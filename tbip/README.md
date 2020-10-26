@@ -1,3 +1,5 @@
+This directory was cloned from https://github.com/keyonvafa/tbip which has been adapted for this project's purpose. Below is their original README.md file.
+
 # Text-Based Ideal Points
 Source code for the paper: 
 [Text-Based Ideal Points by Keyon Vafa, Suresh Naidu, and David Blei (ACL 2020)](https://www.aclweb.org/anthology/2020.acl-main.475/).
