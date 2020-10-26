@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import os
+import argparse
 import nltk
 from nltk.stem import WordNetLemmatizer
 from sentence_transformers import SentenceTransformer, util
@@ -52,7 +53,7 @@ def clustering(descriptions, author_types, author_dict, tweets_orig):
 
 		# Perform kmean clustering
 		num_clusters = 4
-		clustering_model = KMeans(n_clusters=num_clusters, n_init=5)
+		clustering_model = KMeans(n_clusters=num_clusters, n_init=20)
 		clustering_model.fit(corpus_embeddings)
 		cluster_assignment = clustering_model.labels_
 
@@ -73,6 +74,11 @@ def clustering(descriptions, author_types, author_dict, tweets_orig):
 
 if __name__ == "__main__":
 
+	parser = argparse.ArgumentParser()
+	parser.add_argument('--get_tied', default='False')
+
+	args = parser.parse_args()
+
 	out_path = 'tbip/data/covid-tweets-2020/raw/covid_tweets.csv'
 	base_path = 'data/tweets/'
 
@@ -85,17 +91,15 @@ if __name__ == "__main__":
 	            ls.append(df)
 
 	tweets = pd.concat(ls, axis=0, ignore_index=True)
-	print(len(tweets))
+	print('# original tweets: {}'.format(len(tweets)))
 
 	# drop NaNs
 	tweets = tweets.dropna(subset=['description', 'tweet'])
 	# remove Retweeted content
 	tweets = tweets.drop(tweets[tweets.tweet.str.startswith('RT')].index)
-	print(len(tweets))
+	print('# tweets (removed N/A + RTs): {}'.format(len(tweets)))
 
 	tweets_orig = tweets.copy()
-
-	lemmatizer = WordNetLemmatizer()
 
 	academic_kw = set(open('tbip/lexicons/academic.txt', 'r').read().split())
 	journalist_kw = set(open('tbip/lexicons/journalist.txt', 'r').read().split())
@@ -103,12 +107,16 @@ if __name__ == "__main__":
 	politician_kw = set(open('tbip/lexicons/politician.txt', 'r').read().split())
 
 	# lemmatize (SHOULD PROBABLY ONLY DO IF LEMMATIZE DESCRIPTIONS TOO)
+	lemmatizer = WordNetLemmatizer()
 	academic_kw = set([lemmatizer.lemmatize(w) for w in academic_kw])
 	journalist_kw = set([lemmatizer.lemmatize(w) for w in journalist_kw])
 	doctor_kw = set([lemmatizer.lemmatize(w) for w in doctor_kw])
 	politician_kw = set([lemmatizer.lemmatize(w) for w in politician_kw])
 
 	author_types = [academic_kw, journalist_kw, doctor_kw, politician_kw]
+
+	if args.get_tied:
+		print(util.getTiedLabels(tweets, author_types))
 
 	# tweets['description'] = tweets.description.apply(lambda x: nltk.word_tokenize(x))
 	# tweets['description'] = tweets.description.apply(lambda x: [w.lower() for w in x])

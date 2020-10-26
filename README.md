@@ -1,2 +1,1 @@
-# covid-tbip
 # ideal-points
