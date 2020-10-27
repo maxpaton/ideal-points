@@ -17,25 +17,28 @@ def cosineSim(descriptions, author_types, authors, tweets_orig, use_entire_lexic
 	"""
 	Labels the tweet's account description by author type by comparing the sentence embedding of the description with
 	the sentence embedding of either
-	a) the name of each author type (i.e. 'doctor'), or
-	b) averaged similarity of all words in each lexicon
+	a) only the name of each author type (i.e. 'doctor'), or
+	b) averaged similarity of all words in each author type lexicon
 	"""
-	
 	print('Encoding descriptions')
 	description_embeddings = [embedder.encode(d, convert_to_tensor=True) for d in descriptions]
 	print('Finished encoding descriptions')
 
 	print('Encoding lexicons')
+	# use all words from lexicons
 	if use_entire_lexicon:
 		queries = [list(author) for author in author_types]
 		kw_embeddings = [embedder.encode(author, convert_to_tensor=True) for author in queries]
+	# use only author type name
 	else:
 		queries = authors
 		kw_embeddings = embedder.encode(queries, convert_to_tensor=True)
 	print('Finished encoding lexicons')
 
+	# calculate cosine similarity between description and lexicon keywords
 	print('Cosine similarities')
 	for idx, description in enumerate(description_embeddings):
+		# if comparing with all words from each lexicon
 		if use_entire_lexicon:
 			cos_scores_all = []
 			for author in kw_embeddings:
@@ -43,14 +46,15 @@ def cosineSim(descriptions, author_types, authors, tweets_orig, use_entire_lexic
 				cos_scores_all.append(cos_scores.cpu())
 			mean_scores = [torch.mean(scores) for scores in cos_scores_all] 
 			pred = max(mean_scores)
-			print('Original description: {} \nPrediction: {} \nScore: {} \nIndex: {} \n'.format(list(tweets_orig.description)[idx], 
-																					author_dict[mean_scores.index(max(mean_scores))], pred, idx))
+			argmax = mean_scores.index(max(mean_scores))
+		# if only comparing with name of each author type
 		else:
 			cos_scores = util.pytorch_cos_sim(description, kw_embeddings)[0]
 			cos_scores = cos_scores.cpu()
 			pred = torch.max(cos_scores)
-			print('Original description: {} \nPrediction: {} \nScore: {} \nIndex: {} \n'.format(list(tweets_orig.description)[idx], 
-																					author_dict[torch.argmax(cos_scores).item()], pred, idx))
+			argmax = torch.argmax(cos_scores).item()
+		print('Original description: {} \nPrediction: {} \nScore: {} \nIndex: {} \n'.format(list(tweets_orig.description)[idx], 
+																						author_dict[argmax], pred, idx))
 	print('Finished encoding')
 
 
@@ -93,7 +97,7 @@ if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 
 	parser.add_argument('--get_equal_prob', default=False, help='Inspect the account descriptions with equal probability for multiple classes')
-	parser.add_argument('--model', default='clustering', help='which model to use to label account descriptions')
+	parser.add_argument('--model', default='clustering', help='Which model to use to label account descriptions')
 
 	args = parser.parse_args()
 
@@ -154,7 +158,7 @@ if __name__ == "__main__":
 
 	# choose model
 	if args.model == 'cosine_sim':
-		cosineSimAll(descriptions, author_types, authors, tweets_orig, use_entire_lexicon=False)
+		cosineSim(descriptions, author_types, authors, tweets_orig, use_entire_lexicon=True)
 	if args.model == 'clustering':
 		clustering(descriptions, author_types, author_dict, tweets_orig)
 
