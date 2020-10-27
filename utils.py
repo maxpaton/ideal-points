@@ -1,7 +1,8 @@
 import re
 import nltk
-import numpy as np
 from nltk.stem import WordNetLemmatizer
+import spacy
+import numpy as np
 import pandas as pd
 
 
@@ -29,10 +30,13 @@ def removeStopwords(text, stop_words):
 	return ' '.join(removed)
 
 
-def getTiedLabels(tweets, author_types, author_dict, lemmatize=True, print_selection: int=50):
+def getKWLabels(tweets, author_types, author_dict, get_equal_prob=False, print_selection=False):
 	"""
-	Returns account descriptions which contain an equal number of keywords (tied) from multiple author lexicons, 
+	Returns account descriptions which contain an unambiguous maximum number of keywords from a single author lexicon
+
+	param get_equal_prob: returns account descriptions which contain an equal number of keywords from multiple author lexicons, 
 	and so are equally likely to correspond to multiple author types (i.e equal probability for multiple classes)
+	prarm print_selection: prints print_selection descriptions to visually inspect each description and its corresponding lexicon keywords
 	"""
 	if not isinstance(print_selection, int):
 		raise TypeError
@@ -54,62 +58,64 @@ def getTiedLabels(tweets, author_types, author_dict, lemmatize=True, print_selec
 	tweets_['proba'] = proba.tolist()
 
 	# choose label based on max author type count
-	mask = (tweets_.proba.apply(lambda x: np.isfinite(x).all())) & (tweets_.proba.apply(lambda x: x.count(max(x))>1))
+	if get_equal_prob:
+		mask = (tweets_.proba.apply(lambda x: np.isfinite(x).all())) & (tweets_.proba.apply(lambda x: x.count(max(x))>1))
+	else:
+		mask = (tweets_.proba.apply(lambda x: np.isfinite(x).all())) & (tweets_.proba.apply(lambda x: x.count(max(x))==1))
 	valid = tweets_[mask]
 	tweets_['label'] = 0
+	# get label corresponding to max count
 	tweets_.loc[mask, 'label'] = tweets_.loc[:, 'academic_count': 'politician_count'].idxmax(1)
 
 	# encode categorical author type label
 	d = {'academic_count': 'academic', 'journalist_count': 'journalist', 'doctor_count': 'doctor', 'politician_count': 'politician'}
 	tweets_['label'] = tweets_.label.apply(lambda x: d[x] if x != 0 else x)
-	# concat/compare original descriptions with proba and labels
-	final = pd.concat([tweets[mask].description, tweets_[mask][['proba', 'label']]], axis=1)
 
 	# print selection of records to visually inspect which keywords are present from each lexicon
 	if print_selection:
+		# concat/compare original descriptions with proba and labels
+		final = pd.concat([tweets[mask].description, tweets_[mask][['proba', 'label']]], axis=1)
 		for idx, row in final[:print_selection].iterrows():
 			# get keywords present from each lexicon
 			kws = [[w for w in tweets_.loc[idx].description if w in author] for author in author_types]
-			print(dict(zip(author_dict.values(), kws)))
-			print('Label: {} \nProba: {} \nDescription: {} \n'.format(row.label, row.proba, row.description))
+			print('Label: {} \nProba: {} \nDescription: {}'.format(row.label, row.proba, row.description))
+			print(dict(zip(author_dict.values(), kws)), '\n')
 
-	return final
+	return tweets_.loc[mask][['description', 'proba', 'label']]
 
 
-def getKWLabels(tweets, author_types, lemmatize=True):
-	"""
-	Returns account descriptions which contain an equal number of keywords (tied) from multiple author lexicons, 
-	and so are equally likely to correspond to multiple author types
-	"""
-	tweets_ = tweets.copy()
+# def getKWLabels(tweets, author_types, lemmatize=True):
+# 	"""
+# 	Returns account descriptions which contain an unambiguous maximum number of keywords from a single author lexicon, 
+# 	"""
+# 	tweets_ = tweets.copy()
 
-	lemmatizer = WordNetLemmatizer()
-	tweets_['description'] = tweets_.description.apply(lambda x: nltk.word_tokenize(x))
-	tweets_['description'] = tweets_.description.apply(lambda x: [w.lower() for w in x])
-	tweets_['description'] = tweets_.description.apply(lambda x: [lemmatizer.lemmatize(w) for w in x])
+# 	lemmatizer = WordNetLemmatizer()
+# 	tweets_['description'] = tweets_.description.apply(lambda x: nltk.word_tokenize(x))
+# 	tweets_['description'] = tweets_.description.apply(lambda x: [w.lower() for w in x])
+# 	tweets_['description'] = tweets_.description.apply(lambda x: [lemmatizer.lemmatize(w) for w in x])
 
-	tweets_['academic_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[0]]))
-	tweets_['journalist_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[1]]))
-	tweets_['doctor_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[2]]))
-	tweets_['politician_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[3]]))
+# 	tweets_['academic_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[0]]))
+# 	tweets_['journalist_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[1]]))
+# 	tweets_['doctor_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[2]]))
+# 	tweets_['politician_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[3]]))
 
-	counts = np.array([tweets_.academic_count, tweets_.journalist_count, tweets_.doctor_count, tweets_.politician_count]).T
-	sums = tweets_.academic_count + tweets_.journalist_count + tweets_.doctor_count + tweets_.politician_count
-	proba = counts/sums.values.reshape(-1,1)
-	tweets_['proba'] = proba.tolist()
+# 	counts = tweets_.loc[:, 'academic_count': 'politician_count'].values
+# 	proba = counts/counts.sum(axis=1).reshape(-1,1)
+# 	tweets_['proba'] = proba.tolist()
 
-	# choose label based on max author type count
-	mask = (pd.notnull(tweets_.proba.apply(lambda x: x[0]))) & (tweets_.proba.apply(lambda x: x.count(max(x))==1))
-	valid = tweets_[mask]
-	tweets_['label'] = 0
-	tweets_.loc[mask, 'label'] = tweets_[['academic_count', 'journalist_count', 'doctor_count', 'politician_count']].idxmax(1)
+# 	# choose label based on max author type count
+# 	mask = (tweets_.proba.apply(lambda x: np.isfinite(x).all())) & (tweets_.proba.apply(lambda x: x.count(max(x))==1))
+# 	valid = tweets_[mask]
+# 	tweets_['label'] = 0
+# 	tweets_.loc[mask, 'label'] = tweets_.loc[:, 'academic_count': 'politician_count'].idxmax(1)
 
-	# encode categorical author type label
-	d = {'academic_count': 'academic', 'journalist_count': 'journalist', 'doctor_count': 'doctor', 'politician_count': 'politician'}
-	tweets_['label'] = tweets_.label.apply(lambda x: d[x] if x != 0 else x)
-	tweets_final = tweets_.reset_index()
+# 	# encode categorical author type label
+# 	d = {'academic_count': 'academic', 'journalist_count': 'journalist', 'doctor_count': 'doctor', 'politician_count': 'politician'}
+# 	tweets_['label'] = tweets_.label.apply(lambda x: d[x] if x != 0 else x)
+# 	final = pd.concat([tweets[mask].description, tweets_[mask][['proba', 'label']]], axis=1)
 
-	return tweets_final.loc[tweets_final.label != 0][['description', 'proba', 'label']]
+# 	return final.loc[final.label != 0][['description', 'proba', 'label']]
 
 
 

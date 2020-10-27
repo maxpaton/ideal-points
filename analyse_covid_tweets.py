@@ -11,6 +11,7 @@ from nltk.corpus import stopwords
 from itertools import chain
 from sklearn.cluster import KMeans
 import utils
+import spacy
 
 
 def cosineSim(descriptions, author_types, authors, tweets_orig, use_entire_lexicon=False):
@@ -139,8 +140,11 @@ if __name__ == "__main__":
 	authors = ['academic', 'journalist', 'doctor', 'politician']
 	author_dict = dict(enumerate(authors))
 
+	# labeling account descriptions only by most lexicon keyword matches
 	if args.get_equal_prob:
 		print(utils.getTiedLabels(tweets, author_types, author_dict, print_selection=10))
+
+	print(utils.getKWLabels(tweets, author_types, author_dict, get_equal_prob=False))
 
 	# tweets['description'] = tweets.description.apply(lambda x: nltk.word_tokenize(x))
 	# tweets['description'] = tweets.description.apply(lambda x: [w.lower() for w in x])
@@ -158,7 +162,7 @@ if __name__ == "__main__":
 
 	# choose model
 	if args.model == 'cosine_sim':
-		cosineSim(descriptions, author_types, authors, tweets_orig, use_entire_lexicon=True)
+		cosineSim(descriptions, author_types, authors, tweets_orig, use_entire_lexicon=False)
 	if args.model == 'clustering':
 		clustering(descriptions, author_types, author_dict, tweets_orig)
 
