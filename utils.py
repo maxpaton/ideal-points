@@ -30,6 +30,17 @@ def removeStopwords(text, stop_words):
 	return ' '.join(removed)
 
 
+def sentTokenize(text):
+	nlp = spacy.load('en_core_web_sm')
+	doc = nlp(text)
+	return [sent.string.strip() for sent in doc.sents]
+
+
+def lemmatize(text, lemmatizer):
+	parsed = nltk.word_tokenize(text)
+	return [lemmatizer.lemmatize(w) for w in parsed]
+
+
 def getKWLabels(tweets, author_types, author_dict, get_equal_prob=False, print_selection=False):
 	"""
 	Returns account descriptions which contain an unambiguous maximum number of keywords from a single author lexicon
@@ -43,15 +54,21 @@ def getKWLabels(tweets, author_types, author_dict, get_equal_prob=False, print_s
 
 	tweets_ = tweets.copy()
 
+	# lemmatize descriptions
 	lemmatizer = WordNetLemmatizer()
-	tweets_['description'] = tweets_.description.apply(lambda x: nltk.word_tokenize(x))
-	tweets_['description'] = tweets_.description.apply(lambda x: [w.lower() for w in x])
-	tweets_['description'] = tweets_.description.apply(lambda x: [lemmatizer.lemmatize(w) for w in x])
+	# tweets_['description'] = tweets_.description.apply(lambda x: x.lower())
+	tweets_['description'] = tweets_.description.apply(lambda x: lemmatize(x.lower(), lemmatizer))
+	# lemmatize lexicons
+	academic_kw = set([lemmatizer.lemmatize(w) for w in author_types[0]])
+	journalist_kw = set([lemmatizer.lemmatize(w) for w in author_types[1]])
+	doctor_kw = set([lemmatizer.lemmatize(w) for w in author_types[2]])
+	politician_kw = set([lemmatizer.lemmatize(w) for w in author_types[3]])
 
-	tweets_['academic_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[0]]))
-	tweets_['journalist_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[1]]))
-	tweets_['doctor_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[2]]))
-	tweets_['politician_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[3]]))
+	# get keyword counts
+	tweets_['academic_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in academic_kw]))
+	tweets_['journalist_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in journalist_kw]))
+	tweets_['doctor_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in doctor_kw]))
+	tweets_['politician_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in politician_kw]))
 
 	counts = tweets_.loc[:, 'academic_count': 'politician_count'].values
 	proba = counts/counts.sum(axis=1).reshape(-1,1)

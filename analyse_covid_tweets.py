@@ -21,14 +21,6 @@ def cosineSim(descriptions, author_types, authors, tweets_orig, use_entire_lexic
 	a) only the name of each author type (i.e. 'doctor'), or
 	b) averaged similarity of all words in each author type lexicon
 	"""
-	nlp = spacy.load('en_core_web_sm')
-	for i in range(10):
-		doc = nlp(descriptions[i])
-		print(doc)
-		sentences = [sent.string.strip() for sent in doc.sents]
-		print(sentences)
-
-
 	print('Encoding descriptions')
 	description_embeddings = [embedder.encode(d, convert_to_tensor=True) for d in descriptions]
 	print('Finished encoding descriptions')
@@ -145,13 +137,6 @@ if __name__ == "__main__":
 	doctor_kw = set(open('tbip/lexicons/doctor.txt', 'r').read().split())
 	politician_kw = set(open('tbip/lexicons/politician.txt', 'r').read().split())
 
-	# lemmatize (SHOULD PROBABLY ONLY DO IF LEMMATIZE DESCRIPTIONS TOO)
-	lemmatizer = WordNetLemmatizer()
-	academic_kw = set([lemmatizer.lemmatize(w) for w in academic_kw])
-	journalist_kw = set([lemmatizer.lemmatize(w) for w in journalist_kw])
-	doctor_kw = set([lemmatizer.lemmatize(w) for w in doctor_kw])
-	politician_kw = set([lemmatizer.lemmatize(w) for w in politician_kw])
-
 	author_types = [academic_kw, journalist_kw, doctor_kw, politician_kw]
 	authors = ['academic', 'journalist', 'doctor', 'politician']
 	author_dict = dict(enumerate(authors))
@@ -159,11 +144,6 @@ if __name__ == "__main__":
 	# labeling account descriptions only by most lexicon keyword matches
 	if args.get_kw_labels:
 		print(utils.getKWLabels(tweets, author_types, author_dict, get_equal_prob=False))
-
-	# tweets['description'] = tweets.description.apply(lambda x: nltk.word_tokenize(x))
-	# tweets['description'] = tweets.description.apply(lambda x: [w.lower() for w in x])
-	# tweets['description'] = tweets.description.apply(lambda x: [lemmatizer.lemmatize(w) for w in x])
-	# tweets['description'] = tweets.description.apply(lambda x: ' '.join(x))
 
 	stop_words = set(stopwords.words('english'))
 	# tweets['description'] = tweets.description.apply(lambda x: utils.deEmojify(x))
@@ -173,6 +153,9 @@ if __name__ == "__main__":
 	embedder = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
 
 	descriptions = list(tweets.description)
+
+	print(descriptions[0])
+	print(utils.sentTokenize(descriptions[0]))
 
 	# choose model
 	if args.model == 'cosine_sim':
