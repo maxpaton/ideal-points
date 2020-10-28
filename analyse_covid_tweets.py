@@ -101,7 +101,10 @@ def clustering(descriptions, author_types, author_dict, tweets_orig):
 		print('Original description: {} \nPrediction: {} \nScore: {} \nIndex: {} \n'.format(list(tweets_orig.description)[idx], 
 																					author_counts, pred, idx))
 
-def readFiles(base_path, out_path=None, write_df=False):
+def readFiles(base_path, out_path=None):
+	"""
+	Reads and concatenates all files into a dataframe
+	"""
 	ls = []
 	for path, directory, file in os.walk(base_path):
 	    for name in sorted(file):
@@ -124,7 +127,6 @@ if __name__ == "__main__":
 
 	args = parser.parse_args()
 
-	out_path = 'tbip/data/covid-tweets-2020/raw/covid_tweets.csv'
 	base_path = 'data/tweets/'
 
 	tweets = readFiles(base_path)
