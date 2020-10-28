@@ -84,41 +84,5 @@ def getKWLabels(tweets, author_types, author_dict, get_equal_prob=False, print_s
 	return tweets_.loc[mask][['description', 'proba', 'label']]
 
 
-# def getKWLabels(tweets, author_types, lemmatize=True):
-# 	"""
-# 	Returns account descriptions which contain an unambiguous maximum number of keywords from a single author lexicon, 
-# 	"""
-# 	tweets_ = tweets.copy()
-
-# 	lemmatizer = WordNetLemmatizer()
-# 	tweets_['description'] = tweets_.description.apply(lambda x: nltk.word_tokenize(x))
-# 	tweets_['description'] = tweets_.description.apply(lambda x: [w.lower() for w in x])
-# 	tweets_['description'] = tweets_.description.apply(lambda x: [lemmatizer.lemmatize(w) for w in x])
-
-# 	tweets_['academic_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[0]]))
-# 	tweets_['journalist_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[1]]))
-# 	tweets_['doctor_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[2]]))
-# 	tweets_['politician_count'] = tweets_.description.apply(lambda x: len([w for w in x if w in author_types[3]]))
-
-# 	counts = tweets_.loc[:, 'academic_count': 'politician_count'].values
-# 	proba = counts/counts.sum(axis=1).reshape(-1,1)
-# 	tweets_['proba'] = proba.tolist()
-
-# 	# choose label based on max author type count
-# 	mask = (tweets_.proba.apply(lambda x: np.isfinite(x).all())) & (tweets_.proba.apply(lambda x: x.count(max(x))==1))
-# 	valid = tweets_[mask]
-# 	tweets_['label'] = 0
-# 	tweets_.loc[mask, 'label'] = tweets_.loc[:, 'academic_count': 'politician_count'].idxmax(1)
-
-# 	# encode categorical author type label
-# 	d = {'academic_count': 'academic', 'journalist_count': 'journalist', 'doctor_count': 'doctor', 'politician_count': 'politician'}
-# 	tweets_['label'] = tweets_.label.apply(lambda x: d[x] if x != 0 else x)
-# 	final = pd.concat([tweets[mask].description, tweets_[mask][['proba', 'label']]], axis=1)
-
-# 	return final.loc[final.label != 0][['description', 'proba', 'label']]
-
-
-
-
 
 

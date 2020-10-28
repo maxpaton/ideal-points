@@ -21,6 +21,14 @@ def cosineSim(descriptions, author_types, authors, tweets_orig, use_entire_lexic
 	a) only the name of each author type (i.e. 'doctor'), or
 	b) averaged similarity of all words in each author type lexicon
 	"""
+	nlp = spacy.load('en_core_web_sm')
+	for i in range(10):
+		doc = nlp(descriptions[i])
+		print(doc)
+		sentences = [sent.string.strip() for sent in doc.sents]
+		print(sentences)
+
+
 	print('Encoding descriptions')
 	description_embeddings = [embedder.encode(d, convert_to_tensor=True) for d in descriptions]
 	print('Finished encoding descriptions')
@@ -65,6 +73,7 @@ def clustering(descriptions, author_types, author_dict, tweets_orig):
 	description_embeddings = [embedder.encode(d) for d in descriptions]
 	print('Finished encoding descriptions')
 
+	# concat all lexicons
 	all_lexicons = list(set(chain.from_iterable(author_types)))
 	lexicons_encoded = embedder.encode(all_lexicons)
 
@@ -92,19 +101,7 @@ def clustering(descriptions, author_types, author_dict, tweets_orig):
 		print('Original description: {} \nPrediction: {} \nScore: {} \nIndex: {} \n'.format(list(tweets_orig.description)[idx], 
 																					author_counts, pred, idx))
 
-
-if __name__ == "__main__":
-
-	parser = argparse.ArgumentParser()
-
-	parser.add_argument('--get_equal_prob', default=False, help='Inspect the account descriptions with equal probability for multiple classes')
-	parser.add_argument('--model', default='clustering', help='Which model to use to label account descriptions')
-
-	args = parser.parse_args()
-
-	out_path = 'tbip/data/covid-tweets-2020/raw/covid_tweets.csv'
-	base_path = 'data/tweets/'
-
+def readFiles(base_path, out_path=None, write_df=False):
 	ls = []
 	for path, directory, file in os.walk(base_path):
 	    for name in sorted(file):
@@ -112,8 +109,25 @@ if __name__ == "__main__":
 	            filename = os.path.join(path, name)
 	            df = pd.read_csv(filename, header=0, index_col=None, engine='python')
 	            ls.append(df)
-
 	tweets = pd.concat(ls, axis=0, ignore_index=True)
+	if out_path:
+		tweets.to_csv(out_path)
+	return tweets
+
+
+if __name__ == "__main__":
+
+	parser = argparse.ArgumentParser()
+
+	parser.add_argument('--get_kw_labels', default=False, help='Get descriptions corresponding to lexicon keyword matches')
+	parser.add_argument('--model', default='clustering', help='Model to use to label account descriptions')
+
+	args = parser.parse_args()
+
+	out_path = 'tbip/data/covid-tweets-2020/raw/covid_tweets.csv'
+	base_path = 'data/tweets/'
+
+	tweets = readFiles(base_path)
 	print('# original tweets: {}'.format(len(tweets)))
 
 	# drop NaNs
@@ -141,10 +155,8 @@ if __name__ == "__main__":
 	author_dict = dict(enumerate(authors))
 
 	# labeling account descriptions only by most lexicon keyword matches
-	if args.get_equal_prob:
-		print(utils.getTiedLabels(tweets, author_types, author_dict, print_selection=10))
-
-	print(utils.getKWLabels(tweets, author_types, author_dict, get_equal_prob=False))
+	if args.get_kw_labels:
+		print(utils.getKWLabels(tweets, author_types, author_dict, get_equal_prob=False))
 
 	# tweets['description'] = tweets.description.apply(lambda x: nltk.word_tokenize(x))
 	# tweets['description'] = tweets.description.apply(lambda x: [w.lower() for w in x])
@@ -152,8 +164,8 @@ if __name__ == "__main__":
 	# tweets['description'] = tweets.description.apply(lambda x: ' '.join(x))
 
 	stop_words = set(stopwords.words('english'))
-	tweets['description'] = tweets.description.apply(lambda x: utils.deEmojify(x))
-	tweets['description'] = tweets.description.apply(lambda x: utils.removeStopwords(x, stop_words))
+	# tweets['description'] = tweets.description.apply(lambda x: utils.deEmojify(x))
+	# tweets['description'] = tweets.description.apply(lambda x: utils.removeStopwords(x, stop_words))
 	print(tweets)
 
 	embedder = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')

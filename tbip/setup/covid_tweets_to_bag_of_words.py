@@ -12,6 +12,7 @@ from scipy import sparse
 import setup_utils as utils
 from sklearn.feature_extraction.text import CountVectorizer
 
+
 project_dir = os.path.abspath(
     os.path.join(os.path.dirname(__file__), os.pardir)) 
 data_dir = os.path.join(project_dir, "data/covid-tweets-2020/raw")
