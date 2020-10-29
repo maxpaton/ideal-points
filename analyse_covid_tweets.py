@@ -14,7 +14,7 @@ import utils
 import spacy
 
 
-def cosineSim(descriptions, author_types, authors, tweets_orig, use_entire_lexicon=False):
+def cosineSim(descriptions, author_lexicons, author_names, tweets_orig, use_entire_lexicon=False):
 	"""
 	Labels the tweet's account description by author type by comparing the sentence embedding of the description with
 	the sentence embedding of either
@@ -28,11 +28,11 @@ def cosineSim(descriptions, author_types, authors, tweets_orig, use_entire_lexic
 	print('Encoding lexicons')
 	# use all words from lexicons
 	if use_entire_lexicon:
-		queries = [list(author) for author in author_types]
+		queries = [list(author) for author in author_lexicons]
 		kw_embeddings = [embedder.encode(author, convert_to_tensor=True) for author in queries]
 	# use only author type name
 	else:
-		queries = authors
+		queries = author_names
 		kw_embeddings = embedder.encode(queries, convert_to_tensor=True)
 	print('Finished encoding lexicons')
 
@@ -59,14 +59,14 @@ def cosineSim(descriptions, author_types, authors, tweets_orig, use_entire_lexic
 	print('Finished encoding')
 
 
-def clustering(descriptions, author_types, author_dict, tweets_orig):
+def clustering(descriptions, author_lexicons, author_dict, tweets_orig):
 
 	print('Encoding descriptions')
 	description_embeddings = [embedder.encode(d) for d in descriptions]
 	print('Finished encoding descriptions')
 
 	# concat all lexicons
-	all_lexicons = list(set(chain.from_iterable(author_types)))
+	all_lexicons = list(set(chain.from_iterable(author_lexicons)))
 	lexicons_encoded = embedder.encode(all_lexicons)
 
 	for idx, description in enumerate(description_embeddings):
@@ -86,7 +86,7 @@ def clustering(descriptions, author_types, author_dict, tweets_orig):
 		# get cluster which description falls into
 		cluster_pred = [i for i, cluster in enumerate(clustered_sentences) if descriptions[idx] in cluster][0]
 		# get counts of each author keywords in this cluster, then use author type with max. matches as author
-		author_counts = [len(author & set(clustered_sentences[cluster_pred])) for author in author_types]
+		author_counts = [len(author & set(clustered_sentences[cluster_pred])) for author in author_lexicons]
 		# print(author_counts)
 		pred = author_dict[author_counts.index(max(author_counts))]
 		# print(pred)
@@ -132,18 +132,19 @@ if __name__ == "__main__":
 
 	tweets_orig = tweets.copy()
 
+	# load author lexicons
 	academic_kw = set(open('tbip/lexicons/academic.txt', 'r').read().split())
 	journalist_kw = set(open('tbip/lexicons/journalist.txt', 'r').read().split())
 	doctor_kw = set(open('tbip/lexicons/doctor.txt', 'r').read().split())
 	politician_kw = set(open('tbip/lexicons/politician.txt', 'r').read().split())
 
-	author_types = [academic_kw, journalist_kw, doctor_kw, politician_kw]
-	authors = ['academic', 'journalist', 'doctor', 'politician']
-	author_dict = dict(enumerate(authors))
+	author_lexicons = [academic_kw, journalist_kw, doctor_kw, politician_kw]
+	author_names = ['academic', 'journalist', 'doctor', 'politician']
+	author_dict = dict(enumerate(author_names))
 
 	# labeling account descriptions only by most lexicon keyword matches
 	if args.get_kw_labels:
-		print(utils.getKWLabels(tweets, author_types, author_dict, get_equal_prob=False))
+		print(utils.getKWLabels(tweets, author_lexicons, author_dict, get_equal_prob=True, print_selection=10))
 
 	stop_words = set(stopwords.words('english'))
 	# tweets['description'] = tweets.description.apply(lambda x: utils.deEmojify(x))
@@ -154,13 +155,10 @@ if __name__ == "__main__":
 
 	descriptions = list(tweets.description)
 
-	print(descriptions[0])
-	print(utils.sentTokenize(descriptions[0]))
-
 	# choose model
 	if args.model == 'cosine_sim':
-		cosineSim(descriptions, author_types, authors, tweets_orig, use_entire_lexicon=False)
+		cosineSim(descriptions, author_lexicons, author_names, tweets_orig, use_entire_lexicon=False)
 	if args.model == 'clustering':
-		clustering(descriptions, author_types, author_dict, tweets_orig)
+		clustering(descriptions, author_lexicons, author_dict, tweets_orig)
 
 
