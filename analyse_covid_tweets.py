@@ -1,17 +1,18 @@
+import os
 import numpy as np
 import pandas as pd
-import os
 import argparse
-import nltk
-from nltk.stem import WordNetLemmatizer
-from sentence_transformers import SentenceTransformer, util
-import torch
-import re
-from nltk.corpus import stopwords
 from itertools import chain
-from sklearn.cluster import KMeans
 import utils
+import re
+import nltk
 import spacy
+from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
+from sentence_transformers import SentenceTransformer, util
+from sklearn.cluster import KMeans
+import torch
+
 
 
 def cosineSim(descriptions, author_lexicons, author_names, tweets_orig, use_entire_lexicon=False):
@@ -114,7 +115,7 @@ if __name__ == "__main__":
 
 	parser = argparse.ArgumentParser()
 
-	parser.add_argument('--get_kw_labels', default=False, help='Get descriptions corresponding to lexicon keyword matches')
+	parser.add_argument('--get_keyword_labels', default=False, help='Get descriptions corresponding to lexicon keyword matches')
 	parser.add_argument('--model', default='clustering', help='Model to use to label account descriptions')
 
 	args = parser.parse_args()
@@ -132,24 +133,24 @@ if __name__ == "__main__":
 
 	tweets_orig = tweets.copy()
 
-	# load author lexicons
-	academic_kw = set(open('tbip/lexicons/academic.txt', 'r').read().split())
-	journalist_kw = set(open('tbip/lexicons/journalist.txt', 'r').read().split())
-	doctor_kw = set(open('tbip/lexicons/doctor.txt', 'r').read().split())
-	politician_kw = set(open('tbip/lexicons/politician.txt', 'r').read().split())
+	# load author lexicons containing keywords
+	academic_lexicon = set(open('tbip/lexicons/academic.txt', 'r').read().split())
+	journalist_lexicon = set(open('tbip/lexicons/journalist.txt', 'r').read().split())
+	doctor_lexicon = set(open('tbip/lexicons/doctor.txt', 'r').read().split())
+	politician_lexicon = set(open('tbip/lexicons/politician.txt', 'r').read().split())
 
-	author_lexicons = [academic_kw, journalist_kw, doctor_kw, politician_kw]
+	author_lexicons = [academic_lexicon, journalist_lexicon, doctor_lexicon, politician_lexicon]
 	author_names = ['academic', 'journalist', 'doctor', 'politician']
 	author_dict = dict(enumerate(author_names))
 
 	# labeling account descriptions only by most lexicon keyword matches
-	if args.get_kw_labels:
-		print(utils.getKWLabels(tweets, author_lexicons, author_dict, get_equal_prob=True, print_selection=10))
+	if args.get_keyword_labels:
+		tweets_to_label = tweets.copy()
+		print(utils.getKeywordLabels(tweets_to_label, tweets_orig, author_lexicons, author_dict, equal_prob_flag=False, print_selection=10))
 
 	stop_words = set(stopwords.words('english'))
 	# tweets['description'] = tweets.description.apply(lambda x: utils.deEmojify(x))
 	# tweets['description'] = tweets.description.apply(lambda x: utils.removeStopwords(x, stop_words))
-	print(tweets)
 
 	embedder = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
 

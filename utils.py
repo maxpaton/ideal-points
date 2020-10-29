@@ -45,28 +45,28 @@ def lemmatizeLexicons(author_lexicons, lemmatizer):
 	return [set([lemmatizer.lemmatize(w) for w in author]) for author in author_lexicons]
 
 
-def getKWCounts(tweets, author_lexicons, col_names):
+def getKeywordCounts(tweets, author_lexicons, col_names):
 	for author, col_name in zip(author_lexicons, col_names):
 		tweets[col_name + '_count'] = tweets.description.apply(lambda x: len([w for w in x if w in author]))
 	return tweets
 
 
-def getKWProba(tweets):
+def getKeywordProba(tweets):
 	counts = tweets.loc[:, 'academic_count': 'politician_count'].values
 	proba = counts/counts.sum(axis=1).reshape(-1,1)
 	tweets['proba'] = proba.tolist()
 	return tweets
 
 
-def getValidTweets(tweets, get_equal_prob):
-	if get_equal_prob:
+def getValidTweets(tweets, equal_prob_flag):
+	if equal_prob_flag:
 		mask = (tweets.proba.apply(lambda x: np.isfinite(x).all())) & (tweets.proba.apply(lambda x: x.count(max(x))>1))
 	else:
 		mask = (tweets.proba.apply(lambda x: np.isfinite(x).all())) & (tweets.proba.apply(lambda x: x.count(max(x))==1))
 	return tweets[mask]
 
 
-def getLabels(tweets, author_names):
+def getLabelsFromCounts(tweets, author_names):
 	count_cols = tweets.loc[:, 'academic_count': 'politician_count']
 	label = count_cols.idxmax(1)
 	label_names = dict(zip(count_cols.columns, author_names))
@@ -74,51 +74,50 @@ def getLabels(tweets, author_names):
 	return tweets
 
 
+def label(tweets, author_lexicons, author_names, equal_prob_flag):
+	# get keyword counts and probability vector
+	tweets = getKeywordCounts(tweets, author_lexicons, author_names)
+	tweets = getKeywordProba(tweets)
+	# either descriptions with equal probability or unambiguous keyword matches
+	tweets = getValidTweets(tweets, equal_prob_flag)
+	# get label corresponding to max count
+	return getLabelsFromCounts(tweets, author_names)
+
+
 def printSelection(print_selection, tweets, tweets_orig, author_names, author_lexicons):
 	# concat/compare original descriptions with proba and labels
 	final = pd.concat([tweets_orig.loc[tweets.index].description, tweets[['proba', 'label']]], axis=1)
 	for idx, row in final[:print_selection].iterrows():
 		# get keywords present from each lexicon
-		kws = [[w for w in tweets.loc[idx].description if w in author] for author in author_lexicons]
+		keywords = [[w for w in tweets.loc[idx].description if w in author] for author in author_lexicons]
 		print('Label: {} \nProba: {} \nDescription: {}'.format(row.label, row.proba, row.description))
-		print(dict(zip(author_names, kws)), '\n')
+		print(dict(zip(author_names, keywords)), '\n')
 
 
 
-def getKWLabels(tweets, author_lexicons, author_dict, get_equal_prob=False, print_selection=False):
+def getKeywordLabels(tweets, tweets_orig, author_lexicons, author_dict, equal_prob_flag=False, print_selection=False):
 	"""
 	Returns account descriptions which contain an unambiguous maximum number of keywords from a single author lexicon
 
-	param get_equal_prob: returns account descriptions which contain an equal number of keywords from multiple author lexicons, 
+	param equal_prob_flag: returns account descriptions which contain an equal number of keywords from multiple author lexicons, 
 	and so are equally likely to correspond to multiple author types (i.e equal probability for multiple classes)
-	prarm print_selection: prints print_selection descriptions to visually inspect each description and its corresponding lexicon keywords
+	param print_selection: prints print_selection descriptions to visually inspect each description and its corresponding lexicon keywords
 	"""
 	if not isinstance(print_selection, int) or print_selection == True:
 		raise TypeError
 
-	tweets_labelled = tweets.copy()
-
 	# lemmatize descriptions and lexicons
 	lemmatizer = WordNetLemmatizer()
-	tweets_labelled['description'] = tweets_labelled.description.apply(lambda x: lemmatize(x.lower(), lemmatizer))
+	tweets['description'] = tweets.description.apply(lambda x: lemmatize(x.lower(), lemmatizer))
 	author_lexicons_lemmatized = lemmatizeLexicons(author_lexicons, lemmatizer)
 
-	# get keyword counts
-	tweets_labelled = getKWCounts(tweets_labelled, author_lexicons_lemmatized, author_dict.values())
-
-	tweets_labelled = getKWProba(tweets_labelled)
-
-	# either descriptions with equal probability or unambiguous keyword matches
-	tweets_labelled = getValidTweets(tweets_labelled, get_equal_prob)
-
-	# get label corresponding to max count
-	tweets_labelled = getLabels(tweets_labelled, author_dict.values())
+	tweets = label(tweets, author_lexicons_lemmatized, author_dict.values(), equal_prob_flag)
 
 	# print selection of records to visually inspect which keywords are present from each lexicon
 	if print_selection:
-		printSelection(print_selection, tweets_labelled, tweets, author_dict.values(), author_lexicons)
+		printSelection(print_selection, tweets, tweets_orig, author_dict.values(), author_lexicons)
 
-	return tweets_labelled[['description', 'proba', 'label']]
+	return tweets[['description', 'proba', 'label']]
 
 
 
