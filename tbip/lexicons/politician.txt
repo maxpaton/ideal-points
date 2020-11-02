@@ -5,7 +5,6 @@ party
 parliament
 house
 representative
-decocrat
 commons
 lords
 politics

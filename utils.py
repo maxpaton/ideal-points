@@ -4,6 +4,9 @@ from nltk.stem import WordNetLemmatizer
 import spacy
 import numpy as np
 import pandas as pd
+from sentence_transformers import SentenceTransformer, util
+from sklearn.cluster import KMeans
+import torch
 
 
 def deEmojify(text):
@@ -30,24 +33,31 @@ def removeStopwords(text, stop_words):
 	return ' '.join(removed)
 
 
-def sentTokenize(text):
-	nlp = spacy.load('en_core_web_sm')
-	doc = nlp(text)
+def sentTokenize(text, lang_model):
+	doc = lang_model(text)
 	return [sent.string.strip() for sent in doc.sents]
 
 
-def lemmatize(text, lemmatizer):
-	parsed = nltk.word_tokenize(text)
-	return [lemmatizer.lemmatize(w) for w in parsed]
+def lemmatize(text, lang_model):
+	doc = lang_model(text)
+	return [token.lemma_ for token in doc]
 
 
-def lemmatizeLexicons(author_lexicons, lemmatizer):
-	return [set([lemmatizer.lemmatize(w) for w in author]) for author in author_lexicons]
+def lemmatizeLexicons(lexicons, lang_model):
+	return [set([lang_model(w)[0].lemma_ for w in author]) for author in lexicons]
 
 
-def getKeywordCounts(tweets, author_lexicons, col_names):
-	for author, col_name in zip(author_lexicons, col_names):
-		tweets[col_name + '_count'] = tweets.description.apply(lambda x: len([w for w in x if w in author]))
+# def lemmatize(text, lemmatizer):
+# 	parsed = nltk.word_tokenize(text)
+# 	return [lemmatizer.lemmatize(w) for w in parsed]
+
+# def lemmatizeLexicons(lexicons, lemmatizer):
+# 	return [set([lemmatizer.lemmatize(w) for w in author]) for author in lexicons]
+
+
+def getKeywordCounts(tweets, author_info):
+	for author, col_name in zip(author_info.lexicons_lemmatized, author_info.names):
+		tweets[col_name + '_count'] = tweets.description_lemmatized.apply(lambda x: len([w for w in x if w in author]))
 	return tweets
 
 
@@ -74,51 +84,107 @@ def getLabelsFromCounts(tweets, author_names):
 	return tweets
 
 
-def label(tweets, author_lexicons, author_names, equal_prob_flag):
+def label(tweets, author_info, equal_prob_flag):
 	# get keyword counts and probability vector
-	tweets = getKeywordCounts(tweets, author_lexicons, author_names)
+	tweets = getKeywordCounts(tweets, author_info)
 	tweets = getKeywordProba(tweets)
 	# either descriptions with equal probability or unambiguous keyword matches
 	tweets = getValidTweets(tweets, equal_prob_flag)
 	# get label corresponding to max count
-	return getLabelsFromCounts(tweets, author_names)
+	return getLabelsFromCounts(tweets, author_info.names)
 
 
-def printSelection(print_selection, tweets, tweets_orig, author_names, author_lexicons):
-	# concat/compare original descriptions with proba and labels
-	final = pd.concat([tweets_orig.loc[tweets.index].description, tweets[['proba', 'label']]], axis=1)
-	for idx, row in final[:print_selection].iterrows():
+def printResults(print_results, tweets, author_info):
+	# compare original descriptions with proba and labels
+	for idx, row in tweets[['description', 'description_lemmatized', 'proba', 'label']][:print_results].iterrows():
 		# get keywords present from each lexicon
-		keywords = [[w for w in tweets.loc[idx].description if w in author] for author in author_lexicons]
-		print('Label: {} \nProba: {} \nDescription: {}'.format(row.label, row.proba, row.description))
-		print(dict(zip(author_names, keywords)), '\n')
+		keywords = [[w for w in row.description_lemmatized if w in author] for author in author_info.lexicons_lemmatized]
+		print('Label: {} \nProba: {} \nDescription: {} \nIndex: {}'.format(row.label, row.proba, row.description, idx))
+		print(dict(zip(author_info.names, keywords)), '\n')
 
 
-
-def getKeywordLabels(tweets, tweets_orig, author_lexicons, author_dict, equal_prob_flag=False, print_selection=False):
+def getKeywordLabels(tweets, author_info, equal_prob_flag=False, print_results=False):
 	"""
 	Returns account descriptions which contain an unambiguous maximum number of keywords from a single author lexicon
 
 	param equal_prob_flag: returns account descriptions which contain an equal number of keywords from multiple author lexicons, 
 	and so are equally likely to correspond to multiple author types (i.e equal probability for multiple classes)
-	param print_selection: prints print_selection descriptions to visually inspect each description and its corresponding lexicon keywords
+	param print_results: prints print_results descriptions to visually inspect each description and its corresponding lexicon keywords
 	"""
-	if not isinstance(print_selection, int) or print_selection == True:
+	if not isinstance(print_results, int) or print_results == True:
 		raise TypeError
 
 	# lemmatize descriptions and lexicons
 	lemmatizer = WordNetLemmatizer()
-	tweets['description'] = tweets.description.apply(lambda x: lemmatize(x.lower(), lemmatizer))
-	author_lexicons_lemmatized = lemmatizeLexicons(author_lexicons, lemmatizer)
+	nlp = spacy.load('en_core_web_sm')
 
-	tweets = label(tweets, author_lexicons_lemmatized, author_dict.values(), equal_prob_flag)
+	tweets['description_lemmatized'] = tweets.description.apply(lambda x: lemmatize(x.lower(), nlp))
+	author_info.lexicons_lemmatized = lemmatizeLexicons(author_info.lexicons, nlp)
+
+	tweets = label(tweets, author_info, equal_prob_flag)
 
 	# print selection of records to visually inspect which keywords are present from each lexicon
-	if print_selection:
-		printSelection(print_selection, tweets, tweets_orig, author_dict.values(), author_lexicons)
+	if print_results:
+		printResults(print_results, tweets, author_info)
 
-	return tweets[['description', 'proba', 'label']]
+	# print('{} records labelled'.format(len(tweets)))
+	print(tweets)
 
+	return tweets[['description', 'proba', 'label']], len(tweets)
+
+
+
+class authorInfo():
+
+	def __init__(self, names, labels, lexicons):
+		self.names = names
+		self.labels = labels
+		self.lexicons = lexicons
+
+
+
+# class dataEmbedder():
+
+# 	def __init__(self, embedder, author_lexicons, author_labels):
+# 		self.embedder = embedder
+# 		self.author_lexicons = author_lexicons
+# 		self.author_labels = author_labels
+
+# 	def embed_descriptions(self, descriptions):
+
+# 		print('Embedding descriptions')
+# 		description_embeddings = [self.embedder.encode(d, convert_to_tensor=True) for d in descriptions]
+# 		return description_embeddings, 'Finished embedding descriptions'
+
+# 	def embed_lexicons(self, use_lexicon=False):
+# 		# use all words from lexicons
+# 		if use_lexicon:
+# 			queries = [list(author) for author in self.author_lexicons]
+# 			return [self.embedder.encode(author, convert_to_tensor=True) for author in queries]
+# 		# use only author type name
+# 		else:
+# 			queries = self.author_labels.values()
+# 			return self.embedder.encode(queries, convert_to_tensor=True)
+
+
+
+# class clusteringSimilarity():
+
+# 	def __init__(encoder, num_clusters):
+# 		self.encoder = encoder
+# 		self.num_clusters = num_clusters
+
+
+# 	def encode_descriptions():
+
+
+# 	def encode_lexicons():
+
+
+# 	def calculateSimilarity():
+
+
+# 	def print_results():
 
 
 
