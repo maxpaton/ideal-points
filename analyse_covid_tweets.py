@@ -1,4 +1,6 @@
 import os
+import sys
+import glob
 import numpy as np
 import pandas as pd
 import argparse
@@ -11,14 +13,16 @@ from sentence_transformers import SentenceTransformer, util
 
 
 
-def readFiles(base_path, out_path=None):
+def readTweets(base_path, out_path=None):
 	"""
 	Reads and concatenates individual files into a dataframe
 	"""
 	ls = []
 	for path, directory, file in os.walk(base_path):
 	    for name in sorted(file):
-	        if name.endswith('.csv') and '2020-02-06' in name:
+	        # if name.endswith('.csv') and '2020-02' in name:
+	        # if name.endswith('.csv') and '2020-01' in name:
+	        if name.endswith('.csv'):
 	            filename = os.path.join(path, name)
 	            df = pd.read_csv(filename, header=0, index_col=None, engine='python')
 	            ls.append(df)
@@ -26,6 +30,20 @@ def readFiles(base_path, out_path=None):
 	if out_path:
 		tweets.to_csv(out_path)
 	return tweets
+
+def readLexicons(base_path):
+	author_lexicons = []
+	for file in sorted(glob.glob(base_path + '*.txt')):
+		lexicon = set(open(file, 'r').read().split())
+		author_lexicons.append(lexicon)
+	return author_lexicons
+
+def exportTweetsForBOW(tweets, out_path):
+	tweets.drop(['description', 'proba'], axis=1, inplace=True)
+	tweets = tweets[['label', 'id', 'time', 'tweet']]
+	tweets.columns = ['screen_name', 'id', 'created_at', 'text']
+	tweets.to_csv(out_path, index=False)
+
 
 
 if __name__ == "__main__":
@@ -39,8 +57,9 @@ if __name__ == "__main__":
 
 	base_path = 'data/tweets/'
 
-	tweets = readFiles(base_path)
+	tweets = readTweets(base_path)
 	print('# original tweets: {}'.format(len(tweets)))
+	print(tweets.head())
 
 	# drop NaNs
 	tweets = tweets.dropna(subset=['description', 'tweet'])
@@ -48,36 +67,35 @@ if __name__ == "__main__":
 	tweets = tweets.drop(tweets[tweets.tweet.str.startswith('RT')].index)
 	print('# tweets used (removed N/A + RTs): {}'.format(len(tweets)))
 
-	# load author lexicons containing keywords
-	academic_lexicon = set(open('tbip/lexicons/academic.txt', 'r').read().split())
-	journalist_lexicon = set(open('tbip/lexicons/journalist.txt', 'r').read().split())
-	doctor_lexicon = set(open('tbip/lexicons/doctor.txt', 'r').read().split())
-	politician_lexicon = set(open('tbip/lexicons/politician.txt', 'r').read().split())
+	# tweets.to_csv('all_tweets.csv')
 
-	author_lexicons = [academic_lexicon, journalist_lexicon, doctor_lexicon, politician_lexicon]
-	author_names = ['academic', 'journalist', 'doctor', 'politician']
+	# load author lexicons containing keywords
+	author_lexicons = readLexicons('tbip/lexicons/')
+	author_names = ['academic', 'doctor', 'journalist', 'politician']
 	author_labels = dict(enumerate(author_names))
 
 	author_info = utils.authorInfo(author_names, author_labels, author_lexicons)
 
-	# labeling account descriptions only by most lexicon keyword matches
+	# labelling account descriptions only by most lexicon keyword matches
 	if args.get_keyword_labels:
 		tweets_to_label = tweets.copy()
 		tweets_with_keyword, n_labelled = utils.getKeywordLabels(tweets_to_label, author_info, equal_prob_flag=False, print_results=15)
 		print('{:.0%} of account descriptions have keywords\n'.format(n_labelled/len(tweets)))
 
-	stop_words = set(stopwords.words('english'))
-	# tweets['description'] = tweets.description.apply(lambda x: utils.deEmojify(x))
-	# tweets['description'] = tweets.description.apply(lambda x: utils.removeStopwords(x, stop_words))
+		# tweets_with_keyword.to_csv('tweets_with_keyword.csv')
+		exportTweetsForBOW(tweets_with_keyword, 'tbip/data/covid-tweets-2020/raw/tweets.csv')
+
+	sys.exit()
 
 	embedder = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
 
 	descriptions = list(tweets.description)
+	# descriptions = list(tweets.description.apply(lambda x: utils.demojize(x)))
 
 	# choose model
 	if args.model == 'cosine_sim':
 		cosine_similarity.cosineSim(descriptions, embedder, author_info, use_lexicon=False)
 	if args.model == 'clustering':
-		clustering.clustering(descriptions, embedder, len(author_names), author_lexicons, author_labels)
+		clustering.clusteringAll(descriptions, embedder, author_info)
 
 

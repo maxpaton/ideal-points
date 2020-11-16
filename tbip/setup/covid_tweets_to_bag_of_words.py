@@ -12,7 +12,6 @@ from scipy import sparse
 import setup_utils as utils
 from sklearn.feature_extraction.text import CountVectorizer
 
-
 project_dir = os.path.abspath(
     os.path.join(os.path.dirname(__file__), os.pardir)) 
 data_dir = os.path.join(project_dir, "data/covid-tweets-2020/raw")
@@ -32,9 +31,12 @@ tweets = np.array(df['text'])
 
 candidate_to_candidate_id = dict(
     [(y.title(), x) for x, y in enumerate(sorted(set(candidates)))])
+print(candidate_to_candidate_id)
 author_indices = np.array(
     [candidate_to_candidate_id[s.title()] for s in candidates])
 author_map = np.array(list(candidate_to_candidate_id.keys()))
+
+print(author_map)
 
 stopwords = set(np.loadtxt(
     os.path.join(project_dir, "setup/stopwords/candidate_tweets.txt"),

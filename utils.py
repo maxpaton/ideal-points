@@ -1,25 +1,21 @@
 import re
 import nltk
-from nltk.stem import WordNetLemmatizer
+# from nltk.stem import WordNetLemmatizer
 import spacy
 import numpy as np
 import pandas as pd
 from sentence_transformers import SentenceTransformer, util
 from sklearn.cluster import KMeans
 import torch
+import emoji
+import time
 
 
-def deEmojify(text):
+def demojize(text):
 	"""
 	Removes emojis and other unicode standards from text
 	"""
-	regrex_pattern = re.compile(pattern = "["
-	u"\U0001F600-\U0001F64F"  # emoticons
-	u"\U0001F300-\U0001F5FF"  # symbols & pictographs
-	u"\U0001F680-\U0001F6FF"  # transport & map symbols
-	u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
-						"]+", flags = re.UNICODE)
-	return regrex_pattern.sub(r'', text)
+	return emoji.demojize(text, remove=True)
 
 
 def removeStopwords(text, stop_words):
@@ -115,22 +111,23 @@ def getKeywordLabels(tweets, author_info, equal_prob_flag=False, print_results=F
 		raise TypeError
 
 	# lemmatize descriptions and lexicons
-	lemmatizer = WordNetLemmatizer()
-	nlp = spacy.load('en_core_web_sm')
+	nlp = spacy.load('en_core_web_sm', disable=['tagger', 'ner', 'parser'])
 
+	print('Started lemmatizing')
+	start = time.time()
 	tweets['description_lemmatized'] = tweets.description.apply(lambda x: lemmatize(x.lower(), nlp))
 	author_info.lexicons_lemmatized = lemmatizeLexicons(author_info.lexicons, nlp)
-
+	print('Took {} seconds'.format(time.time() - start))
+	print('Finished lemmatizing')
 	tweets = label(tweets, author_info, equal_prob_flag)
 
 	# print selection of records to visually inspect which keywords are present from each lexicon
 	if print_results:
 		printResults(print_results, tweets, author_info)
 
-	# print('{} records labelled'.format(len(tweets)))
 	print(tweets)
 
-	return tweets[['description', 'proba', 'label']], len(tweets)
+	return tweets[['id', 'tweet', 'time', 'description', 'proba', 'label']], len(tweets)
 
 
 
