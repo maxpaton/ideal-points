@@ -1,5 +1,7 @@
 from sentence_transformers import util
 import torch
+import numpy as np
+import pandas as pd
 
 
 def getEmbeddingsFromList(embedder, input_list):
@@ -45,7 +47,8 @@ def cosineSim(descriptions, embedder, author_info, use_lexicon=False):
 	b) averaged similarity of all words in each author type lexicon
 	"""
 	print('Encoding descriptions')
-	description_embeddings = getEmbeddingsFromList(embedder, descriptions)
+	# description_embeddings = getEmbeddingsFromList(embedder, descriptions)
+	description_embeddings = np.load('embeddings/description_embeddings_2020-02.npy')
 	print('Finished encoding descriptions')
 
 	print('Encoding keywords')
@@ -56,11 +59,15 @@ def cosineSim(descriptions, embedder, author_info, use_lexicon=False):
 	print('Finished keyword encoding')
 
 	# calculate cosine similarity between description and lexicon keywords
+	scores = []
 	print('Cosine similarities')
 	for idx, description_embedding in enumerate(description_embeddings):
 		score, argmax = getCosineScore(description_embedding, author_embeddings, use_lexicon)
+		scores.append(score.item())
 		label = author_info.labels[argmax]
-		print('Original description: {} \nLabel: {} \nScore: {} \nIndex: {} \n'.format(descriptions[idx], 
-																						label, score, idx))
-	print('Finished encoding')
+		# print('Original description: {} \nLabel: {} \nScore: {} \nIndex: {} \n'.format(descriptions[idx], 
+																						# label, score.item(), idx))																					
+	print('Finished similarities')
+
+	return scores
 

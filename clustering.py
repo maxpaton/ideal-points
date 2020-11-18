@@ -46,7 +46,7 @@ def clusteringAll(descriptions, embedder, author_info, n_clusters=4):
 	# corpus_embeddings = embedder.encode(descriptions, show_progress_bar=True)
 	# np.save('description_embeddings_2020-02_wo_emojis.npy', corpus_embeddings)
 
-	description_embeddings = np.load('description_embeddings_2020-02_wo_emojis.npy')
+	description_embeddings = np.load('embeddings/description_embeddings_2020-02.npy')
 
 	all_lexicons = list(set(chain.from_iterable(author_info.lexicons)))
 	lexicon_embeddings = embedder.encode(all_lexicons)

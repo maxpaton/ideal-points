@@ -6,5 +6,5 @@ Sentence-BERT/
 papers/
 tbip/venv/
 get_tweets*
-embeddings_temp/
+embeddings/
 all_tweets.csv

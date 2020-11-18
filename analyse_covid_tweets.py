@@ -10,6 +10,8 @@ import clustering
 import re
 from nltk.corpus import stopwords
 from sentence_transformers import SentenceTransformer, util
+import matplotlib.pyplot as plt
+import emoji
 
 
 
@@ -20,9 +22,9 @@ def readTweets(base_path, out_path=None):
 	ls = []
 	for path, directory, file in os.walk(base_path):
 	    for name in sorted(file):
-	        # if name.endswith('.csv') and '2020-02' in name:
+	        if name.endswith('.csv') and '2020-02' in name:
 	        # if name.endswith('.csv') and '2020-01' in name:
-	        if name.endswith('.csv'):
+	        # if name.endswith('.csv'):
 	            filename = os.path.join(path, name)
 	            df = pd.read_csv(filename, header=0, index_col=None, engine='python')
 	            ls.append(df)
@@ -44,6 +46,14 @@ def exportTweetsForBOW(tweets, out_path):
 	tweets.columns = ['screen_name', 'id', 'created_at', 'text']
 	tweets.to_csv(out_path, index=False)
 
+def plotSimilarityScores(scores):
+	fig, ax = plt.subplots()
+	ax.hist(scores, bins=20, edgecolor='black')
+	ax.set_xlabel('Cosine similarity scores')
+	ax.set_ylabel('Frequency')
+	ax.yaxis.grid()
+	fig.savefig('cosine_similarity_hist.png', bbox_inches='tight', dpi=400)
+
 
 
 if __name__ == "__main__":
@@ -51,7 +61,7 @@ if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 
 	parser.add_argument('--get_keyword_labels', default=False, help='Get descriptions corresponding to lexicon keyword matches')
-	parser.add_argument('--model', default='clustering', help='Model to use to label account descriptions')
+	parser.add_argument('--model', default='cosine_sim', help='Model to use to label account descriptions')
 
 	args = parser.parse_args()
 
@@ -79,22 +89,24 @@ if __name__ == "__main__":
 	# labelling account descriptions only by most lexicon keyword matches
 	if args.get_keyword_labels:
 		tweets_to_label = tweets.copy()
-		tweets_with_keyword, n_labelled = utils.getKeywordLabels(tweets_to_label, author_info, equal_prob_flag=False, print_results=15)
+		tweets_with_keyword, n_labelled = utils.getKeywordLabels(tweets_to_label, author_info, equal_prob_flag=False, print_results=20)
 		print('{:.0%} of account descriptions have keywords\n'.format(n_labelled/len(tweets)))
+
+		sys.exit()
 
 		# tweets_with_keyword.to_csv('tweets_with_keyword.csv')
 		exportTweetsForBOW(tweets_with_keyword, 'tbip/data/covid-tweets-2020/raw/tweets.csv')
 
-	sys.exit()
 
 	embedder = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
 
 	descriptions = list(tweets.description)
-	# descriptions = list(tweets.description.apply(lambda x: utils.demojize(x)))
-
+	# descriptions = list(tweets.description.apply(lambda x: emoji.demojize(x, remove=True)))
 	# choose model
 	if args.model == 'cosine_sim':
-		cosine_similarity.cosineSim(descriptions, embedder, author_info, use_lexicon=False)
+		scores = cosine_similarity.cosineSim(descriptions, embedder, author_info, use_lexicon=False)
+		plotSimilarityScores(scores)
+
 	if args.model == 'clustering':
 		clustering.clusteringAll(descriptions, embedder, author_info)
 

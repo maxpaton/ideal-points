@@ -1,21 +1,19 @@
 import re
 import nltk
-# from nltk.stem import WordNetLemmatizer
 import spacy
 import numpy as np
 import pandas as pd
 from sentence_transformers import SentenceTransformer, util
-from sklearn.cluster import KMeans
 import torch
-import emoji
 import time
 
 
-def demojize(text):
-	"""
-	Removes emojis and other unicode standards from text
-	"""
-	return emoji.demojize(text, remove=True)
+class authorInfo():
+
+	def __init__(self, names, labels, lexicons):
+		self.names = names
+		self.labels = labels
+		self.lexicons = lexicons
 
 
 def removeStopwords(text, stop_words):
@@ -29,39 +27,14 @@ def removeStopwords(text, stop_words):
 	return ' '.join(removed)
 
 
-def sentTokenize(text, lang_model):
-	doc = lang_model(text)
-	return [sent.string.strip() for sent in doc.sents]
+# def sentTokenize(text, lang_model):
+# 	doc = lang_model(text)
+# 	return [sent.string.strip() for sent in doc.sents]
 
 
-def lemmatize(text, lang_model):
-	doc = lang_model(text)
+def lemmatize(text, nlp):
+	doc = nlp(text)
 	return [token.lemma_ for token in doc]
-
-
-def lemmatizeLexicons(lexicons, lang_model):
-	return [set([lang_model(w)[0].lemma_ for w in author]) for author in lexicons]
-
-
-# def lemmatize(text, lemmatizer):
-# 	parsed = nltk.word_tokenize(text)
-# 	return [lemmatizer.lemmatize(w) for w in parsed]
-
-# def lemmatizeLexicons(lexicons, lemmatizer):
-# 	return [set([lemmatizer.lemmatize(w) for w in author]) for author in lexicons]
-
-
-def getKeywordCounts(tweets, author_info):
-	for author, col_name in zip(author_info.lexicons_lemmatized, author_info.names):
-		tweets[col_name + '_count'] = tweets.description_lemmatized.apply(lambda x: len([w for w in x if w in author]))
-	return tweets
-
-
-def getKeywordProba(tweets):
-	counts = tweets.loc[:, 'academic_count': 'politician_count'].values
-	proba = counts/counts.sum(axis=1).reshape(-1,1)
-	tweets['proba'] = proba.tolist()
-	return tweets
 
 
 def getValidTweets(tweets, equal_prob_flag):
@@ -72,22 +45,26 @@ def getValidTweets(tweets, equal_prob_flag):
 	return tweets[mask]
 
 
-def getLabelsFromCounts(tweets, author_names):
-	count_cols = tweets.loc[:, 'academic_count': 'politician_count']
-	label = count_cols.idxmax(1)
-	label_names = dict(zip(count_cols.columns, author_names))
-	tweets['label'] = label.apply((lambda x: label_names[x]))
-	return tweets
-
-
 def label(tweets, author_info, equal_prob_flag):
-	# get keyword counts and probability vector
-	tweets = getKeywordCounts(tweets, author_info)
-	tweets = getKeywordProba(tweets)
+	# get keyword counts
+	for author, col_name in zip(author_info.lexicons_lemmatized, author_info.names):
+		tweets[col_name + '_count'] = tweets.description_lemmatized.apply(lambda x: len([w for w in x if w in author]))
+
+	# get keyword probability vector based on counts
+	counts = tweets.loc[:, 'academic_count': 'politician_count'].values
+	proba = counts/counts.sum(axis=1).reshape(-1,1)
+	tweets['proba'] = proba.tolist()
+
 	# either descriptions with equal probability or unambiguous keyword matches
 	tweets = getValidTweets(tweets, equal_prob_flag)
+
 	# get label corresponding to max count
-	return getLabelsFromCounts(tweets, author_info.names)
+	count_cols = tweets.loc[:, 'academic_count': 'politician_count']
+	label = count_cols.idxmax(1)
+	label_names = dict(zip(count_cols.columns, author_info.names))
+	tweets['label'] = label.apply((lambda x: label_names[x]))
+
+	return tweets
 
 
 def printResults(print_results, tweets, author_info):
@@ -114,10 +91,8 @@ def getKeywordLabels(tweets, author_info, equal_prob_flag=False, print_results=F
 	nlp = spacy.load('en_core_web_sm', disable=['tagger', 'ner', 'parser'])
 
 	print('Started lemmatizing')
-	start = time.time()
 	tweets['description_lemmatized'] = tweets.description.apply(lambda x: lemmatize(x.lower(), nlp))
-	author_info.lexicons_lemmatized = lemmatizeLexicons(author_info.lexicons, nlp)
-	print('Took {} seconds'.format(time.time() - start))
+	author_info.lexicons_lemmatized = [set([nlp(w)[0].lemma_ for w in author]) for author in author_info.lexicons]
 	print('Finished lemmatizing')
 	tweets = label(tweets, author_info, equal_prob_flag)
 
@@ -126,62 +101,8 @@ def getKeywordLabels(tweets, author_info, equal_prob_flag=False, print_results=F
 		printResults(print_results, tweets, author_info)
 
 	print(tweets)
+	counts = tweets.label.value_counts()
+	print(counts/counts.sum())
 
 	return tweets[['id', 'tweet', 'time', 'description', 'proba', 'label']], len(tweets)
-
-
-
-class authorInfo():
-
-	def __init__(self, names, labels, lexicons):
-		self.names = names
-		self.labels = labels
-		self.lexicons = lexicons
-
-
-
-# class dataEmbedder():
-
-# 	def __init__(self, embedder, author_lexicons, author_labels):
-# 		self.embedder = embedder
-# 		self.author_lexicons = author_lexicons
-# 		self.author_labels = author_labels
-
-# 	def embed_descriptions(self, descriptions):
-
-# 		print('Embedding descriptions')
-# 		description_embeddings = [self.embedder.encode(d, convert_to_tensor=True) for d in descriptions]
-# 		return description_embeddings, 'Finished embedding descriptions'
-
-# 	def embed_lexicons(self, use_lexicon=False):
-# 		# use all words from lexicons
-# 		if use_lexicon:
-# 			queries = [list(author) for author in self.author_lexicons]
-# 			return [self.embedder.encode(author, convert_to_tensor=True) for author in queries]
-# 		# use only author type name
-# 		else:
-# 			queries = self.author_labels.values()
-# 			return self.embedder.encode(queries, convert_to_tensor=True)
-
-
-
-# class clusteringSimilarity():
-
-# 	def __init__(encoder, num_clusters):
-# 		self.encoder = encoder
-# 		self.num_clusters = num_clusters
-
-
-# 	def encode_descriptions():
-
-
-# 	def encode_lexicons():
-
-
-# 	def calculateSimilarity():
-
-
-# 	def print_results():
-
-
 

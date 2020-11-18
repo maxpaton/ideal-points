@@ -39,7 +39,8 @@ author_map = np.array(list(candidate_to_candidate_id.keys()))
 print(author_map)
 
 stopwords = set(np.loadtxt(
-    os.path.join(project_dir, "setup/stopwords/candidate_tweets.txt"),
+    # os.path.join(project_dir, "setup/stopwords/candidate_tweets.txt"),
+    os.path.join(project_dir, "setup/stopwords/covid_tweets.txt"),
     dtype=str,
     delimiter="\n"))
 
