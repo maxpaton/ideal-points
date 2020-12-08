@@ -11,3 +11,4 @@ all_tweets.csv
 for_embeddings/
 set*
 faiss_tutorial.py
+tweets_with_keyword.csv
