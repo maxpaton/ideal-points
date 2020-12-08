@@ -79,10 +79,9 @@ def printResults(print_results, tweets, author_info):
 def getKeywordLabels(tweets, author_info, equal_prob_flag=False, print_results=False):
 	"""
 	Returns account descriptions which contain an unambiguous maximum number of keywords from a single author lexicon
-
-	param equal_prob_flag: returns account descriptions which contain an equal number of keywords from multiple author lexicons, 
-	and so are equally likely to correspond to multiple author types (i.e equal probability for multiple classes)
-	param print_results: prints print_results descriptions to visually inspect each description and its corresponding lexicon keywords
+	+ equal_prob_flag: returns account descriptions which contain an equal number of keywords from multiple author lexicons, 
+		and so are equally likely to correspond to multiple author types (i.e equal probability for multiple classes)
+	+ print_results: prints print_results descriptions to visually inspect each description and its corresponding lexicon keywords
 	"""
 	if not isinstance(print_results, int) or print_results == True:
 		raise TypeError

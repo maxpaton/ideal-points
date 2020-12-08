@@ -22,9 +22,9 @@ def readTweets(base_path, out_path=None):
 	ls = []
 	for path, directory, file in os.walk(base_path):
 	    for name in sorted(file):
-	        if name.endswith('.csv') and '2020-02' in name:
+	        # if name.endswith('.csv') and '2020-02' in name:
 	        # if name.endswith('.csv') and '2020-01' in name:
-	        # if name.endswith('.csv'):
+	        if name.endswith('.csv'):
 	            filename = os.path.join(path, name)
 	            df = pd.read_csv(filename, header=0, index_col=None, engine='python')
 	            ls.append(df)
@@ -41,7 +41,7 @@ def readLexicons(base_path):
 	return author_lexicons
 
 def exportTweetsForBOW(tweets, out_path):
-	tweets.drop(['description', 'proba'], axis=1, inplace=True)
+	# tweets.drop(['description', 'proba'], axis=1, inplace=True)
 	tweets = tweets[['label', 'id', 'time', 'tweet']]
 	tweets.columns = ['screen_name', 'id', 'created_at', 'text']
 	tweets.to_csv(out_path, index=False)
@@ -52,7 +52,7 @@ def plotSimilarityScores(scores):
 	ax.set_xlabel('Cosine similarity scores')
 	ax.set_ylabel('Frequency')
 	ax.yaxis.grid()
-	fig.savefig('cosine_similarity_hist.png', bbox_inches='tight', dpi=400)
+	fig.savefig('plots/cosine_similarity_hist.png', bbox_inches='tight', dpi=400)
 
 
 
@@ -77,7 +77,9 @@ if __name__ == "__main__":
 	tweets = tweets.drop(tweets[tweets.tweet.str.startswith('RT')].index)
 	print('# tweets used (removed N/A + RTs): {}'.format(len(tweets)))
 
-	# tweets.to_csv('all_tweets.csv')
+	# export descriptions to compute embeddings on Colab
+	# tweets_temp = tweets.description
+	# tweets_temp.to_csv('for_embeddings/tweets.csv')
 
 	# load author lexicons containing keywords
 	author_lexicons = readLexicons('tbip/lexicons/')
@@ -92,22 +94,28 @@ if __name__ == "__main__":
 		tweets_with_keyword, n_labelled = utils.getKeywordLabels(tweets_to_label, author_info, equal_prob_flag=False, print_results=20)
 		print('{:.0%} of account descriptions have keywords\n'.format(n_labelled/len(tweets)))
 
-		sys.exit()
-
-		# tweets_with_keyword.to_csv('tweets_with_keyword.csv')
-		exportTweetsForBOW(tweets_with_keyword, 'tbip/data/covid-tweets-2020/raw/tweets.csv')
+		# exportTweetsForBOW(tweets_with_keyword, 'tbip/data/covid-tweets-2020/raw/tweets.csv')
 
 
 	embedder = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
 
-	descriptions = list(tweets.description)
 	# descriptions = list(tweets.description.apply(lambda x: emoji.demojize(x, remove=True)))
 	# choose model
 	if args.model == 'cosine_sim':
-		scores = cosine_similarity.cosineSim(descriptions, embedder, author_info, use_lexicon=False)
-		plotSimilarityScores(scores)
+		tweets = cosine_similarity.cosineSim(tweets, embedder, author_info, use_lexicon=False)
+		# plotSimilarityScores(scores_histogram)
 
 	if args.model == 'clustering':
-		clustering.clusteringAll(descriptions, embedder, author_info)
+		# change so outputs tweets df
+		scores = clustering.clusteringAll(tweets, embedder, author_info)
+
+
+	# tweets = cosine_similarity.cosineSimSecondFaiss(tweets, author_info)
+	tweets = cosine_similarity.cosineSimSecond(tweets, author_info)
+	print(tweets)
+	print(tweets.label.value_counts())
+	exportTweetsForBOW(tweets, 'tbip/data/covid-tweets-2020/raw/tweets_all.csv')
+
+
 
 

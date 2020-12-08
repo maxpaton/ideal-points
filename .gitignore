@@ -8,3 +8,6 @@ tbip/venv/
 get_tweets*
 embeddings/
 all_tweets.csv
+for_embeddings/
+set*
+faiss_sim.py

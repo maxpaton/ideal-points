@@ -8,8 +8,9 @@ def getEmbeddingsFromList(embedder, input_list):
 	return [embedder.encode(d, show_progress_bar=True) for d in input_list]
 
 
-def clusteringOld(descriptions, embedder, author_info, n_clusters=4):
+def clusteringOld(tweets, embedder, author_info, n_clusters=4):
 
+	
 	print('Encoding descriptions')
 	description_embeddings = getEmbeddingsFromList(descriptions)
 	print('Finished encoding descriptions')
@@ -40,8 +41,9 @@ def clusteringOld(descriptions, embedder, author_info, n_clusters=4):
 		print('Original description: {} \nPrediction: {} \nScore: {} \nIndex: {} \n'.format(descriptions[idx], 
 																					author_counts, label, idx))
 
-def clusteringAll(descriptions, embedder, author_info, n_clusters=4):
+def clusteringAll(tweets, embedder, author_info, n_clusters=4):
 
+	# descriptions = list(tweets.description)
 	# description_embeddings = getEmbeddingsFromList(descriptions)
 	# corpus_embeddings = embedder.encode(descriptions, show_progress_bar=True)
 	# np.save('description_embeddings_2020-02_wo_emojis.npy', corpus_embeddings)
@@ -76,8 +78,9 @@ def clusteringAll(descriptions, embedder, author_info, n_clusters=4):
 		print(dist, cluster_assignment[i], '\n')
 
 
-def clustering(descriptions, embedder, author_info, n_clusters=4):
+def clustering(tweets, embedder, author_info, n_clusters=4):
 
+	descriptions = list(tweets.description)
 	print('Encoding descriptions')
 	# description_embeddings = getEmbeddingsFromList(descriptions)
 	corpus_embeddings = embedder.encode(descriptions)
