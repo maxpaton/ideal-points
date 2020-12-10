@@ -3,7 +3,7 @@ import torch
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
-import faiss_ideal_points
+import faiss_similarity
 
 
 def getEmbeddingsFromList(embedder, input_list):
@@ -103,7 +103,7 @@ def cosineSimSecondFaiss(tweets, author_info):
 
 	assert description_embeddings.shape[0] == len(set_a) + len(set_b)
 
-	distances, indices = faiss_ideal_points.computeFaissSim(set_a, set_b)
+	distances, indices = faiss_similarity.computeFaissSim(set_a, set_b)
 
 	set_a_df = tweets[tweets.label.notnull()]
 	set_b_df = tweets[tweets.label.isnull()]
@@ -143,7 +143,8 @@ def cosineSimSecond(tweets, author_info):
 	# scores_histogram = []
 	set_b_df['second_cos_label'] = np.nan
 	set_b_df['second_cos_score'] = np.nan
-	thresholds = dict(zip(author_info.names, [0.3, 0.35, 0.3, 0.25]))
+	thresholds = dict(zip(author_info.names, [0.3, 0.35, 0.325, 0.3]))
+	# thresholds = dict(zip(author_info.names, [0.3, 0.35, 0.35, 0.25]))
 	print(len(set_a))
 	print(len(set_b))
 	print('Cosine similarities')

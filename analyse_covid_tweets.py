@@ -114,7 +114,7 @@ if __name__ == "__main__":
 	tweets = cosine_similarity.cosineSimSecond(tweets, author_info)
 	print(tweets)
 	print(tweets.label.value_counts())
-	exportTweetsForBOW(tweets, 'tbip/data/covid-tweets-2020/raw/tweets_all.csv')
+	exportTweetsForBOW(tweets, 'tbip/data/covid-tweets-2020/raw/tweets.csv')
 
 
 
