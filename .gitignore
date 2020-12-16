@@ -12,3 +12,7 @@ for_embeddings/
 set*
 faiss_tutorial.py
 tweets_with_keyword.csv
+tutorials/
+indexes/
+collections/
+docs_jsonl/

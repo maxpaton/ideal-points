@@ -12,6 +12,7 @@ from nltk.corpus import stopwords
 from sentence_transformers import SentenceTransformer, util
 import matplotlib.pyplot as plt
 import emoji
+import BM25_similarity
 
 
 
@@ -22,9 +23,9 @@ def readTweets(base_path, out_path=None):
 	ls = []
 	for path, directory, file in os.walk(base_path):
 	    for name in sorted(file):
-	        # if name.endswith('.csv') and '2020-02' in name:
+	        if name.endswith('.csv') and '2020-02' in name:
 	        # if name.endswith('.csv') and '2020-01' in name:
-	        if name.endswith('.csv'):
+	        # if name.endswith('.csv'):
 	            filename = os.path.join(path, name)
 	            df = pd.read_csv(filename, header=0, index_col=None, engine='python')
 	            ls.append(df)
@@ -45,6 +46,11 @@ def exportTweetsForBOW(tweets, out_path):
 	tweets = tweets[['label', 'id', 'time', 'tweet']]
 	tweets.columns = ['screen_name', 'id', 'created_at', 'text']
 	tweets.to_csv(out_path, index=False)
+
+def descriptionsToJSON(df):
+	df.columns = ['id', 'contents']
+	df.to_json('docs_jsonl/documents.jsonl', orient='records', lines=True)
+
 
 def plotSimilarityScores(scores):
 	fig, ax = plt.subplots()
@@ -81,6 +87,10 @@ if __name__ == "__main__":
 	# tweets_temp = tweets.description
 	# tweets_temp.to_csv('for_embeddings/tweets.csv')
 
+	# descriptionsToJSON(tweets[['id', 'description']])
+	print(tweets.loc[tweets['id']==1223774964374888448])
+	sys.exit()
+
 	# load author lexicons containing keywords
 	author_lexicons = readLexicons('tbip/lexicons/')
 	author_names = ['academic', 'doctor', 'journalist', 'politician']
@@ -95,6 +105,8 @@ if __name__ == "__main__":
 		print('{:.0%} of account descriptions have keywords\n'.format(n_labelled/len(tweets)))
 
 		# exportTweetsForBOW(tweets_with_keyword, 'tbip/data/covid-tweets-2020/raw/tweets.csv')
+
+	result = BM25_similarity.BM25Sim(tweets, author_info)
 
 
 	embedder = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
