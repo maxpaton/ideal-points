@@ -3,74 +3,51 @@ import torch
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
-from BM25 import BM25
-from nltk.corpus import stopwords
+from pyserini.search import SimpleSearcher
 
 
 
-def BM25Sim(tweets, author_info):
+def bm25Sim(tweets, author_info):
 	"""
 	"""
+	# parameters
+	fb_terms = 2
+	fb_docs = 2
+	original_query_weight = 1.0
+	k = 50000
 
+	searcher = SimpleSearcher('indexes/docs_jsonl')
+	# searcher.set_bm25(0.3, 0.7)
+	searcher.set_rm3(fb_terms, fb_docs, original_query_weight)	
 
-	corpus = list(tweets.description)
+	tweets['label'] = np.nan
+	tweets['label_score'] = np.nan
 
-	stop_words = set(stopwords.words('english'))
+	for author in author_info.names:
+		hits = searcher.search(author, k)
+		print(len(hits))
+		tweet_ids = [int(hit.docid) for hit in hits]
+		scores = [hit.score for hit in hits]
+		mask = tweets.id.isin(tweet_ids)
+		tweets.loc[mask, 'label'] = author_info.names[2]
+		tweets.loc[mask, 'label_score'] = scores
 
-	texts = [
-    [word for word in document.lower().split() if word not in stop_words]
-    for document in corpus
-	]
+	return tweets
 
-	# build a word count dictionary so we can remove words that appear only once
-	word_count_dict = {}
-	for text in texts:
-	    for token in text:
-	        word_count = word_count_dict.get(token, 0) + 1
-	        word_count_dict[token] = word_count
-
-	texts = [[token for token in text if word_count_dict[token] > 1] for text in texts]
-
-	# query our corpus to see which document is more relevant
-	query = 'politician'
-	query = [word for word in query.lower().split() if word not in stop_words]
-
-	bm25 = BM25()
-	bm25.fit(texts)
-	scores = bm25.search(query)
-
-	for score, doc in zip(scores, corpus):
-	    score = round(score, 3)
-	    print(str(score) + '\t' + doc)
-
-
-
-
-
-
-	# if use_lexicon:
-	# 	author_embeddings = getLexiconEmbeddings(embedder, author_info.lexicons)
-	# else:
-	# 	author_embeddings = getNameEmbeddings(embedder, author_info.names)
-
-	# # calculate cosine similarity between description and lexicon keywords
-	# # get max scores for histogram
-	# # scores_histogram = []
 	# tweets['label'] = np.nan
 	# tweets['label_score'] = np.nan
-	# thresholds = dict(zip(author_info.names, [0.45, 0.45, 0.45, 0.35]))
-	# print('Cosine similarities')
-	# for idx, description_embedding in enumerate(description_embeddings):
-	# 	scores = computeCosineScore(description_embedding, author_embeddings, use_lexicon)
-	# 	scores_dict = dict(zip(author_info.names, scores))
-	# 	label = max(scores_dict, key=scores_dict.get)
-	# 	# scores_histogram.append(scores_dict[label])
-	# 	if scores_dict[label] > thresholds[label]:
-	# 		tweets['label'].iloc[idx] = label
-	# 		tweets['label_score'].iloc[idx] = scores_dict[label]
-	# 		# print(scores_dict)
-	# 		# print('Original description: {} \nLabel: {} \nScore: {} \nIndex: {} \n'.format(tweets.iloc[idx].description,
-	# 																					# label, scores_dict[label], idx))
-	# print('Finished similarities')
+
+	# searcher = SimpleSearcher('indexes/docs_jsonl')
+	# # searcher.set_bm25(0.3, 0.7)
+	# searcher.set_rm3(fb_terms, fb_docs, original_query_weight)
+
+	# for author in author_info.names:
+	# 	hits = searcher.search(author, k)
+	# 	print(len(hits))
+	# 	for i in range(len(hits)):
+	# 		tweet_id = int(hits[i].docid)
+	# 		score = hits[i].score
+	# 		tweets['label'].loc[tweets['id'] == tweet_id] = author
+	# 		tweets['label_score'].loc[tweets['id'] == tweet_id] = score
 
 	# return tweets

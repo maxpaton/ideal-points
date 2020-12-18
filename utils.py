@@ -16,6 +16,15 @@ class authorInfo():
 		self.lexicons = lexicons
 
 
+def plotSimilarityScores(scores):
+	fig, ax = plt.subplots()
+	ax.hist(scores, bins=20, edgecolor='black')
+	ax.set_xlabel('Cosine similarity scores')
+	ax.set_ylabel('Frequency')
+	ax.yaxis.grid()
+	fig.savefig('plots/cosine_similarity_hist.png', bbox_inches='tight', dpi=400)
+
+
 def removeStopwords(text, stop_words):
 	"""
 	Removes stopwords, non-alphanumeric characters and lowercases text
