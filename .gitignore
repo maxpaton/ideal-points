@@ -14,5 +14,5 @@ tweets_with_keyword.csv
 tutorials/
 indexes/
 collections/
-docs_jsonl/
+docs_jsonl*/
 search_test.py

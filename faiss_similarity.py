@@ -34,6 +34,7 @@ def computeFaissSim(db_vectors, query_vectors):
 	distances, indices = index.search(query_vectors, k)
 	# print(f'distances: \n{distances}')
 	# print(f'indices: \n{indices}')
+	print("Finished Faiss search")
 
 	return distances, indices
 

@@ -13,6 +13,7 @@ from sentence_transformers import SentenceTransformer, util
 import matplotlib.pyplot as plt
 import emoji
 import bm25_similarity
+import time
 
 
 
@@ -77,7 +78,9 @@ if __name__ == "__main__":
 
 	# export descriptions to compute embeddings on Colab
 	# tweets_temp = tweets.description
-	# tweets_temp.to_csv('for_embeddings/tweets.csv')
+	# tweets_temp.to_csv('for_embeddings/tweets_for_embeddings.csv')
+	# print('Tweets for embeddings saved')
+	# time.sleep(555)
 
 	# load author lexicons containing keywords
 	author_lexicons = readLexicons('tbip/lexicons/')
@@ -99,8 +102,8 @@ if __name__ == "__main__":
 	# choose model
 	if args.model == 'cosine_sim':
 		tweets = cosine_similarity.cosineSim(tweets, embedder, author_info, use_lexicon=False)
-		# tweets = cosine_similarity.cosineSimSecondFaiss(tweets, author_info)
-		tweets = cosine_similarity.cosineSimSecond(tweets, author_info)
+		tweets = cosine_similarity.cosineSimSecondFaiss(tweets, author_info)
+		# tweets = cosine_similarity.cosineSimSecond(tweets, author_info)
 		print(tweets)
 		print(tweets.label.value_counts())
 		# utils.plotSimilarityScores(scores_histogram)
@@ -115,7 +118,7 @@ if __name__ == "__main__":
 		tweets.dropna(inplace=True)
 		print(len(tweets))
 	
-	# exportTweetsForBOW(tweets, 'tbip/data/covid-tweets-2020/raw/tweets_bm25.csv')
+	# exportTweetsForBOW(tweets, 'tbip/data/covid-tweets-2020/raw/tweets_' + args.model + '.csv')
 
 
 

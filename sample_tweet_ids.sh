@@ -2,7 +2,8 @@
 
 base=data/COVID-19-TweetIDs
 root=$(dirname $base)
-FILES=${base}/2020-0[5,6]/*
+#FILES=${base}/2020-0[5,6]/*
+FILES=${base}/2020-10/*
 for f in $FILES
 do
 	echo $f

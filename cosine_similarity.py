@@ -112,10 +112,16 @@ def cosineSimSecondFaiss(tweets, author_info):
 
 	set_b_df['second_cos_score'] = distances[:,0]
 	set_b_df['second_cos_index'] = indices[:,0]
-	set_b_df['second_cos_label'] = set_b_df.second_cos_index.apply(lambda x: getSecondLabel(x, author_indices, author_info))
+	set_b_df['second_cos_label'] = set_b_df.second_cos_index.apply(lambda x: getSecondLabelFaiss(x, author_indices, author_info))
 
 	tweets = set_a_df.append(set_b_df.drop(['second_cos_index'], axis=1)).sort_index()
-	tweets = tweets.loc[(tweets['second_cos_score'] < 160) | (tweets['label_score'].notnull())]
+	tweets = tweets.loc[(tweets['second_cos_score'] < 150) | (tweets['label_score'].notnull())]
+
+	# clean
+	tweets['label_score'].fillna(tweets['second_cos_score'], inplace=True)
+	tweets['label'].fillna(tweets['second_cos_label'], inplace=True)
+	tweets.dropna(subset=['label'], inplace=True)
+	tweets.drop(labels=['second_cos_label', 'second_cos_score'], axis=1, inplace=True)
 
 	return tweets
 

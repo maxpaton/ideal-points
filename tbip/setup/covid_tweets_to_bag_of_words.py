@@ -17,7 +17,7 @@ project_dir = os.path.abspath(
 data_dir = os.path.join(project_dir, "data/covid-tweets-2020/raw")
 save_dir = os.path.join(project_dir, "data/covid-tweets-2020/clean")
 
-df = pd.read_csv(os.path.join(data_dir, "tweets_bm25.csv"))
+df = pd.read_csv(os.path.join(data_dir, "tweets_cosine_sim_masks.csv"))
 
 # Don't include tweets before 2019.
 # df = df[pd.to_datetime(df['created_at']) > pd.to_datetime('2019')]

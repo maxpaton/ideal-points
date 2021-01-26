@@ -1,0 +1,1121 @@
+Step:   0 ELBO: -968063.625 (0.436 sec/step)
+Step: 100 ELBO: -290693.844 (0.015 sec/step)
+Step: 200 ELBO: -269205.906 (0.013 sec/step)
+Step: 300 ELBO: -227082.312 (0.012 sec/step)
+Step: 400 ELBO: -216669.000 (0.012 sec/step)
+Step: 500 ELBO: -214024.500 (0.011 sec/step)
+Step: 600 ELBO: -209218.438 (0.011 sec/step)
+Step: 700 ELBO: -209818.281 (0.011 sec/step)
+Step: 800 ELBO: -207951.281 (0.011 sec/step)
+Step: 900 ELBO: -205954.781 (0.011 sec/step)
+Step: 1000 ELBO: -205643.531 (0.011 sec/step)
+Step: 1100 ELBO: -204163.750 (0.011 sec/step)
+Step: 1200 ELBO: -206019.750 (0.011 sec/step)
+Step: 1300 ELBO: -202868.328 (0.011 sec/step)
+Step: 1400 ELBO: -208740.953 (0.011 sec/step)
+Step: 1500 ELBO: -207101.156 (0.011 sec/step)
+Step: 1600 ELBO: -202125.250 (0.011 sec/step)
+Step: 1700 ELBO: -201359.719 (0.011 sec/step)
+Step: 1800 ELBO: -203240.812 (0.011 sec/step)
+Step: 1900 ELBO: -199690.078 (0.011 sec/step)
+Step: 2000 ELBO: -203433.203 (0.011 sec/step)
+Step: 2100 ELBO: -201199.750 (0.011 sec/step)
+Step: 2200 ELBO: -202749.906 (0.011 sec/step)
+Step: 2300 ELBO: -199182.406 (0.011 sec/step)
+Step: 2400 ELBO: -201319.906 (0.011 sec/step)
+['Negative 0: wearing, protect, everyone, #wearamask, got, see, others, business, realdonaldtrump, show'
+ 'Neutral  0: wearing, protect, everyone, #wearamask, got, see, others, business, realdonaldtrump, said'
+ 'Positive 0: wearing, everyone, protect, #wearamask, see, others, got, business, realdonaldtrump, face covering'
+ '=========='
+ 'Negative 1: face mask, still, new, without, public, virus, really, shops, help, mandatory'
+ 'Neutral  1: face mask, still, new, without, really, public, shops, virus, mandatory, fines'
+ 'Positive 1: face mask, still, new, really, mandatory, public, shops, without, virus, use'
+ '=========='
+ 'Negative 2: people, health, right, lockdown, thing, time, think, even, believe, really'
+ 'Neutral  2: people, right, health, lockdown, think, thing, really, time, even, believe'
+ 'Positive 2: people, right, health, think, really, lockdown, around, thing, even, time'
+ '=========='
+ 'Negative 3: #covid, #coronavirus, going, #masks, hands, face, wash, #mask, think, asked'
+ 'Neutral  3: #covid, going, #coronavirus, #masks, hands, wash, #mask, keep, think, put'
+ 'Positive 3: #covid, going, #coronavirus, #masks, hands, wash, making, keep, #mask, stop'
+ '=========='
+ 'Negative 4: face masks, first, getting, person, state, dr, video, says, even, new'
+ 'Neutral  4: face masks, first, getting, person, state, video, dr, says, new, advice'
+ 'Positive 4: face masks, getting, first, person, new, state, video, says, dr, advice'
+ '=========='
+ 'Negative 5: need, go, get, one, want, know, please, let, make, day'
+ 'Neutral  5: need, go, one, get, want, know, make, please, let, work'
+ 'Positive 5: need, one, go, get, want, know, make, work, home, say'
+ '=========='
+ 'Negative 6: covid, spread, protect, may, work, ppe, prevent, help, medicine, new england journal'
+ 'Neutral  6: covid, spread, protect, may, work, help, ppe, medicine, new england journal, via'
+ 'Positive 6: covid, spread, protect, may, work, help, medicine, ppe, via, see'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, yes, would, like, refusing, required, mask mandate, damn mask'
+ 'Neutral  7: wear masks, public, pandemic, yes, would, required, refusing, like, damn mask, mask mandate'
+ 'Positive 7: wear masks, public, pandemic, would, yes, required, refusing, damn mask, cdc, like'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, like, stop, anti mask, says, times, hospital, news'
+ 'Neutral  8: coronavirus, trump, via, like, stop, says, anti mask, hospital, times, news'
+ 'Positive 8: coronavirus, trump, via, like, says, stop, anti mask, hospital, times, news'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, safe, mask wearing, see, worn, family, already'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, mask wearing, safe, see, worn, family, safety'
+ 'Positive 9: social distancing, wearing masks, good, everyone, mask wearing, safe, see, family, safety, worn'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Journalist, Academic, Doctor, Politician
+ ==================== 
+Step: 2500 ELBO: -202989.562 (0.011 sec/step)
+Step: 2600 ELBO: -199848.516 (0.011 sec/step)
+Step: 2700 ELBO: -199259.781 (0.011 sec/step)
+Step: 2800 ELBO: -201291.688 (0.011 sec/step)
+Step: 2900 ELBO: -198966.031 (0.011 sec/step)
+Step: 3000 ELBO: -198398.375 (0.011 sec/step)
+Step: 3100 ELBO: -200457.469 (0.011 sec/step)
+Step: 3200 ELBO: -200094.375 (0.011 sec/step)
+Step: 3300 ELBO: -200024.594 (0.011 sec/step)
+Step: 3400 ELBO: -199457.219 (0.011 sec/step)
+Step: 3500 ELBO: -201336.859 (0.010 sec/step)
+Step: 3600 ELBO: -218331.438 (0.010 sec/step)
+Step: 3700 ELBO: -204325.156 (0.010 sec/step)
+Step: 3800 ELBO: -200761.125 (0.010 sec/step)
+Step: 3900 ELBO: -196943.344 (0.010 sec/step)
+Step: 4000 ELBO: -198809.953 (0.010 sec/step)
+Step: 4100 ELBO: -198936.562 (0.010 sec/step)
+Step: 4200 ELBO: -198428.672 (0.010 sec/step)
+Step: 4300 ELBO: -197772.844 (0.010 sec/step)
+Step: 4400 ELBO: -198540.047 (0.010 sec/step)
+Step: 4500 ELBO: -204644.578 (0.010 sec/step)
+Step: 4600 ELBO: -195614.219 (0.010 sec/step)
+Step: 4700 ELBO: -196465.219 (0.010 sec/step)
+Step: 4800 ELBO: -198559.266 (0.010 sec/step)
+Step: 4900 ELBO: -196544.375 (0.010 sec/step)
+['Negative 0: wearing, protect, got, #wearamask, everyone, see, today, nobody, others, business'
+ 'Neutral  0: wearing, protect, #wearamask, got, everyone, see, today, others, show, business'
+ 'Positive 0: wearing, #wearamask, protect, got, everyone, see, others, today, show, business'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, without, mandatory, shops, england, really, fines'
+ 'Neutral  1: face mask, still, new, virus, without, mandatory, really, shops, mask wearing, refused'
+ 'Positive 1: face mask, still, new, virus, mandatory, without, really, mask wearing, refused, july'
+ '=========='
+ 'Negative 2: people, right, health, lockdown, think, believe, thing, time, even, really'
+ 'Neutral  2: people, right, health, lockdown, think, time, thing, believe, really, around'
+ 'Positive 2: people, health, right, think, time, lockdown, thing, around, even, wearing mask'
+ '=========='
+ 'Negative 3: #covid, #coronavirus, going, hands, asked, #masks, face, keep, wash, put'
+ 'Neutral  3: #covid, going, #coronavirus, hands, #masks, wash, face, asked, keep, #mask'
+ 'Positive 3: #covid, going, #coronavirus, hands, #masks, wash, face, asked, keep, #mask'
+ '=========='
+ 'Negative 4: face masks, person, getting, first, state, says, dr, advice, video, study'
+ 'Neutral  4: face masks, person, getting, first, state, dr, says, video, advice, even'
+ 'Positive 4: face masks, person, getting, first, dr, state, says, video, even, advice'
+ '=========='
+ 'Negative 5: need, one, go, get, know, want, make, home, let, stay'
+ 'Neutral  5: need, one, get, go, want, know, please, make, let, stay'
+ 'Positive 5: need, get, one, go, want, know, please, let, say, make'
+ '=========='
+ 'Negative 6: covid, spread, protect, may, help, work, ppe, data, prevent, air'
+ 'Neutral  6: covid, spread, protect, may, work, help, ppe, prevent, medicine, data'
+ 'Positive 6: covid, spread, protect, may, work, help, ppe, medicine, prevent, new england journal'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, yes, would, required, damn mask, refusing, mask mandate, cdc'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, required, refusing, damn mask, cdc, like'
+ 'Positive 7: wear masks, public, pandemic, would, yes, required, refusing, damn mask, like, cdc'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, like, stop, says, times, hospital, anti mask, china'
+ 'Neutral  8: coronavirus, trump, via, stop, like, says, anti mask, hospital, times, could'
+ 'Positive 8: coronavirus, trump, via, stop, like, anti mask, says, hospital, china, could'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, mask wearing, safe, worn, see, family, mean'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, safe, mask wearing, see, worn, safety, schools'
+ 'Positive 9: social distancing, wearing masks, good, everyone, safe, mask wearing, see, worn, safety, schools'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Journalist, Academic, Doctor, Politician
+ ==================== 
+Step: 5000 ELBO: -196734.844 (0.010 sec/step)
+Step: 5100 ELBO: -196875.406 (0.010 sec/step)
+Step: 5200 ELBO: -340190.875 (0.010 sec/step)
+Step: 5300 ELBO: -196316.953 (0.010 sec/step)
+Step: 5400 ELBO: -200077.828 (0.010 sec/step)
+Step: 5500 ELBO: -198929.328 (0.010 sec/step)
+Step: 5600 ELBO: -194409.609 (0.010 sec/step)
+Step: 5700 ELBO: -199193.156 (0.010 sec/step)
+Step: 5800 ELBO: -197033.250 (0.010 sec/step)
+Step: 5900 ELBO: -195087.500 (0.010 sec/step)
+Step: 6000 ELBO: -195250.734 (0.010 sec/step)
+Step: 6100 ELBO: -199242.906 (0.010 sec/step)
+Step: 6200 ELBO: -196140.250 (0.010 sec/step)
+Step: 6300 ELBO: -195224.531 (0.010 sec/step)
+Step: 6400 ELBO: -196484.438 (0.010 sec/step)
+Step: 6500 ELBO: -197898.625 (0.010 sec/step)
+Step: 6600 ELBO: -193031.891 (0.010 sec/step)
+Step: 6700 ELBO: -195349.656 (0.010 sec/step)
+Step: 6800 ELBO: -199461.156 (0.010 sec/step)
+Step: 6900 ELBO: -194929.750 (0.010 sec/step)
+Step: 7000 ELBO: -194093.125 (0.010 sec/step)
+Step: 7100 ELBO: -194373.391 (0.010 sec/step)
+Step: 7200 ELBO: -198652.516 (0.010 sec/step)
+Step: 7300 ELBO: -198412.875 (0.010 sec/step)
+Step: 7400 ELBO: -197370.312 (0.010 sec/step)
+['Negative 0: wearing, protect, #wearamask, see, everyone, got, today, business, others, realdonaldtrump'
+ 'Neutral  0: wearing, protect, #wearamask, see, got, today, everyone, business, others, show'
+ 'Positive 0: wearing, protect, #wearamask, see, got, today, someone, show, everyone, business'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, without, really, mandatory, shops, england, next'
+ 'Neutral  1: face mask, still, new, virus, without, mandatory, really, shops, refused, mask wearing'
+ 'Positive 1: face mask, still, new, virus, mandatory, without, really, shops, mask wearing, refused'
+ '=========='
+ 'Negative 2: people, right, health, lockdown, think, thing, time, even, believe, around'
+ 'Neutral  2: people, right, health, lockdown, think, time, thing, around, really, believe'
+ 'Positive 2: people, right, health, lockdown, think, time, really, thing, around, wearing mask'
+ '=========='
+ 'Negative 3: #covid, going, #coronavirus, hands, face, asked, #masks, wash, keep, put'
+ 'Neutral  3: #covid, #coronavirus, going, hands, face, #masks, keep, wash, asked, #mask'
+ 'Positive 3: #covid, #coronavirus, face, going, hands, keep, wash, #masks, asked, #mask'
+ '=========='
+ 'Negative 4: face masks, person, getting, state, says, first, dr, advice, video, even'
+ 'Neutral  4: face masks, person, getting, first, state, dr, says, video, advice, even'
+ 'Positive 4: face masks, person, getting, first, dr, state, says, video, advice, new'
+ '=========='
+ 'Negative 5: need, one, get, go, want, make, know, please, let, say'
+ 'Neutral  5: need, one, get, go, want, know, make, let, please, home'
+ 'Positive 5: need, get, one, go, want, know, let, home, please, day'
+ '=========='
+ 'Negative 6: covid, spread, may, help, protect, work, ppe, prevent, data, medicine'
+ 'Neutral  6: covid, spread, may, protect, help, work, ppe, prevent, data, medicine'
+ 'Positive 6: covid, spread, protect, may, work, help, ppe, data, prevent, medicine'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, would, yes, required, refusing, damn mask, cdc, like'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, required, damn mask, refusing, cdc, mask mandate'
+ 'Positive 7: wear masks, public, pandemic, would, yes, damn mask, required, refusing, cdc, mask mandate'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, stop, like, china, hospital, could, anti mask, times'
+ 'Neutral  8: coronavirus, trump, via, stop, like, china, anti mask, hospital, says, could'
+ 'Positive 8: coronavirus, trump, via, stop, like, china, anti mask, says, could, hospital'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, worn, safe, mask wearing, schools, family, see'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, safe, worn, mask wearing, schools, see, safety'
+ 'Positive 9: social distancing, wearing masks, good, everyone, safe, worn, mask wearing, see, schools, staff'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Journalist, Politician, Doctor, Academic
+ ==================== 
+Step: 7500 ELBO: -197415.828 (0.010 sec/step)
+Step: 7600 ELBO: -192846.000 (0.010 sec/step)
+Step: 7700 ELBO: -195268.438 (0.010 sec/step)
+Step: 7800 ELBO: -196024.172 (0.010 sec/step)
+Step: 7900 ELBO: -194841.312 (0.010 sec/step)
+Step: 8000 ELBO: -192850.359 (0.010 sec/step)
+Step: 8100 ELBO: -194959.594 (0.010 sec/step)
+Step: 8200 ELBO: -193359.891 (0.010 sec/step)
+Step: 8300 ELBO: -200467.719 (0.010 sec/step)
+Step: 8400 ELBO: -194184.984 (0.010 sec/step)
+Step: 8500 ELBO: -196612.375 (0.010 sec/step)
+Step: 8600 ELBO: -192680.062 (0.010 sec/step)
+Step: 8700 ELBO: -194186.406 (0.010 sec/step)
+Step: 8800 ELBO: -195065.688 (0.010 sec/step)
+Step: 8900 ELBO: -194146.594 (0.010 sec/step)
+Step: 9000 ELBO: -193241.547 (0.010 sec/step)
+Step: 9100 ELBO: -194292.688 (0.010 sec/step)
+Step: 9200 ELBO: -193699.922 (0.010 sec/step)
+Step: 9300 ELBO: -190476.875 (0.010 sec/step)
+Step: 9400 ELBO: -195256.281 (0.010 sec/step)
+Step: 9500 ELBO: -196099.750 (0.010 sec/step)
+Step: 9600 ELBO: -192149.844 (0.010 sec/step)
+Step: 9700 ELBO: -201704.344 (0.010 sec/step)
+Step: 9800 ELBO: -193474.312 (0.010 sec/step)
+Step: 9900 ELBO: -191624.188 (0.010 sec/step)
+['Negative 0: wearing, #wearamask, protect, today, got, see, everyone, business, someone, anyone'
+ 'Neutral  0: wearing, #wearamask, protect, see, got, today, everyone, business, someone, realdonaldtrump'
+ 'Positive 0: wearing, #wearamask, protect, see, got, everyone, today, realdonaldtrump, show, business'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, without, mandatory, shops, really, july, refused'
+ 'Neutral  1: face mask, still, new, virus, without, mandatory, really, shops, refused, july'
+ 'Positive 1: face mask, still, new, virus, without, mandatory, really, shops, refused, next'
+ '=========='
+ 'Negative 2: people, right, health, time, lockdown, think, even, said, believe, around'
+ 'Neutral  2: people, right, health, lockdown, think, time, thing, really, around, believe'
+ 'Positive 2: people, right, health, lockdown, think, thing, time, really, around, wearing mask'
+ '=========='
+ 'Negative 3: #covid, #coronavirus, going, face, hands, #masks, asked, wash, keep, #mask'
+ 'Neutral  3: #covid, #coronavirus, going, face, hands, #masks, keep, asked, wash, #mask'
+ 'Positive 3: #covid, going, #coronavirus, hands, keep, #masks, face, wash, asked, making'
+ '=========='
+ 'Negative 4: face masks, person, getting, first, state, dr, says, advice, even, video'
+ 'Neutral  4: face masks, person, getting, first, state, dr, says, advice, video, even'
+ 'Positive 4: face masks, person, first, getting, state, dr, says, video, advice, covid cases'
+ '=========='
+ 'Negative 5: need, one, get, go, know, want, make, please, day, let'
+ 'Neutral  5: need, one, go, get, want, know, let, please, make, day'
+ 'Positive 5: need, go, one, get, want, know, let, please, make, say'
+ '=========='
+ 'Negative 6: covid, spread, protect, may, help, ppe, work, prevent, data, medicine'
+ 'Neutral  6: covid, spread, may, protect, help, work, ppe, prevent, data, medicine'
+ 'Positive 6: covid, spread, may, help, protect, work, ppe, prevent, medicine, data'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, would, yes, required, damn mask, refusing, cdc, mask mandate'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, damn mask, required, refusing, cdc, mask mandate'
+ 'Positive 7: wear masks, pandemic, public, would, yes, damn mask, cdc, required, refusing, order'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, like, stop, china, says, could, hospital, georgia'
+ 'Neutral  8: coronavirus, trump, via, stop, like, china, says, hospital, anti mask, times'
+ 'Positive 8: coronavirus, trump, via, stop, like, china, says, anti mask, hospital, times'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, safe, worn, schools, mask wearing, family, see'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, safe, schools, mask wearing, see, safety'
+ 'Positive 9: social distancing, wearing masks, good, everyone, worn, schools, safe, mask wearing, see, safety'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Doctor, Academic, Politician, Journalist
+ ==================== 
+Step: 10000 ELBO: -191958.578 (0.010 sec/step)
+Step: 10100 ELBO: -192677.594 (0.010 sec/step)
+Step: 10200 ELBO: -192795.531 (0.010 sec/step)
+Step: 10300 ELBO: -189914.375 (0.010 sec/step)
+Step: 10400 ELBO: -191685.250 (0.010 sec/step)
+Step: 10500 ELBO: -194214.906 (0.010 sec/step)
+Step: 10600 ELBO: -191882.719 (0.010 sec/step)
+Step: 10700 ELBO: -192973.938 (0.010 sec/step)
+Step: 10800 ELBO: -193566.812 (0.010 sec/step)
+Step: 10900 ELBO: -191706.469 (0.010 sec/step)
+Step: 11000 ELBO: -192785.438 (0.010 sec/step)
+Step: 11100 ELBO: -191150.250 (0.010 sec/step)
+Step: 11200 ELBO: -192376.969 (0.010 sec/step)
+Step: 11300 ELBO: -190376.812 (0.010 sec/step)
+Step: 11400 ELBO: -220229.594 (0.010 sec/step)
+Step: 11500 ELBO: -194688.438 (0.010 sec/step)
+Step: 11600 ELBO: -192245.875 (0.010 sec/step)
+Step: 11700 ELBO: -190601.047 (0.010 sec/step)
+Step: 11800 ELBO: -197741.062 (0.010 sec/step)
+Step: 11900 ELBO: -191111.125 (0.010 sec/step)
+Step: 12000 ELBO: -190353.469 (0.010 sec/step)
+Step: 12100 ELBO: -190897.547 (0.010 sec/step)
+Step: 12200 ELBO: -190991.719 (0.010 sec/step)
+Step: 12300 ELBO: -190043.547 (0.010 sec/step)
+Step: 12400 ELBO: -190747.281 (0.010 sec/step)
+['Negative 0: wearing, see, protect, #wearamask, today, anyone, got, someone, everyone, show'
+ 'Neutral  0: wearing, protect, #wearamask, see, today, got, realdonaldtrump, anyone, someone, business'
+ 'Positive 0: wearing, protect, #wearamask, see, today, got, business, realdonaldtrump, others, show'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, mandatory, without, shops, really, july, england'
+ 'Neutral  1: face mask, still, new, virus, mandatory, without, really, shops, mask wearing, refused'
+ 'Positive 1: face mask, still, new, virus, mandatory, without, really, shops, mask wearing, refused'
+ '=========='
+ 'Negative 2: people, right, health, lockdown, time, think, thing, believe, yet, workers'
+ 'Neutral  2: people, right, health, lockdown, time, think, thing, believe, around, say'
+ 'Positive 2: people, right, health, time, lockdown, think, thing, said, believe, say'
+ '=========='
+ 'Negative 3: #covid, #coronavirus, going, hands, face, keep, #masks, #mask, making, wash'
+ 'Neutral  3: #covid, #coronavirus, going, face, hands, keep, #masks, asked, wash, #mask'
+ 'Positive 3: #covid, going, #coronavirus, face, hands, keep, wash, asked, #masks, put'
+ '=========='
+ 'Negative 4: face masks, person, dr, state, first, says, getting, advice, video, even'
+ 'Neutral  4: face masks, person, getting, first, state, dr, says, advice, video, even'
+ 'Positive 4: face masks, person, getting, first, state, dr, says, study, even, video'
+ '=========='
+ 'Negative 5: need, one, go, get, want, know, make, day, let, please'
+ 'Neutral  5: need, get, one, go, want, know, make, please, let, day'
+ 'Positive 5: get, need, go, one, want, know, please, let, home, make'
+ '=========='
+ 'Negative 6: covid, spread, protect, help, work, may, ppe, prevent, data, medicine'
+ 'Neutral  6: covid, spread, may, protect, help, work, ppe, prevent, data, medicine'
+ 'Positive 6: covid, spread, may, help, work, protect, ppe, prevent, data, evidence'
+ '=========='
+ 'Negative 7: wear masks, pandemic, public, would, yes, damn mask, cdc, required, mask mandate, refusing'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, damn mask, required, cdc, refusing, mask mandate'
+ 'Positive 7: wear masks, public, pandemic, would, yes, damn mask, required, refusing, cdc, mask mandate'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, like, stop, china, anti mask, news, could, times'
+ 'Neutral  8: coronavirus, trump, via, stop, like, china, anti mask, hospital, could, says'
+ 'Positive 8: coronavirus, trump, via, stop, like, china, anti mask, georgia, could, hospital'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, schools, worn, open, safe, mask wearing, family'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, safe, schools, mask wearing, open, see'
+ 'Positive 9: social distancing, wearing masks, good, everyone, safe, worn, schools, mask wearing, open, safety'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Politician, Academic, Doctor, Journalist
+ ==================== 
+Step: 12500 ELBO: -193358.094 (0.010 sec/step)
+Step: 12600 ELBO: -190015.031 (0.010 sec/step)
+Step: 12700 ELBO: -190004.234 (0.010 sec/step)
+Step: 12800 ELBO: -197009.656 (0.010 sec/step)
+Step: 12900 ELBO: -191135.672 (0.010 sec/step)
+Step: 13000 ELBO: -200283.188 (0.010 sec/step)
+Step: 13100 ELBO: -191885.469 (0.010 sec/step)
+Step: 13200 ELBO: -190209.266 (0.010 sec/step)
+Step: 13300 ELBO: -188089.781 (0.010 sec/step)
+Step: 13400 ELBO: -193838.781 (0.010 sec/step)
+Step: 13500 ELBO: -192495.219 (0.010 sec/step)
+Step: 13600 ELBO: -187857.297 (0.010 sec/step)
+Step: 13700 ELBO: -190465.562 (0.010 sec/step)
+Step: 13800 ELBO: -190993.266 (0.010 sec/step)
+Step: 13900 ELBO: -188356.938 (0.010 sec/step)
+Step: 14000 ELBO: -187417.250 (0.010 sec/step)
+Step: 14100 ELBO: -191445.312 (0.010 sec/step)
+Step: 14200 ELBO: -189602.391 (0.010 sec/step)
+Step: 14300 ELBO: -188026.531 (0.010 sec/step)
+Step: 14400 ELBO: -190787.469 (0.010 sec/step)
+Step: 14500 ELBO: -192615.750 (0.010 sec/step)
+Step: 14600 ELBO: -187754.031 (0.010 sec/step)
+Step: 14700 ELBO: -189351.562 (0.010 sec/step)
+Step: 14800 ELBO: -190125.203 (0.010 sec/step)
+Step: 14900 ELBO: -189846.656 (0.010 sec/step)
+['Negative 0: wearing, protect, today, #wearamask, see, got, realdonaldtrump, business, show, someone'
+ 'Neutral  0: wearing, #wearamask, protect, today, see, got, realdonaldtrump, someone, anyone, business'
+ 'Positive 0: wearing, #wearamask, see, protect, got, today, anyone, realdonaldtrump, someone, business'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, mandatory, without, really, shops, mask wearing, july'
+ 'Neutral  1: face mask, still, new, virus, mandatory, without, really, shops, july, mask wearing'
+ 'Positive 1: face mask, still, new, virus, without, mandatory, really, shops, july, england'
+ '=========='
+ 'Negative 2: people, right, health, time, lockdown, think, thing, believe, around, wearing mask'
+ 'Neutral  2: people, right, health, lockdown, time, think, thing, believe, around, yet'
+ 'Positive 2: people, right, health, lockdown, time, think, believe, thing, yet, said'
+ '=========='
+ 'Negative 3: #covid, going, #coronavirus, face, keep, hands, #masks, asked, wash, #mask'
+ 'Neutral  3: #covid, #coronavirus, going, face, keep, hands, #masks, asked, wash, #mask'
+ 'Positive 3: #covid, #coronavirus, going, keep, face, hands, asked, #masks, wash, mask wear'
+ '=========='
+ 'Negative 4: face masks, person, getting, dr, first, state, says, video, advice, even'
+ 'Neutral  4: face masks, person, getting, first, dr, state, says, advice, video, even'
+ 'Positive 4: face masks, person, first, getting, state, says, dr, advice, video, even'
+ '=========='
+ 'Negative 5: need, go, get, one, want, know, day, make, please, home'
+ 'Neutral  5: need, get, go, one, want, know, let, please, make, day'
+ 'Positive 5: need, one, go, get, know, want, let, day, make, please'
+ '=========='
+ 'Negative 6: covid, spread, may, help, protect, work, ppe, evidence, medicine, prevent'
+ 'Neutral  6: covid, spread, may, help, protect, work, ppe, evidence, prevent, data'
+ 'Positive 6: covid, spread, protect, help, may, work, ppe, evidence, data, medicine'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, would, yes, required, damn mask, cdc, refusing, order'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, damn mask, required, cdc, refusing, mask mandate'
+ 'Positive 7: wear masks, pandemic, public, yes, would, cdc, damn mask, required, mask mandate, refusing'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, like, stop, china, anti mask, says, could, hospital'
+ 'Neutral  8: coronavirus, trump, via, like, stop, china, anti mask, says, hospital, could'
+ 'Positive 8: coronavirus, trump, via, like, stop, china, anti mask, could, says, georgia'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, everyone, good, schools, worn, open, safe, mask wearing, safety'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, mask wearing, family'
+ 'Positive 9: social distancing, wearing masks, good, everyone, worn, safe, schools, mask wearing, open, family'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Politician, Doctor, Journalist, Academic
+ ==================== 
+Step: 15000 ELBO: -190606.109 (0.010 sec/step)
+Step: 15100 ELBO: -191574.969 (0.010 sec/step)
+Step: 15200 ELBO: -189332.516 (0.010 sec/step)
+Step: 15300 ELBO: -187653.312 (0.010 sec/step)
+Step: 15400 ELBO: -189914.516 (0.010 sec/step)
+Step: 15500 ELBO: -191450.625 (0.010 sec/step)
+Step: 15600 ELBO: -188055.844 (0.010 sec/step)
+Step: 15700 ELBO: -187929.906 (0.010 sec/step)
+Step: 15800 ELBO: -189418.281 (0.010 sec/step)
+Step: 15900 ELBO: -187844.969 (0.010 sec/step)
+Step: 16000 ELBO: -187038.312 (0.010 sec/step)
+Step: 16100 ELBO: -187966.125 (0.010 sec/step)
+Step: 16200 ELBO: -189016.375 (0.010 sec/step)
+Step: 16300 ELBO: -187672.594 (0.010 sec/step)
+Step: 16400 ELBO: -188667.438 (0.010 sec/step)
+Step: 16500 ELBO: -191226.656 (0.010 sec/step)
+Step: 16600 ELBO: -187405.125 (0.010 sec/step)
+Step: 16700 ELBO: -187529.875 (0.010 sec/step)
+Step: 16800 ELBO: -190966.219 (0.010 sec/step)
+Step: 16900 ELBO: -187535.406 (0.010 sec/step)
+Step: 17000 ELBO: -186403.188 (0.010 sec/step)
+Step: 17100 ELBO: -189297.922 (0.010 sec/step)
+Step: 17200 ELBO: -188066.219 (0.010 sec/step)
+Step: 17300 ELBO: -185395.344 (0.010 sec/step)
+Step: 17400 ELBO: -189853.484 (0.010 sec/step)
+['Negative 0: wearing, protect, see, #wearamask, today, got, realdonaldtrump, someone, anyone, business'
+ 'Neutral  0: wearing, protect, today, #wearamask, see, got, realdonaldtrump, someone, anyone, business'
+ 'Positive 0: wearing, today, protect, see, #wearamask, got, realdonaldtrump, others, someone, anyone'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, mandatory, without, really, july, mask wearing, shops'
+ 'Neutral  1: face mask, still, new, virus, mandatory, without, really, shops, mask wearing, july'
+ 'Positive 1: face mask, still, new, virus, without, mandatory, shops, really, mask wearing, july'
+ '=========='
+ 'Negative 2: people, right, time, lockdown, health, think, believe, said, thing, wearing mask'
+ 'Neutral  2: people, right, health, lockdown, time, think, thing, believe, say, said'
+ 'Positive 2: people, right, health, time, lockdown, think, say, thing, around, believe'
+ '=========='
+ 'Negative 3: #covid, #coronavirus, keep, face, going, hands, #masks, wash, asked, making'
+ 'Neutral  3: #covid, #coronavirus, going, face, keep, hands, #masks, asked, wash, #mask'
+ 'Positive 3: #covid, going, face, #coronavirus, keep, #masks, hands, asked, wash, #mask'
+ '=========='
+ 'Negative 4: face masks, person, first, dr, getting, state, video, says, even, study'
+ 'Neutral  4: face masks, person, dr, getting, first, state, says, video, advice, even'
+ 'Positive 4: face masks, person, dr, first, getting, says, state, high, video, advice'
+ '=========='
+ 'Negative 5: need, go, one, get, want, know, make, let, please, day'
+ 'Neutral  5: need, get, go, one, want, know, make, let, day, please'
+ 'Positive 5: get, go, need, one, know, want, make, let, day, please'
+ '=========='
+ 'Negative 6: covid, spread, help, may, protect, work, ppe, evidence, prevent, data'
+ 'Neutral  6: covid, spread, help, may, protect, work, ppe, evidence, prevent, data'
+ 'Positive 6: covid, spread, help, work, protect, may, evidence, prevent, ppe, new england journal'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, would, yes, damn mask, cdc, required, refusing, mask mandate'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, damn mask, required, cdc, refusing, mask mandate'
+ 'Positive 7: wear masks, pandemic, public, would, yes, damn mask, required, refusing, cdc, mask mandate'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, like, stop, china, anti mask, hospital, gov, could'
+ 'Neutral  8: coronavirus, trump, via, like, stop, china, anti mask, says, hospital, could'
+ 'Positive 8: coronavirus, trump, via, like, stop, china, anti mask, says, hospital, could'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, worn, safe, schools, open, mask wearing, family'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, mask wearing, safety'
+ 'Positive 9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, mask wearing, staff'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Politician, Doctor, Journalist, Academic
+ ==================== 
+Step: 17500 ELBO: -190539.297 (0.010 sec/step)
+Step: 17600 ELBO: -186903.453 (0.010 sec/step)
+Step: 17700 ELBO: -186908.047 (0.010 sec/step)
+Step: 17800 ELBO: -188397.000 (0.010 sec/step)
+Step: 17900 ELBO: -187283.688 (0.010 sec/step)
+Step: 18000 ELBO: -186808.844 (0.010 sec/step)
+Step: 18100 ELBO: -187803.047 (0.010 sec/step)
+Step: 18200 ELBO: -188618.375 (0.010 sec/step)
+Step: 18300 ELBO: -187334.234 (0.010 sec/step)
+Step: 18400 ELBO: -188321.234 (0.010 sec/step)
+Step: 18500 ELBO: -189250.625 (0.010 sec/step)
+Step: 18600 ELBO: -186599.922 (0.010 sec/step)
+Step: 18700 ELBO: -186808.047 (0.010 sec/step)
+Step: 18800 ELBO: -188075.922 (0.010 sec/step)
+Step: 18900 ELBO: -186992.062 (0.010 sec/step)
+Step: 19000 ELBO: -186487.625 (0.010 sec/step)
+Step: 19100 ELBO: -188462.969 (0.010 sec/step)
+Step: 19200 ELBO: -188479.906 (0.010 sec/step)
+Step: 19300 ELBO: -185600.484 (0.010 sec/step)
+Step: 19400 ELBO: -188765.250 (0.010 sec/step)
+Step: 19500 ELBO: -189862.969 (0.010 sec/step)
+Step: 19600 ELBO: -186565.250 (0.010 sec/step)
+Step: 19700 ELBO: -187121.688 (0.010 sec/step)
+Step: 19800 ELBO: -187548.547 (0.010 sec/step)
+Step: 19900 ELBO: -186351.672 (0.010 sec/step)
+['Negative 0: wearing, today, #wearamask, protect, see, realdonaldtrump, anyone, got, someone, business'
+ 'Neutral  0: wearing, today, protect, #wearamask, see, got, realdonaldtrump, someone, anyone, business'
+ 'Positive 0: wearing, today, see, #wearamask, got, protect, realdonaldtrump, someone, business, anyone'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, mandatory, without, really, mask wearing, shops, next'
+ 'Neutral  1: face mask, still, new, virus, mandatory, without, really, mask wearing, shops, july'
+ 'Positive 1: face mask, still, new, virus, mandatory, without, really, shops, mask wearing, july'
+ '=========='
+ 'Negative 2: people, right, health, lockdown, time, think, thing, said, yet, say'
+ 'Neutral  2: people, right, health, time, lockdown, think, said, say, believe, thing'
+ 'Positive 2: people, right, health, time, lockdown, think, said, say, believe, yet'
+ '=========='
+ 'Negative 3: #covid, keep, #coronavirus, going, face, hands, asked, #masks, wash, making'
+ 'Neutral  3: #covid, #coronavirus, face, going, keep, hands, #masks, asked, wash, #mask'
+ 'Positive 3: #covid, #coronavirus, going, face, keep, hands, #masks, wash, #mask, asked'
+ '=========='
+ 'Negative 4: face masks, person, getting, first, dr, state, says, even, video, advice'
+ 'Neutral  4: face masks, person, getting, dr, first, state, says, even, advice, video'
+ 'Positive 4: face masks, person, state, getting, first, says, dr, advice, across, even'
+ '=========='
+ 'Negative 5: need, get, one, go, want, know, let, day, please, make'
+ 'Neutral  5: need, get, go, one, know, want, let, day, make, please'
+ 'Positive 5: need, get, go, one, know, want, make, day, let, stay'
+ '=========='
+ 'Negative 6: covid, spread, protect, may, help, work, ppe, evidence, prevent, new england journal'
+ 'Neutral  6: covid, spread, help, may, protect, work, ppe, evidence, prevent, data'
+ 'Positive 6: covid, spread, help, may, protect, work, ppe, data, evidence, medicine'
+ '=========='
+ 'Negative 7: public, pandemic, wear masks, would, yes, damn mask, cdc, required, mask mandate, refusing'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, cdc, damn mask, required, refusing, mask mandate'
+ 'Positive 7: wear masks, public, pandemic, would, yes, required, cdc, refusing, damn mask, mask mandate'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, like, stop, china, anti mask, could, hospital, georgia'
+ 'Neutral  8: coronavirus, trump, via, like, stop, china, anti mask, says, hospital, could'
+ 'Positive 8: coronavirus, trump, via, like, stop, china, anti mask, says, news, could'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, schools, safe, worn, open, safety, family'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, family, safety'
+ 'Positive 9: social distancing, wearing masks, good, worn, everyone, schools, safe, open, mask wearing, family'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Academic, Journalist, Doctor, Politician
+ ==================== 
+Step: 20000 ELBO: -186077.922 (0.010 sec/step)
+Step: 20100 ELBO: -187976.891 (0.010 sec/step)
+Step: 20200 ELBO: -187953.500 (0.010 sec/step)
+Step: 20300 ELBO: -185371.094 (0.010 sec/step)
+Step: 20400 ELBO: -187911.750 (0.010 sec/step)
+Step: 20500 ELBO: -189406.625 (0.010 sec/step)
+Step: 20600 ELBO: -184551.250 (0.010 sec/step)
+Step: 20700 ELBO: -187685.812 (0.010 sec/step)
+Step: 20800 ELBO: -188003.297 (0.010 sec/step)
+Step: 20900 ELBO: -185700.938 (0.010 sec/step)
+Step: 21000 ELBO: -186377.312 (0.010 sec/step)
+Step: 21100 ELBO: -187312.922 (0.010 sec/step)
+Step: 21200 ELBO: -187579.750 (0.010 sec/step)
+Step: 21300 ELBO: -185861.406 (0.010 sec/step)
+Step: 21400 ELBO: -187093.109 (0.010 sec/step)
+Step: 21500 ELBO: -188725.656 (0.010 sec/step)
+Step: 21600 ELBO: -185071.531 (0.010 sec/step)
+Step: 21700 ELBO: -186228.188 (0.010 sec/step)
+Step: 21800 ELBO: -188265.531 (0.010 sec/step)
+Step: 21900 ELBO: -186001.844 (0.010 sec/step)
+Step: 22000 ELBO: -186344.188 (0.010 sec/step)
+Step: 22100 ELBO: -187488.094 (0.010 sec/step)
+Step: 22200 ELBO: -187681.781 (0.010 sec/step)
+Step: 22300 ELBO: -184018.672 (0.010 sec/step)
+Step: 22400 ELBO: -187554.312 (0.010 sec/step)
+['Negative 0: wearing, protect, today, see, #wearamask, realdonaldtrump, someone, business, anyone, got'
+ 'Neutral  0: wearing, today, protect, #wearamask, see, realdonaldtrump, got, someone, anyone, business'
+ 'Positive 0: wearing, protect, today, #wearamask, got, see, realdonaldtrump, others, anyone, someone'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, without, mandatory, really, mask wearing, shops, july'
+ 'Neutral  1: face mask, still, new, virus, mandatory, without, really, shops, mask wearing, july'
+ 'Positive 1: face mask, still, new, virus, mandatory, really, without, shops, july, mask wearing'
+ '=========='
+ 'Negative 2: people, right, time, health, lockdown, think, believe, thing, said, yet'
+ 'Neutral  2: people, right, health, time, lockdown, think, said, thing, believe, wearing mask'
+ 'Positive 2: people, right, health, time, lockdown, think, said, thing, wearing mask, workers'
+ '=========='
+ 'Negative 3: #covid, #coronavirus, keep, face, going, hands, wash, asked, #masks, #mask'
+ 'Neutral  3: #covid, #coronavirus, face, keep, going, hands, #masks, asked, wash, #mask'
+ 'Positive 3: #covid, going, keep, #coronavirus, face, hands, asked, #masks, wash, #mask'
+ '=========='
+ 'Negative 4: face masks, person, dr, says, first, state, getting, even, advice, high'
+ 'Neutral  4: face masks, person, getting, dr, first, state, says, even, advice, government'
+ 'Positive 4: face masks, person, first, getting, state, dr, says, even, advice, video'
+ '=========='
+ 'Negative 5: get, need, go, want, know, one, day, please, make, let'
+ 'Neutral  5: need, go, get, one, know, want, day, make, please, let'
+ 'Positive 5: need, get, go, one, know, want, make, day, please, home'
+ '=========='
+ 'Negative 6: covid, spread, may, help, work, protect, ppe, evidence, prevent, data'
+ 'Neutral  6: covid, spread, help, may, protect, work, ppe, evidence, prevent, data'
+ 'Positive 6: covid, spread, help, protect, may, work, evidence, ppe, prevent, data'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, would, yes, damn mask, required, cdc, mask mandate, order'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, damn mask, cdc, required, refusing, mask mandate'
+ 'Positive 7: wear masks, public, pandemic, would, yes, cdc, damn mask, refusing, required, mask mandate'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, like, stop, china, says, anti mask, hospital, georgia'
+ 'Neutral  8: coronavirus, trump, via, like, stop, china, anti mask, says, hospital, georgia'
+ 'Positive 8: coronavirus, trump, via, like, stop, china, hospital, anti mask, says, times'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, safe, worn, schools, open, staff, mask wearing'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, family, safety'
+ 'Positive 9: social distancing, wearing masks, good, everyone, schools, worn, open, safe, family, safety'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Academic, Doctor, Politician, Journalist
+ ==================== 
+Step: 22500 ELBO: -188449.312 (0.010 sec/step)
+Step: 22600 ELBO: -184917.422 (0.010 sec/step)
+Step: 22700 ELBO: -186229.703 (0.010 sec/step)
+Step: 22800 ELBO: -187643.844 (0.010 sec/step)
+Step: 22900 ELBO: -185510.062 (0.010 sec/step)
+Step: 23000 ELBO: -185985.703 (0.010 sec/step)
+Step: 23100 ELBO: -187662.984 (0.010 sec/step)
+Step: 23200 ELBO: -187490.625 (0.010 sec/step)
+Step: 23300 ELBO: -184777.625 (0.010 sec/step)
+Step: 23400 ELBO: -187230.453 (0.010 sec/step)
+Step: 23500 ELBO: -187975.531 (0.010 sec/step)
+Step: 23600 ELBO: -184321.281 (0.010 sec/step)
+Step: 23700 ELBO: -185853.375 (0.010 sec/step)
+Step: 23800 ELBO: -188265.219 (0.010 sec/step)
+Step: 23900 ELBO: -184709.531 (0.010 sec/step)
+Step: 24000 ELBO: -184233.422 (0.010 sec/step)
+Step: 24100 ELBO: -186907.156 (0.010 sec/step)
+Step: 24200 ELBO: -187357.219 (0.010 sec/step)
+Step: 24300 ELBO: -184460.625 (0.010 sec/step)
+Step: 24400 ELBO: -186865.453 (0.010 sec/step)
+Step: 24500 ELBO: -187898.438 (0.010 sec/step)
+Step: 24600 ELBO: -184696.906 (0.010 sec/step)
+Step: 24700 ELBO: -186652.641 (0.010 sec/step)
+Step: 24800 ELBO: -188689.906 (0.010 sec/step)
+Step: 24900 ELBO: -185915.250 (0.010 sec/step)
+['Negative 0: wearing, today, see, protect, #wearamask, realdonaldtrump, got, someone, show, anyone'
+ 'Neutral  0: wearing, today, protect, #wearamask, see, realdonaldtrump, got, someone, anyone, others'
+ 'Positive 0: wearing, today, protect, #wearamask, see, realdonaldtrump, got, anyone, others, someone'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, really, mandatory, without, july, mask wearing, refused'
+ 'Neutral  1: face mask, still, new, virus, mandatory, really, without, mask wearing, shops, july'
+ 'Positive 1: face mask, still, new, virus, without, mandatory, really, shops, july, mask wearing'
+ '=========='
+ 'Negative 2: people, right, health, time, think, lockdown, said, believe, thing, yet'
+ 'Neutral  2: people, right, health, time, lockdown, think, said, thing, believe, say'
+ 'Positive 2: people, right, health, time, lockdown, think, said, thing, believe, say'
+ '=========='
+ 'Negative 3: #covid, #coronavirus, keep, face, going, hands, asked, wash, #masks, use'
+ 'Neutral  3: #covid, #coronavirus, face, keep, going, hands, asked, #masks, wash, making'
+ 'Positive 3: #covid, face, #coronavirus, keep, going, hands, asked, #masks, wash, mask wear'
+ '=========='
+ 'Negative 4: face masks, person, getting, dr, state, says, first, study, video, even'
+ 'Neutral  4: face masks, person, getting, state, dr, first, says, advice, even, study'
+ 'Positive 4: face masks, person, first, state, getting, dr, says, even, study, advice'
+ '=========='
+ 'Negative 5: need, get, go, one, know, want, please, make, let, home'
+ 'Neutral  5: need, get, go, want, one, know, day, let, please, make'
+ 'Positive 5: need, go, get, want, one, know, day, let, make, please'
+ '=========='
+ 'Negative 6: covid, spread, may, help, protect, work, ppe, evidence, data, medicine'
+ 'Neutral  6: covid, spread, help, may, protect, work, ppe, evidence, data, prevent'
+ 'Positive 6: covid, spread, help, protect, may, work, ppe, medicine, prevent, evidence'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, would, yes, cdc, damn mask, mask mandate, refusing, required'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, damn mask, cdc, required, refusing, mask mandate'
+ 'Positive 7: wear masks, public, pandemic, would, yes, damn mask, cdc, required, refusing, mask mandate'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, stop, like, china, anti mask, hospital, says, times'
+ 'Neutral  8: coronavirus, trump, via, like, stop, china, anti mask, says, hospital, georgia'
+ 'Positive 8: coronavirus, trump, via, stop, like, china, anti mask, says, amid, georgia'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, safety, family'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, family, safety'
+ 'Positive 9: social distancing, wearing masks, good, everyone, schools, safe, worn, open, staff, family'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Doctor, Politician, Journalist, Academic
+ ==================== 
+Step: 25000 ELBO: -184931.938 (0.010 sec/step)
+Step: 25100 ELBO: -187974.406 (0.010 sec/step)
+Step: 25200 ELBO: -187709.844 (0.010 sec/step)
+Step: 25300 ELBO: -184034.938 (0.010 sec/step)
+Step: 25400 ELBO: -188117.000 (0.010 sec/step)
+Step: 25500 ELBO: -187098.406 (0.010 sec/step)
+Step: 25600 ELBO: -185264.984 (0.010 sec/step)
+Step: 25700 ELBO: -185274.938 (0.010 sec/step)
+Step: 25800 ELBO: -187405.516 (0.010 sec/step)
+Step: 25900 ELBO: -185843.344 (0.010 sec/step)
+Step: 26000 ELBO: -184521.281 (0.010 sec/step)
+Step: 26100 ELBO: -187367.938 (0.010 sec/step)
+Step: 26200 ELBO: -187556.734 (0.010 sec/step)
+Step: 26300 ELBO: -184581.844 (0.010 sec/step)
+Step: 26400 ELBO: -187158.000 (0.010 sec/step)
+Step: 26500 ELBO: -188555.031 (0.010 sec/step)
+Step: 26600 ELBO: -184151.594 (0.010 sec/step)
+Step: 26700 ELBO: -186554.500 (0.010 sec/step)
+Step: 26800 ELBO: -187592.438 (0.010 sec/step)
+Step: 26900 ELBO: -185738.469 (0.010 sec/step)
+Step: 27000 ELBO: -184947.406 (0.010 sec/step)
+Step: 27100 ELBO: -187491.703 (0.010 sec/step)
+Step: 27200 ELBO: -187063.781 (0.010 sec/step)
+Step: 27300 ELBO: -185082.219 (0.010 sec/step)
+Step: 27400 ELBO: -191112.438 (0.010 sec/step)
+['Negative 0: wearing, today, #wearamask, protect, see, realdonaldtrump, got, anyone, others, someone'
+ 'Neutral  0: wearing, today, protect, see, #wearamask, realdonaldtrump, got, someone, anyone, others'
+ 'Positive 0: wearing, #wearamask, today, see, protect, realdonaldtrump, got, anyone, someone, others'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, mandatory, really, without, mask wearing, shops, july'
+ 'Neutral  1: face mask, still, new, virus, mandatory, really, without, shops, mask wearing, july'
+ 'Positive 1: face mask, still, new, virus, really, without, mandatory, july, shops, woman'
+ '=========='
+ 'Negative 2: people, right, time, health, lockdown, think, said, say, wearing mask, believe'
+ 'Neutral  2: people, right, time, health, lockdown, think, said, believe, thing, wearing mask'
+ 'Positive 2: people, right, health, time, lockdown, said, think, thing, wearing mask, believe'
+ '=========='
+ 'Negative 3: #covid, face, keep, #coronavirus, going, hands, #masks, wash, asked, making'
+ 'Neutral  3: #covid, #coronavirus, face, keep, going, hands, #masks, asked, wash, use'
+ 'Positive 3: #covid, #coronavirus, hands, going, face, keep, #masks, asked, wash, #mask'
+ '=========='
+ 'Negative 4: face masks, person, dr, first, getting, state, says, government, advice, video'
+ 'Neutral  4: face masks, person, dr, first, getting, state, says, advice, government, study'
+ 'Positive 4: face masks, person, dr, first, getting, says, state, even, study, advice'
+ '=========='
+ 'Negative 5: need, get, go, want, one, know, make, let, please, day'
+ 'Neutral  5: need, get, go, one, want, know, day, please, make, let'
+ 'Positive 5: need, go, get, one, know, day, want, make, home, please'
+ '=========='
+ 'Negative 6: covid, spread, help, protect, may, work, ppe, evidence, data, prevent'
+ 'Neutral  6: covid, spread, help, protect, may, work, ppe, evidence, prevent, data'
+ 'Positive 6: covid, spread, help, protect, may, work, ppe, evidence, data, prevent'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, would, yes, damn mask, cdc, required, mask mandate, refusing'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, damn mask, cdc, required, refusing, mask mandate'
+ 'Positive 7: wear masks, pandemic, public, would, yes, cdc, damn mask, refusing, required, even'
+ '=========='
+ 'Negative 8: coronavirus, via, trump, stop, like, china, hospital, anti mask, could, says'
+ 'Neutral  8: coronavirus, trump, via, like, stop, china, anti mask, says, hospital, amid'
+ 'Positive 8: coronavirus, trump, via, like, stop, china, anti mask, hospital, says, amid'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, thought, family'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, family, safety'
+ 'Positive 9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, family, mean'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Doctor, Politician, Academic, Journalist
+ ==================== 
+Step: 27500 ELBO: -187886.625 (0.010 sec/step)
+Step: 27600 ELBO: -184452.484 (0.010 sec/step)
+Step: 27700 ELBO: -185063.156 (0.010 sec/step)
+Step: 27800 ELBO: -186843.562 (0.010 sec/step)
+Step: 27900 ELBO: -184353.047 (0.010 sec/step)
+Step: 28000 ELBO: -184037.781 (0.010 sec/step)
+Step: 28100 ELBO: -187911.656 (0.010 sec/step)
+Step: 28200 ELBO: -187064.609 (0.010 sec/step)
+Step: 28300 ELBO: -184298.906 (0.010 sec/step)
+Step: 28400 ELBO: -187755.375 (0.010 sec/step)
+Step: 28500 ELBO: -188104.875 (0.010 sec/step)
+Step: 28600 ELBO: -185882.969 (0.010 sec/step)
+Step: 28700 ELBO: -185193.875 (0.010 sec/step)
+Step: 28800 ELBO: -187070.906 (0.010 sec/step)
+Step: 28900 ELBO: -184786.469 (0.010 sec/step)
+Step: 29000 ELBO: -184774.828 (0.010 sec/step)
+Step: 29100 ELBO: -187214.078 (0.010 sec/step)
+Step: 29200 ELBO: -188481.594 (0.010 sec/step)
+Step: 29300 ELBO: -184853.125 (0.010 sec/step)
+Step: 29400 ELBO: -186293.328 (0.010 sec/step)
+Step: 29500 ELBO: -190782.125 (0.010 sec/step)
+Step: 29600 ELBO: -185497.375 (0.010 sec/step)
+Step: 29700 ELBO: -184393.141 (0.010 sec/step)
+Step: 29800 ELBO: -185903.000 (0.010 sec/step)
+Step: 29900 ELBO: -185751.750 (0.010 sec/step)
+['Negative 0: wearing, #wearamask, see, protect, today, realdonaldtrump, someone, got, anyone, others'
+ 'Neutral  0: wearing, today, protect, #wearamask, see, realdonaldtrump, got, someone, anyone, others'
+ 'Positive 0: wearing, protect, today, #wearamask, realdonaldtrump, see, got, someone, others, anyone'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, mandatory, without, really, mask wearing, shops, july'
+ 'Neutral  1: face mask, still, new, virus, really, mandatory, without, mask wearing, shops, july'
+ 'Positive 1: face mask, still, new, virus, really, mandatory, without, mask wearing, shops, july'
+ '=========='
+ 'Negative 2: people, right, time, health, lockdown, said, think, wearing mask, thing, believe'
+ 'Neutral  2: people, right, time, health, lockdown, think, said, thing, believe, wearing mask'
+ 'Positive 2: people, time, right, health, lockdown, said, think, say, thing, well'
+ '=========='
+ 'Negative 3: #covid, face, #coronavirus, keep, going, hands, asked, #masks, use, wash'
+ 'Neutral  3: #covid, #coronavirus, face, keep, going, hands, asked, #masks, wash, use'
+ 'Positive 3: #covid, #coronavirus, face, hands, going, keep, #masks, wash, #mask, asked'
+ '=========='
+ 'Negative 4: face masks, person, dr, getting, first, state, says, advice, study, government'
+ 'Neutral  4: face masks, person, dr, getting, first, state, says, government, even, advice'
+ 'Positive 4: face masks, person, dr, getting, state, first, says, government, even, video'
+ '=========='
+ 'Negative 5: need, go, get, want, know, one, day, please, make, home'
+ 'Neutral  5: need, go, get, want, one, know, day, please, make, let'
+ 'Positive 5: get, need, go, one, want, day, know, let, make, home'
+ '=========='
+ 'Negative 6: covid, spread, help, may, protect, work, ppe, evidence, data, risk'
+ 'Neutral  6: covid, spread, help, may, work, protect, ppe, evidence, prevent, risk'
+ 'Positive 6: covid, spread, may, protect, help, work, evidence, ppe, risk, see'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, would, yes, cdc, damn mask, required, refusing, mask mandate'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, damn mask, cdc, required, refusing, mask mandate'
+ 'Positive 7: wear masks, public, pandemic, would, yes, damn mask, cdc, refusing, required, mask mandate'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, like, stop, china, says, anti mask, hospital, amid'
+ 'Neutral  8: coronavirus, trump, via, like, stop, china, says, anti mask, hospital, georgia'
+ 'Positive 8: coronavirus, trump, stop, via, like, china, anti mask, says, could, georgia'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, worn, schools, open, safe, family, safety'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, family, safety'
+ 'Positive 9: social distancing, wearing masks, good, everyone, safe, schools, open, worn, safety, thought'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Journalist, Politician, Academic, Doctor
+ ==================== 
+Step: 30000 ELBO: -185573.328 (0.010 sec/step)
+Step: 30100 ELBO: -188470.203 (0.010 sec/step)
+Step: 30200 ELBO: -185899.531 (0.010 sec/step)
+Step: 30300 ELBO: -184398.375 (0.010 sec/step)
+Step: 30400 ELBO: -186637.844 (0.010 sec/step)
+Step: 30500 ELBO: -187092.406 (0.010 sec/step)
+Step: 30600 ELBO: -183969.031 (0.010 sec/step)
+Step: 30700 ELBO: -184167.969 (0.010 sec/step)
+Step: 30800 ELBO: -187877.422 (0.010 sec/step)
+Step: 30900 ELBO: -186160.266 (0.010 sec/step)
+Step: 31000 ELBO: -185064.375 (0.010 sec/step)
+Step: 31100 ELBO: -186930.688 (0.010 sec/step)
+Step: 31200 ELBO: -186522.344 (0.010 sec/step)
+Step: 31300 ELBO: -185809.562 (0.010 sec/step)
+Step: 31400 ELBO: -185837.469 (0.010 sec/step)
+Step: 31500 ELBO: -188215.719 (0.010 sec/step)
+Step: 31600 ELBO: -186166.562 (0.010 sec/step)
+Step: 31700 ELBO: -184207.406 (0.010 sec/step)
+Step: 31800 ELBO: -187443.234 (0.010 sec/step)
+Step: 31900 ELBO: -184828.406 (0.010 sec/step)
+Step: 32000 ELBO: -184111.891 (0.010 sec/step)
+Step: 32100 ELBO: -186861.406 (0.010 sec/step)
+Step: 32200 ELBO: -186234.188 (0.010 sec/step)
+Step: 32300 ELBO: -184302.391 (0.010 sec/step)
+Step: 32400 ELBO: -185426.812 (0.010 sec/step)
+['Negative 0: wearing, today, realdonaldtrump, #wearamask, protect, see, got, others, anyone, someone'
+ 'Neutral  0: wearing, today, protect, #wearamask, realdonaldtrump, see, got, others, someone, anyone'
+ 'Positive 0: wearing, protect, today, #wearamask, realdonaldtrump, see, got, someone, anyone, others'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, mandatory, really, without, july, shops, mask wearing'
+ 'Neutral  1: face mask, still, new, virus, really, mandatory, without, mask wearing, shops, july'
+ 'Positive 1: face mask, still, new, virus, really, without, mandatory, mask wearing, shops, refused'
+ '=========='
+ 'Negative 2: people, time, right, lockdown, said, health, think, thing, one, believe'
+ 'Neutral  2: people, right, time, health, lockdown, said, think, thing, believe, yet'
+ 'Positive 2: people, right, time, health, lockdown, said, think, believe, thing, workers'
+ '=========='
+ 'Negative 3: #covid, #coronavirus, face, keep, going, hands, asked, use, wash, #masks'
+ 'Neutral  3: #covid, face, #coronavirus, keep, going, hands, #masks, asked, wash, use'
+ 'Positive 3: #covid, face, #coronavirus, keep, going, #masks, hands, wash, asked, use'
+ '=========='
+ 'Negative 4: face masks, person, getting, state, first, says, dr, study, government, even'
+ 'Neutral  4: face masks, person, dr, getting, state, first, says, government, even, study'
+ 'Positive 4: face masks, person, dr, getting, state, first, says, advice, study, video'
+ '=========='
+ 'Negative 5: go, get, need, want, one, know, make, day, let, please'
+ 'Neutral  5: need, get, go, want, one, know, day, make, let, please'
+ 'Positive 5: need, go, get, one, want, know, make, day, home, stay'
+ '=========='
+ 'Negative 6: covid, spread, help, protect, may, work, ppe, evidence, data, prevent'
+ 'Neutral  6: covid, spread, help, may, protect, work, ppe, evidence, data, prevent'
+ 'Positive 6: covid, spread, help, protect, may, work, ppe, evidence, risk, data'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, would, yes, damn mask, cdc, required, mask mandate, refusing'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, cdc, damn mask, required, refusing, mask mandate'
+ 'Positive 7: wear masks, public, pandemic, would, yes, required, cdc, damn mask, refusing, mask mandate'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, like, stop, china, says, anti mask, georgia, amid'
+ 'Neutral  8: coronavirus, trump, via, like, stop, china, anti mask, says, hospital, georgia'
+ 'Positive 8: coronavirus, trump, via, like, stop, china, hospital, says, anti mask, times'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, safety, thought'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, safety, family'
+ 'Positive 9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, family, staff'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Academic, Doctor, Journalist, Politician
+ ==================== 
+Step: 32500 ELBO: -188552.250 (0.010 sec/step)
+Step: 32600 ELBO: -185458.312 (0.010 sec/step)
+Step: 32700 ELBO: -185328.688 (0.010 sec/step)
+Step: 32800 ELBO: -187845.500 (0.010 sec/step)
+Step: 32900 ELBO: -184735.594 (0.010 sec/step)
+Step: 33000 ELBO: -184819.359 (0.010 sec/step)
+Step: 33100 ELBO: -187657.594 (0.010 sec/step)
+Step: 33200 ELBO: -186803.000 (0.010 sec/step)
+Step: 33300 ELBO: -183609.047 (0.010 sec/step)
+Step: 33400 ELBO: -185132.344 (0.010 sec/step)
+Step: 33500 ELBO: -186883.688 (0.010 sec/step)
+Step: 33600 ELBO: -184437.094 (0.010 sec/step)
+Step: 33700 ELBO: -185245.047 (0.010 sec/step)
+Step: 33800 ELBO: -186804.109 (0.010 sec/step)
+Step: 33900 ELBO: -186116.312 (0.010 sec/step)
+Step: 34000 ELBO: -185321.406 (0.010 sec/step)
+Step: 34100 ELBO: -188317.938 (0.010 sec/step)
+Step: 34200 ELBO: -186570.312 (0.010 sec/step)
+Step: 34300 ELBO: -183669.031 (0.010 sec/step)
+Step: 34400 ELBO: -185273.281 (0.010 sec/step)
+Step: 34500 ELBO: -188389.875 (0.010 sec/step)
+Step: 34600 ELBO: -184784.125 (0.010 sec/step)
+Step: 34700 ELBO: -185422.406 (0.010 sec/step)
+Step: 34800 ELBO: -189035.312 (0.010 sec/step)
+Step: 34900 ELBO: -184037.172 (0.010 sec/step)
+['Negative 0: wearing, today, realdonaldtrump, protect, #wearamask, see, got, others, anyone, someone'
+ 'Neutral  0: wearing, today, realdonaldtrump, protect, #wearamask, see, got, someone, anyone, others'
+ 'Positive 0: wearing, realdonaldtrump, today, #wearamask, protect, see, got, someone, anyone, others'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, mandatory, really, without, mask wearing, shops, refused'
+ 'Neutral  1: face mask, still, new, virus, really, mandatory, without, mask wearing, shops, july'
+ 'Positive 1: face mask, still, new, virus, really, without, mandatory, mask wearing, shops, july'
+ '=========='
+ 'Negative 2: people, right, time, health, lockdown, said, think, thing, say, believe'
+ 'Neutral  2: people, right, time, health, lockdown, said, think, thing, believe, yet'
+ 'Positive 2: people, time, lockdown, health, right, think, said, wearing mask, thing, believe'
+ '=========='
+ 'Negative 3: #covid, face, keep, #coronavirus, hands, going, #masks, wash, asked, use'
+ 'Neutral  3: #covid, #coronavirus, face, keep, going, hands, #masks, asked, wash, use'
+ 'Positive 3: #covid, #coronavirus, keep, face, going, hands, wash, asked, #masks, use'
+ '=========='
+ 'Negative 4: face masks, person, dr, getting, first, state, advice, study, says, government'
+ 'Neutral  4: face masks, person, dr, first, getting, state, says, government, even, advice'
+ 'Positive 4: face masks, person, dr, first, getting, state, says, even, government, advice'
+ '=========='
+ 'Negative 5: need, go, get, want, one, know, please, day, let, home'
+ 'Neutral  5: need, go, get, want, one, know, day, let, make, please'
+ 'Positive 5: go, get, need, one, know, want, day, let, please, make'
+ '=========='
+ 'Negative 6: covid, spread, help, work, may, protect, ppe, evidence, risk, medicine'
+ 'Neutral  6: covid, spread, help, may, protect, work, ppe, evidence, data, risk'
+ 'Positive 6: covid, spread, help, protect, work, may, ppe, evidence, data, prevent'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, would, yes, cdc, refusing, required, damn mask, mask mandate'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, cdc, damn mask, required, refusing, even'
+ 'Positive 7: wear masks, public, pandemic, would, yes, damn mask, required, cdc, even, refusing'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, like, stop, china, says, hospital, anti mask, could'
+ 'Neutral  8: coronavirus, trump, via, like, stop, china, says, anti mask, hospital, georgia'
+ 'Positive 8: coronavirus, trump, via, stop, like, china, anti mask, says, amid, hospital'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, everyone, good, worn, open, schools, safe, family, safety'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, family, safety'
+ 'Positive 9: social distancing, wearing masks, good, everyone, schools, worn, safe, open, staff, family'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Politician, Journalist, Doctor, Academic
+ ==================== 
+Step: 35000 ELBO: -185655.469 (0.010 sec/step)
+Step: 35100 ELBO: -187218.406 (0.010 sec/step)
+Step: 35200 ELBO: -185761.656 (0.010 sec/step)
+Step: 35300 ELBO: -185704.312 (0.010 sec/step)
+Step: 35400 ELBO: -185880.312 (0.010 sec/step)
+Step: 35500 ELBO: -187340.812 (0.010 sec/step)
+Step: 35600 ELBO: -184171.656 (0.010 sec/step)
+Step: 35700 ELBO: -185984.344 (0.010 sec/step)
+Step: 35800 ELBO: -188721.453 (0.010 sec/step)
+Step: 35900 ELBO: -184193.844 (0.010 sec/step)
+Step: 36000 ELBO: -185559.844 (0.010 sec/step)
+Step: 36100 ELBO: -187969.500 (0.010 sec/step)
+Step: 36200 ELBO: -187178.156 (0.010 sec/step)
+Step: 36300 ELBO: -183820.688 (0.010 sec/step)
+Step: 36400 ELBO: -185604.594 (0.010 sec/step)
+Step: 36500 ELBO: -187788.547 (0.010 sec/step)
+Step: 36600 ELBO: -184432.844 (0.010 sec/step)
+Step: 36700 ELBO: -185087.688 (0.010 sec/step)
+Step: 36800 ELBO: -185978.750 (0.010 sec/step)
+Step: 36900 ELBO: -184587.453 (0.010 sec/step)
+Step: 37000 ELBO: -185022.188 (0.010 sec/step)
+Step: 37100 ELBO: -188147.375 (0.010 sec/step)
+Step: 37200 ELBO: -186430.406 (0.010 sec/step)
+Step: 37300 ELBO: -185390.281 (0.010 sec/step)
+Step: 37400 ELBO: -186916.625 (0.010 sec/step)
+['Negative 0: wearing, today, realdonaldtrump, #wearamask, protect, see, got, others, someone, show'
+ 'Neutral  0: wearing, today, realdonaldtrump, protect, #wearamask, see, got, someone, others, anyone'
+ 'Positive 0: wearing, realdonaldtrump, today, protect, see, #wearamask, someone, got, anyone, others'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, really, without, mandatory, shops, mask wearing, july'
+ 'Neutral  1: face mask, still, new, virus, really, mandatory, without, mask wearing, shops, july'
+ 'Positive 1: face mask, still, new, virus, really, mandatory, without, mask wearing, july, shops'
+ '=========='
+ 'Negative 2: people, right, time, health, think, lockdown, said, say, thing, wearing mask'
+ 'Neutral  2: people, right, time, health, lockdown, said, think, say, thing, believe'
+ 'Positive 2: people, right, time, health, lockdown, said, think, believe, one, say'
+ '=========='
+ 'Negative 3: #covid, #coronavirus, face, going, keep, asked, hands, wash, #masks, use'
+ 'Neutral  3: #covid, face, #coronavirus, keep, going, hands, asked, #masks, wash, use'
+ 'Positive 3: #covid, face, keep, #coronavirus, going, hands, #masks, asked, wash, use'
+ '=========='
+ 'Negative 4: face masks, person, getting, first, dr, state, says, government, study, even'
+ 'Neutral  4: face masks, person, dr, first, getting, state, says, even, study, government'
+ 'Positive 4: face masks, person, first, getting, dr, says, state, even, video, study'
+ '=========='
+ 'Negative 5: go, need, get, want, know, one, day, make, please, let'
+ 'Neutral  5: need, go, get, want, know, one, day, make, please, let'
+ 'Positive 5: need, go, get, want, know, one, make, day, let, please'
+ '=========='
+ 'Negative 6: covid, spread, help, protect, work, may, ppe, evidence, data, prevent'
+ 'Neutral  6: covid, spread, help, may, work, protect, ppe, evidence, prevent, risk'
+ 'Positive 6: covid, spread, help, work, may, protect, ppe, evidence, risk, see'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, would, yes, damn mask, cdc, required, refusing, even'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, cdc, damn mask, required, refusing, even'
+ 'Positive 7: wear masks, public, pandemic, would, yes, damn mask, cdc, required, refusing, even'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, stop, like, china, anti mask, hospital, says, amid'
+ 'Neutral  8: coronavirus, trump, via, like, stop, china, anti mask, says, hospital, georgia'
+ 'Positive 8: coronavirus, trump, via, like, stop, china, says, anti mask, hospital, georgia'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, good, everyone, worn, open, safe, schools, safety, family'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, family, thought'
+ 'Positive 9: social distancing, wearing masks, good, everyone, schools, worn, safe, open, family, thought'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Politician, Academic, Journalist, Doctor
+ ==================== 
+Step: 37500 ELBO: -187681.891 (0.010 sec/step)
+Step: 37600 ELBO: -184570.719 (0.010 sec/step)
+Step: 37700 ELBO: -185049.453 (0.010 sec/step)
+Step: 37800 ELBO: -186939.750 (0.010 sec/step)
+Step: 37900 ELBO: -183628.203 (0.010 sec/step)
+Step: 38000 ELBO: -185733.500 (0.010 sec/step)
+Step: 38100 ELBO: -188246.391 (0.010 sec/step)
+Step: 38200 ELBO: -186252.125 (0.010 sec/step)
+Step: 38300 ELBO: -184892.656 (0.010 sec/step)
+Step: 38400 ELBO: -186657.188 (0.010 sec/step)
+Step: 38500 ELBO: -187194.922 (0.010 sec/step)
+Step: 38600 ELBO: -184764.562 (0.010 sec/step)
+Step: 38700 ELBO: -184332.250 (0.010 sec/step)
+Step: 38800 ELBO: -186635.484 (0.010 sec/step)
+Step: 38900 ELBO: -184293.750 (0.010 sec/step)
+Step: 39000 ELBO: -184150.375 (0.010 sec/step)
+Step: 39100 ELBO: -189210.781 (0.010 sec/step)
+Step: 39200 ELBO: -186002.125 (0.010 sec/step)
+Step: 39300 ELBO: -185401.438 (0.010 sec/step)
+Step: 39400 ELBO: -185223.359 (0.010 sec/step)
+Step: 39500 ELBO: -186986.141 (0.010 sec/step)
+Step: 39600 ELBO: -185536.312 (0.010 sec/step)
+Step: 39700 ELBO: -185408.094 (0.010 sec/step)
+Step: 39800 ELBO: -187050.000 (0.010 sec/step)
+Step: 39900 ELBO: -185454.250 (0.010 sec/step)
+Step: 39999 ELBO: -185397.062 (0.010 sec/step)
+['Negative 0: wearing, today, realdonaldtrump, protect, #wearamask, see, got, others, someone, anyone'
+ 'Neutral  0: wearing, today, realdonaldtrump, protect, see, #wearamask, got, others, someone, anyone'
+ 'Positive 0: wearing, realdonaldtrump, today, see, #wearamask, protect, got, anyone, someone, others'
+ '=========='
+ 'Negative 1: face mask, still, new, virus, really, mandatory, without, july, shops, england'
+ 'Neutral  1: face mask, still, new, virus, really, mandatory, without, mask wearing, shops, july'
+ 'Positive 1: face mask, new, still, virus, really, without, mandatory, mask wearing, shops, july'
+ '=========='
+ 'Negative 2: people, right, time, said, health, lockdown, think, believe, thing, say'
+ 'Neutral  2: people, right, time, health, said, lockdown, think, say, thing, believe'
+ 'Positive 2: people, right, health, time, lockdown, said, think, say, wearing mask, thing'
+ '=========='
+ 'Negative 3: #covid, #coronavirus, keep, face, going, hands, #masks, wash, use, asked'
+ 'Neutral  3: #covid, #coronavirus, face, keep, going, hands, #masks, asked, wash, use'
+ 'Positive 3: #covid, #coronavirus, face, keep, going, hands, asked, wash, #masks, use'
+ '=========='
+ 'Negative 4: face masks, person, state, getting, first, dr, says, even, study, government'
+ 'Neutral  4: face masks, person, state, dr, getting, first, says, government, even, study'
+ 'Positive 4: face masks, person, dr, says, first, government, even, state, getting, study'
+ '=========='
+ 'Negative 5: need, get, go, want, day, know, one, let, please, stay'
+ 'Neutral  5: need, get, go, want, know, one, day, please, let, make'
+ 'Positive 5: need, get, go, want, know, one, day, let, please, make'
+ '=========='
+ 'Negative 6: covid, spread, protect, may, help, work, ppe, evidence, prevent, data'
+ 'Neutral  6: covid, spread, help, work, may, protect, ppe, evidence, risk, data'
+ 'Positive 6: covid, spread, help, work, may, protect, ppe, evidence, risk, see'
+ '=========='
+ 'Negative 7: wear masks, public, pandemic, would, yes, damn mask, required, cdc, refusing, students'
+ 'Neutral  7: wear masks, public, pandemic, would, yes, damn mask, cdc, required, refusing, even'
+ 'Positive 7: wear masks, public, pandemic, would, yes, damn mask, cdc, required, refusing, even'
+ '=========='
+ 'Negative 8: coronavirus, trump, via, stop, like, china, anti mask, georgia, says, hospital'
+ 'Neutral  8: coronavirus, trump, via, like, stop, china, anti mask, says, hospital, amid'
+ 'Positive 8: coronavirus, trump, via, like, stop, china, says, anti mask, hospital, georgia'
+ '=========='
+ 'Negative 9: social distancing, wearing masks, everyone, good, worn, safe, schools, open, family, safety'
+ 'Neutral  9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, family, safety'
+ 'Positive 9: social distancing, wearing masks, good, everyone, worn, schools, safe, open, family, staff'
+ '==========']
+
+Sorted ideal points:
+ ==================== 
+Academic, Journalist, Politician, Doctor
+ ==================== 
