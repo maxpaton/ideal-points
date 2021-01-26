@@ -118,7 +118,7 @@ if __name__ == "__main__":
 		tweets.dropna(inplace=True)
 		print(len(tweets))
 	
-	# exportTweetsForBOW(tweets, 'tbip/data/covid-tweets-2020/raw/tweets_' + args.model + '.csv')
+	exportTweetsForBOW(tweets, 'tbip/data/covid-tweets-2020/raw/tweets_' + args.model + '.csv')
 
 
 
