@@ -2,6 +2,7 @@ data/COVID-19-TweetIDs
 data/concat_tweets.ipynb
 data/topic_model_test.ipynb
 data/.ipynb_checkpoints/
+data*/
 Sentence-BERT/
 papers/
 tbip/venv/
