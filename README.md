@@ -1,6 +1,6 @@
 # Ideal Points: COVID-19 Twitter Analysis
 
-In this project, I quantify various prototypical authors' (i.e. politicians, doctors, etc.) stance on COVID-19, by analysing polarisation in tweets. The tweets used were fetched using random samples of COVID-related tweet IDs from [https://github.com/echen102/COVID-19-TweetIDs](https://github.com/echen102/COVID-19-TweetIDs), spanning over six months. In total, around 600,000 tweets were collected.
+In this project, I quantify various prototypical authors' (i.e. politicians, doctors, etc.) stance on COVID-19, by analysing polarisation in tweets. The tweets used were fetched using random samples of COVID-related tweet IDs from [https://github.com/echen102/COVID-19-TweetIDs](https://github.com/echen102/COVID-19-TweetIDs), spanning over six months. In total, around 3 million tweets were collected (many of which were removed as a result of the cleaning/refining process).
 
 An 'ideal points' model, which is an unsupervised probabalistic topic model, is used to detect topics as well as quantifying the authors' stance on an interpretable scale. This model, located in the [tbip](https://github.com/maxpaton/ideal-points/tree/main/tbip) directory, was extracted from [https://github.com/keyonvafa/tbip](https://github.com/keyonvafa/tbip), and has been adapted slightly for this project.
 
