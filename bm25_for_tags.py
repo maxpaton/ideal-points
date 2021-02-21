@@ -27,9 +27,6 @@ def bm25Sim(tweets):#, author_info):
 	# searcher.set_bm25(0.1, 0.9)
 	searcher.set_rm3(fb_terms, fb_docs, original_query_weight)	
 
-	# tweets['label'] = np.nan
-	# tweets['label_score'] = np.nan
-
 	# for author in author_info.names:
 	hits = searcher.search('mask', k)
 	print(len(hits))
@@ -57,15 +54,15 @@ descriptionsToJSON(tweets[['id', 'text']])
  # then uncomment below code
 ######
 
-tweets = bm25Sim(tweets)
-print(len(tweets))
-tweets.dropna(inplace=True)
-print(len(tweets))
-# for i, row in tweets[:1000].iterrows():
-# 	print('##############')
-# 	print(row.text)
-# 	print('##############')
+# tweets = bm25Sim(tweets)
+# print(len(tweets))
+# tweets.dropna(inplace=True)
+# print(len(tweets))
+# # for i, row in tweets[:1000].iterrows():
+# # 	print('##############')
+# # 	print(row.text)
+# # 	print('##############')
 
-print(tweets)
+# print(tweets)
 
-tweets.to_csv('tbip/data/covid-tweets-2020/raw/tweets_cosine_sim_masks.csv')
+# tweets.to_csv('tbip/data/covid-tweets-2020/raw/tweets_cosine_sim_masks.csv')

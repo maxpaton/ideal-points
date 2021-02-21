@@ -1,0 +1,1696 @@
+Step:   0 ELBO: -8992780.000 (1.469 sec/step)
+Step: 100 ELBO: -2432758.250 (0.040 sec/step)
+Step: 200 ELBO: -2157185.250 (0.033 sec/step)
+Step: 300 ELBO: -1806694.125 (0.031 sec/step)
+Step: 400 ELBO: -1684655.500 (0.029 sec/step)
+Step: 500 ELBO: -1658862.250 (0.029 sec/step)
+Step: 600 ELBO: -1617754.750 (0.028 sec/step)
+Step: 700 ELBO: -1606057.625 (0.028 sec/step)
+Step: 800 ELBO: -1595648.625 (0.028 sec/step)
+Step: 900 ELBO: -1525177.500 (0.027 sec/step)
+Step: 1000 ELBO: -1550729.750 (0.027 sec/step)
+Step: 1100 ELBO: -1476904.000 (0.027 sec/step)
+Step: 1200 ELBO: -1502334.250 (0.027 sec/step)
+Step: 1300 ELBO: -1440323.750 (0.027 sec/step)
+Step: 1400 ELBO: -1504511.000 (0.027 sec/step)
+Step: 1500 ELBO: -1501291.500 (0.027 sec/step)
+Step: 1600 ELBO: -1449883.250 (0.027 sec/step)
+Step: 1700 ELBO: -1474593.250 (0.027 sec/step)
+Step: 1800 ELBO: -1433184.500 (0.027 sec/step)
+Step: 1900 ELBO: -1429959.000 (0.027 sec/step)
+Step: 2000 ELBO: -1430321.000 (0.027 sec/step)
+Step: 2100 ELBO: -1458321.750 (0.027 sec/step)
+Step: 2200 ELBO: -1458793.000 (0.026 sec/step)
+Step: 2300 ELBO: -1391882.125 (0.026 sec/step)
+Step: 2400 ELBO: -1369371.500 (0.026 sec/step)
+['Negative 0: know, need, read, also, still, right, well, help, want, think'
+ 'Neutral  0: know, need, read, still, also, right, well, want, help, think'
+ 'Positive 0: read, know, need, still, also, right, well, want, help, think'
+ '=========='
+ 'Negative 1: people, think, virus, really, get covid, infected, canada, tell, least, around'
+ 'Neutral  1: people, think, virus, really, tell, get covid, canada, least, infected, around'
+ 'Positive 1: people, think, really, virus, tell, canada, get covid, least, expression, still'
+ '=========='
+ 'Negative 2: lockdown, amid, via, follow, govt, even, could, long, transport, think'
+ 'Neutral  2: lockdown, amid, via, govt, follow, even, long, could, families, transport'
+ 'Positive 2: lockdown, amid, govt, via, follow, long, even, could, families, economy'
+ '=========='
+ 'Negative 3: one, way, first, teacher, developing, another, said, recently, world, word'
+ 'Neutral  3: one, way, first, teacher, developing, survive, another, hope, made, recently'
+ 'Positive 3: one, way, survive, first, developing, teacher, made, mostly, waiting, recently'
+ '=========='
+ 'Negative 4: says, health, government, cdc, cuomo, leaders, wearing masks, based, dr, could'
+ 'Neutral  4: says, health, government, cdc, cuomo, leaders, based, could, dr, wearing masks'
+ 'Positive 4: says, health, government, leaders, based, cuomo, cdc, could, dr, wearing masks'
+ '=========='
+ 'Negative 5: covid, getting, due, died, making, current, close, influenza, regarding, patients'
+ 'Neutral  5: covid, getting, died, due, close, current, making, influenza, patients, tested positive'
+ 'Positive 5: covid, getting, died, due, close, man, influenza, current, making, learn'
+ '=========='
+ 'Negative 6: coronavirus, air, state, official, second, via, major, quarantine, sources, border'
+ 'Neutral  6: coronavirus, air, state, second, official, major, via, sources, warns, border'
+ 'Positive 6: coronavirus, air, state, second, major, official, sources, warns, border, via'
+ '=========='
+ 'Negative 7: #covid, check, find, next, university, via, latest, non, treatment, patients'
+ 'Neutral  7: #covid, check, next, find, non, university, via, latest, treatment, patients'
+ 'Positive 7: #covid, check, next, find, non, university, body, treatment, via, current'
+ '=========='
+ 'Negative 8: mask, realdonaldtrump, wear, face, safe, masks, wearing, man, care, everyone'
+ 'Neutral  8: mask, realdonaldtrump, wear, safe, face, masks, wearing, care, please, everyone'
+ 'Positive 8: mask, realdonaldtrump, safe, wear, face, masks, care, wearing, man, please'
+ '=========='
+ 'Negative 9: #coronavirus, response, latest, find, world, ministry, excited, thanks, despite, become'
+ 'Neutral  9: #coronavirus, response, latest, find, ministry, world, thanks, despite, become, excited'
+ 'Positive 9: #coronavirus, response, latest, find, ministry, despite, become, economy, world, move'
+ '=========='
+ 'Negative 10: time, led, growing, giving, covid related, saying, care, half, public health, piece'
+ 'Neutral  10: time, led, giving, saying, public health, covid related, care, growing, piece, half'
+ 'Positive 10: time, led, saying, giving, public health, covid related, growing, care, live, guy'
+ '=========='
+ 'Negative 11: may, public, available, testing, cure, problems, worth, never, extension, according'
+ 'Neutral  11: may, public, testing, available, problems, cure, worth, extension, according, simple'
+ 'Positive 11: may, public, testing, available, problems, according, extension, simple, cure, discovered'
+ '=========='
+ 'Negative 12: new, risk, case, ahead, check, delay, planning, project, according, racism'
+ 'Neutral  12: new, risk, check, according, case, project, delay, ahead, racism, planning'
+ 'Positive 12: new, check, according, risk, project, racism, delay, case, prepare, ahead'
+ '=========='
+ 'Negative 13: trump, tax, republican, realdonaldtrump, jobs, gatherings, since, election, cdc, insider'
+ 'Neutral  13: trump, tax, republican, realdonaldtrump, jobs, gatherings, election, cdc, since, insider'
+ 'Positive 13: trump, tax, republican, jobs, realdonaldtrump, gatherings, vote, since, insider, tested'
+ '=========='
+ 'Negative 14: pandemic, better, developed, happening, times, even, economic, could, businesses, make'
+ 'Neutral  14: pandemic, better, developed, times, even, happening, economic, make, could, businesses'
+ 'Positive 14: pandemic, better, times, developed, happening, economic, even, make, world, bad'
+ '=========='
+ 'Negative 15: china, virus, find, hold, pmoindia, world, drop, lying, investigation, rahulgandhi'
+ 'Neutral  15: china, virus, find, hold, pmoindia, lying, world, drop, colleges, investigation'
+ 'Positive 15: china, virus, find, pmoindia, hold, lying, colleges, drop, pneumonia, rahulgandhi'
+ '=========='
+ 'Negative 16: good, many, work, corona, home, see, great, back, students, due'
+ 'Neutral  16: good, many, work, corona, see, home, great, students, back, due'
+ 'Positive 16: good, see, home, work, corona, many, school, students, due, going'
+ '=========='
+ 'Negative 17: would, like, think, dollars, right, say, conspiracy, said, trying, really'
+ 'Neutral  17: would, like, think, say, right, dollars, said, conspiracy, makes, sars cov'
+ 'Positive 17: would, like, think, say, right, said, dollars, conspiracy, absolutely, makes'
+ '=========='
+ 'Negative 18: get, flu, mexico, example, could, coronavirus vaccine, vaccine, support, much, trust'
+ 'Neutral  18: get, flu, mexico, example, coronavirus vaccine, could, much, support, vaccine, help'
+ 'Positive 18: get, flu, mexico, coronavirus vaccine, example, help, support, first, could, together'
+ '=========='
+ 'Negative 19: today, day, news, cases, days, india, deaths, top, first, uk'
+ 'Neutral  19: news, today, day, days, cases, india, deaths, top, uk, first'
+ 'Positive 19: news, today, day, days, top, uk, cases, deaths, india, first'
+ '==========']
+
+Step: 2500 ELBO: -1381785.750 (0.026 sec/step)
+Step: 2600 ELBO: -1368109.750 (0.026 sec/step)
+Step: 2700 ELBO: -1391446.500 (0.026 sec/step)
+Step: 2800 ELBO: -1405443.750 (0.026 sec/step)
+Step: 2900 ELBO: -1404082.875 (0.026 sec/step)
+Step: 3000 ELBO: -1381641.250 (0.026 sec/step)
+Step: 3100 ELBO: -1413802.750 (0.026 sec/step)
+Step: 3200 ELBO: -1383779.000 (0.026 sec/step)
+Step: 3300 ELBO: -1383019.375 (0.026 sec/step)
+Step: 3400 ELBO: -1364576.375 (0.026 sec/step)
+Step: 3500 ELBO: -1358609.125 (0.026 sec/step)
+Step: 3600 ELBO: -1471507.500 (0.026 sec/step)
+Step: 3700 ELBO: -1402276.125 (0.026 sec/step)
+Step: 3800 ELBO: -1379949.375 (0.026 sec/step)
+Step: 3900 ELBO: -1370379.250 (0.026 sec/step)
+Step: 4000 ELBO: -1405199.750 (0.026 sec/step)
+Step: 4100 ELBO: -1364564.750 (0.026 sec/step)
+Step: 4200 ELBO: -1359687.250 (0.026 sec/step)
+Step: 4300 ELBO: -1348254.500 (0.026 sec/step)
+Step: 4400 ELBO: -1339672.250 (0.026 sec/step)
+Step: 4500 ELBO: -1331565.875 (0.026 sec/step)
+Step: 4600 ELBO: -1327990.875 (0.026 sec/step)
+Step: 4700 ELBO: -1337620.000 (0.026 sec/step)
+Step: 4800 ELBO: -1356130.500 (0.026 sec/step)
+Step: 4900 ELBO: -1321998.000 (0.026 sec/step)
+['Negative 0: know, need, read, still, also, well, right, want, think, help'
+ 'Neutral  0: know, need, read, still, also, well, right, want, think, help'
+ 'Positive 0: need, know, read, also, still, well, right, want, help, let'
+ '=========='
+ 'Negative 1: people, really, infected, way, least, virus, expression, around, say, think'
+ 'Neutral  1: people, really, infected, least, way, think, virus, care, around, say'
+ 'Positive 1: people, really, think, infected, expression, care, least, virus, say, around'
+ '=========='
+ 'Negative 2: lockdown, via, rules, government, follow, full, set, could, got, govt'
+ 'Neutral  2: lockdown, via, rules, could, full, govt, government, follow, amid, got'
+ 'Positive 2: lockdown, via, could, govt, follow, amid, full, went, rules, government'
+ '=========='
+ 'Negative 3: one, way, another, world, every, best, fully, first, developing, case'
+ 'Neutral  3: one, way, another, every, best, world, survive, waiting, first, developing'
+ 'Positive 3: one, way, survive, waiting, another, best, every, first, developing, made'
+ '=========='
+ 'Negative 4: says, health, cdc, dr, government, covid vaccine, chief, president, probably, could'
+ 'Neutral  4: says, health, cdc, dr, government, chief, covid vaccine, reached, president, could'
+ 'Positive 4: says, health, cdc, dr, government, reached, chief, covid vaccine, leaders, president'
+ '=========='
+ 'Negative 5: covid, getting, due, via, patients, died, hospital, risk, tested positive, impact'
+ 'Neutral  5: covid, getting, due, patients, died, via, hospital, risk, tested positive, impact'
+ 'Positive 5: covid, getting, died, due, patients, via, hospital, risk, tested positive, learn'
+ '=========='
+ 'Negative 6: coronavirus, air, via, quarantine, state, chinese, spread, could, official, second'
+ 'Neutral  6: coronavirus, air, via, state, quarantine, chinese, spread, labour, second, official'
+ 'Positive 6: coronavirus, air, via, state, labour, major, second, quarantine, official, spread'
+ '=========='
+ 'Negative 7: #covid, latest, response, patients, check, find, spread, research, data, via'
+ 'Neutral  7: #covid, latest, patients, response, check, research, spread, data, next, find'
+ 'Positive 7: #covid, patients, check, latest, find, next, research, non, response, data'
+ '=========='
+ 'Negative 8: mask, wear, realdonaldtrump, masks, safe, wearing, face, everyone, keep, stop'
+ 'Neutral  8: mask, wear, realdonaldtrump, masks, safe, wearing, face, everyone, please, stop'
+ 'Positive 8: mask, wear, safe, realdonaldtrump, masks, face, wearing, everyone, please, stop'
+ '=========='
+ 'Negative 9: #coronavirus, latest, response, find, excited, world, thanks, via, #, chinese'
+ 'Neutral  9: #coronavirus, latest, response, find, thanks, world, excited, via, ministry, #'
+ 'Positive 9: #coronavirus, latest, response, find, thanks, excited, world, ministry, economy, move'
+ '=========='
+ 'Negative 10: time, led, growing, piece, realdonaldtrump, week, saying, world health, care, half'
+ 'Neutral  10: time, led, growing, piece, realdonaldtrump, saying, care, giving, pain, covid related'
+ 'Positive 10: time, led, growing, piece, saying, giving, realdonaldtrump, covid related, public health, care'
+ '=========='
+ 'Negative 11: may, testing, available, cure, worth, never, simple, trying, public, guide'
+ 'Neutral  11: may, testing, available, cure, worth, never, simple, guide, trying, public'
+ 'Positive 11: may, testing, available, simple, cure, worth, public, never, guide, trying'
+ '=========='
+ 'Negative 12: new, risk, delay, ahead, data, report, week, case, research, image'
+ 'Neutral  12: new, delay, risk, data, ahead, report, research, week, case, check'
+ 'Positive 12: new, delay, risk, report, data, check, ahead, according, project, research'
+ '=========='
+ 'Negative 13: trump, tax, election, realdonaldtrump, rally, cdc, pence, campaign, americans, president'
+ 'Neutral  13: trump, tax, realdonaldtrump, election, cdc, rally, republican, gatherings, pence, campaign'
+ 'Positive 13: trump, tax, realdonaldtrump, republican, gatherings, election, vote, cdc, let, white house'
+ '=========='
+ 'Negative 14: pandemic, better, even, economic, say, months, much, happening, online, could'
+ 'Neutral  14: pandemic, better, even, economic, say, months, online, world, still, happening'
+ 'Positive 14: pandemic, better, even, economic, say, happening, world, online, months, still'
+ '=========='
+ 'Negative 15: china, virus, world, find, hold, wuhan, travel, countries, spread, could'
+ 'Neutral  15: china, virus, world, find, hold, spread, wuhan, countries, travel, chinese'
+ 'Positive 15: china, virus, world, find, hold, spread, countries, pmoindia, wuhan, travel'
+ '=========='
+ 'Negative 16: home, corona, work, many, good, see, back, great, kindly, students'
+ 'Neutral  16: good, many, work, corona, home, great, see, students, back, kindly'
+ 'Positive 16: good, many, work, corona, kindly, see, great, students, home, school'
+ '=========='
+ 'Negative 17: like, would, think, right, said, say, really, thought, dollars, absolutely'
+ 'Neutral  17: like, would, think, right, said, say, thought, absolutely, really, dollars'
+ 'Positive 17: would, like, think, right, say, said, absolutely, thought, really, dollars'
+ '=========='
+ 'Negative 18: get, flu, could, vaccine, much, help, mexico, done, going, want'
+ 'Neutral  18: get, flu, could, help, vaccine, much, done, going, want, mexico'
+ 'Positive 18: get, flu, could, help, vaccine, done, much, mexico, want, going'
+ '=========='
+ 'Negative 19: today, day, india, cases, news, deaths, covid cases, uk, first, days'
+ 'Neutral  19: today, day, news, cases, india, deaths, uk, first, covid cases, days'
+ 'Positive 19: news, today, day, cases, deaths, uk, india, days, first, covid cases'
+ '==========']
+
+Step: 5000 ELBO: -1518891.250 (0.026 sec/step)
+Step: 5100 ELBO: -1325224.250 (0.026 sec/step)
+Step: 5200 ELBO: -2458612.500 (0.026 sec/step)
+Step: 5300 ELBO: -1320810.000 (0.026 sec/step)
+Step: 5400 ELBO: -1316595.875 (0.026 sec/step)
+Step: 5500 ELBO: -1324972.250 (0.026 sec/step)
+Step: 5600 ELBO: -1321287.875 (0.026 sec/step)
+Step: 5700 ELBO: -1329038.750 (0.026 sec/step)
+Step: 5800 ELBO: -1321605.750 (0.026 sec/step)
+Step: 5900 ELBO: -1302193.250 (0.026 sec/step)
+Step: 6000 ELBO: -1311868.375 (0.026 sec/step)
+Step: 6100 ELBO: -1307686.750 (0.026 sec/step)
+Step: 6200 ELBO: -1333250.250 (0.026 sec/step)
+Step: 6300 ELBO: -1316226.500 (0.026 sec/step)
+Step: 6400 ELBO: -1335719.250 (0.026 sec/step)
+Step: 6500 ELBO: -1294144.000 (0.026 sec/step)
+Step: 6600 ELBO: -1303392.750 (0.026 sec/step)
+Step: 6700 ELBO: -1317617.500 (0.026 sec/step)
+Step: 6800 ELBO: -1327569.000 (0.026 sec/step)
+Step: 6900 ELBO: -1311721.125 (0.026 sec/step)
+Step: 7000 ELBO: -1291685.750 (0.026 sec/step)
+Step: 7100 ELBO: -1308346.000 (0.026 sec/step)
+Step: 7200 ELBO: -1289784.000 (0.026 sec/step)
+Step: 7300 ELBO: -1354670.250 (0.026 sec/step)
+Step: 7400 ELBO: -1302728.500 (0.026 sec/step)
+['Negative 0: need, know, read, also, still, well, right, want, anyone, let'
+ 'Neutral  0: know, need, read, still, also, well, right, want, anyone, help'
+ 'Positive 0: read, know, need, still, also, well, right, want, anyone, data'
+ '=========='
+ 'Negative 1: people, least, infected, care, around, really, say, expression, way, virus'
+ 'Neutral  1: people, infected, least, care, around, really, say, way, expression, virus'
+ 'Positive 1: people, infected, care, around, expression, least, really, say, way, virus'
+ '=========='
+ 'Negative 2: lockdown, rules, government, via, full, govt, anti, could, went, early'
+ 'Neutral  2: lockdown, full, via, govt, early, could, government, got, put, rules'
+ 'Positive 2: lockdown, via, full, govt, early, coming, could, got, put, weeks'
+ '=========='
+ 'Negative 3: one, way, another, every, world, best, hope, yes, two, fully'
+ 'Neutral  3: one, way, another, every, best, world, hope, two, important, yes'
+ 'Positive 3: one, way, another, best, every, waiting, world, hope, two, survive'
+ '=========='
+ 'Negative 4: says, health, cdc, dr, chief, minister, covid vaccine, president, government, schools'
+ 'Neutral  4: says, health, cdc, dr, chief, covid vaccine, government, president, minister, schools'
+ 'Positive 4: says, health, cdc, dr, covid vaccine, government, chief, reached, president, schools'
+ '=========='
+ 'Negative 5: covid, due, via, died, hospital, patients, tested positive, risk, impact, tests positive'
+ 'Neutral  5: covid, due, died, via, patients, hospital, risk, impact, tested positive, study'
+ 'Positive 5: covid, died, patients, due, via, getting, risk, hospital, impact, study'
+ '=========='
+ 'Negative 6: coronavirus, via, air, chinese, spread, could, two, world, travel, hospital'
+ 'Neutral  6: coronavirus, via, air, chinese, spread, world, could, two, state, case'
+ 'Positive 6: coronavirus, via, air, spread, chinese, state, world, major, first, case'
+ '=========='
+ 'Negative 7: #covid, latest, patients, response, research, data, spread, check, using, test'
+ 'Neutral  7: #covid, latest, patients, response, research, data, check, spread, using, article'
+ 'Positive 7: #covid, patients, latest, response, research, data, check, spread, article, evidence'
+ '=========='
+ 'Negative 8: mask, wear, masks, realdonaldtrump, wearing, please, everyone, stop, safe, social distancing'
+ 'Neutral  8: mask, wear, masks, realdonaldtrump, wearing, safe, everyone, please, stop, social distancing'
+ 'Positive 8: mask, wear, masks, realdonaldtrump, safe, wearing, everyone, stop, please, face'
+ '=========='
+ 'Negative 9: #coronavirus, latest, world, thanks, excited, response, #, find, #china, chinese'
+ 'Neutral  9: #coronavirus, latest, thanks, world, response, excited, find, #, #china, via'
+ 'Positive 9: #coronavirus, latest, thanks, response, excited, world, find, #, via, economy'
+ '=========='
+ 'Negative 10: time, led, growing, week, piece, realdonaldtrump, pain, best, real, next'
+ 'Neutral  10: time, led, growing, pain, week, piece, realdonaldtrump, best, next, real'
+ 'Positive 10: time, led, growing, pain, realdonaldtrump, piece, already, week, every, world health'
+ '=========='
+ 'Negative 11: may, testing, available, cure, never, worth, trying, guide, vitamin, simple'
+ 'Neutral  11: may, testing, available, cure, worth, never, trying, vitamin, guide, simple'
+ 'Positive 11: may, testing, available, cure, worth, vitamin, never, simple, trying, guide'
+ '=========='
+ 'Negative 12: new, report, data, first, research, novel coronavirus, week, disease, public health, ahead'
+ 'Neutral  12: new, data, research, report, novel coronavirus, first, week, disease, ahead, delay'
+ 'Positive 12: new, data, research, report, novel coronavirus, delay, first, week, check, disease'
+ '=========='
+ 'Negative 13: trump, tax, realdonaldtrump, election, rally, americans, pence, cdc, white house, debate'
+ 'Neutral  13: trump, tax, realdonaldtrump, election, rally, cdc, americans, pence, campaign, white house'
+ 'Positive 13: trump, tax, realdonaldtrump, election, cdc, campaign, rally, pence, vote, americans'
+ '=========='
+ 'Negative 14: pandemic, economic, even, months, better, end, say, world, online, situation'
+ 'Neutral  14: pandemic, better, even, economic, months, say, end, world, times, real'
+ 'Positive 14: pandemic, better, even, economic, months, since, say, worse, times, world'
+ '=========='
+ 'Negative 15: china, virus, world, wuhan, travel, coronavirus outbreak, spread, could, countries, chinese'
+ 'Neutral  15: china, virus, world, wuhan, travel, countries, spread, coronavirus outbreak, could, chinese'
+ 'Positive 15: china, virus, world, wuhan, countries, travel, could, spread, chinese, flights'
+ '=========='
+ 'Negative 16: corona, many, kindly, work, home, see, great, good, back, students'
+ 'Neutral  16: many, work, corona, home, kindly, see, good, great, back, students'
+ 'Positive 16: kindly, good, many, work, see, corona, great, home, students, back'
+ '=========='
+ 'Negative 17: would, like, think, right, said, say, thought, really, absolutely, thing'
+ 'Neutral  17: like, would, think, right, said, say, thought, really, absolutely, thing'
+ 'Positive 17: like, would, think, right, say, said, absolutely, thought, really, thing'
+ '=========='
+ 'Negative 18: get, flu, could, vaccine, much, going, help, done, season, worse'
+ 'Neutral  18: get, flu, could, vaccine, much, help, done, want, going, season'
+ 'Positive 18: get, flu, could, vaccine, much, help, want, done, going, covid test'
+ '=========='
+ 'Negative 19: today, day, india, news, deaths, cases, uk, covid cases, first, days'
+ 'Neutral  19: today, day, news, cases, india, deaths, uk, covid cases, first, days'
+ 'Positive 19: today, day, news, cases, deaths, india, uk, first, covid cases, days'
+ '==========']
+
+Step: 7500 ELBO: -1300206.625 (0.026 sec/step)
+Step: 7600 ELBO: -1287208.750 (0.026 sec/step)
+Step: 7700 ELBO: -1276575.000 (0.026 sec/step)
+Step: 7800 ELBO: -1315174.500 (0.026 sec/step)
+Step: 7900 ELBO: -1302702.125 (0.026 sec/step)
+Step: 8000 ELBO: -1285712.625 (0.026 sec/step)
+Step: 8100 ELBO: -1275105.500 (0.026 sec/step)
+Step: 8200 ELBO: -1297211.000 (0.026 sec/step)
+Step: 8300 ELBO: -1306503.625 (0.026 sec/step)
+Step: 8400 ELBO: -1307037.000 (0.026 sec/step)
+Step: 8500 ELBO: -1290943.750 (0.026 sec/step)
+Step: 8600 ELBO: -1295521.500 (0.026 sec/step)
+Step: 8700 ELBO: -1278282.500 (0.026 sec/step)
+Step: 8800 ELBO: -1317107.500 (0.026 sec/step)
+Step: 8900 ELBO: -1314074.000 (0.026 sec/step)
+Step: 9000 ELBO: -1270456.250 (0.026 sec/step)
+Step: 9100 ELBO: -1265918.000 (0.026 sec/step)
+Step: 9200 ELBO: -1264497.250 (0.026 sec/step)
+Step: 9300 ELBO: -1283563.000 (0.026 sec/step)
+Step: 9400 ELBO: -1280706.250 (0.026 sec/step)
+Step: 9500 ELBO: -1302058.000 (0.026 sec/step)
+Step: 9600 ELBO: -1275669.750 (0.026 sec/step)
+Step: 9700 ELBO: -1321532.500 (0.026 sec/step)
+Step: 9800 ELBO: -1265941.000 (0.026 sec/step)
+Step: 9900 ELBO: -1245626.500 (0.026 sec/step)
+['Negative 0: know, need, read, still, also, well, want, right, anyone, everything'
+ 'Neutral  0: need, know, read, still, also, well, want, right, anyone, maybe'
+ 'Positive 0: read, need, know, still, also, well, right, want, anyone, maybe'
+ '=========='
+ 'Negative 1: people, infected, least, really, around, country, care, say, yet, could'
+ 'Neutral  1: people, infected, least, care, around, really, way, could, yet, say'
+ 'Positive 1: people, infected, least, care, around, way, really, could, yet, dying'
+ '=========='
+ 'Negative 2: lockdown, full, govt, rules, set, put, could, went, early, via'
+ 'Neutral  2: lockdown, full, rules, early, govt, via, went, could, set, got'
+ 'Positive 2: lockdown, full, video, early, via, government, rules, went, coming, could'
+ '=========='
+ 'Negative 3: one, way, another, best, every, hope, world, case, yes, important'
+ 'Neutral  3: one, way, another, best, every, world, hope, important, case, two'
+ 'Positive 3: one, way, another, best, every, world, important, hope, two, ever'
+ '=========='
+ 'Negative 4: says, health, cdc, dr, covid vaccine, chief, government, president, minister, state'
+ 'Neutral  4: says, health, cdc, dr, covid vaccine, chief, government, president, minister, state'
+ 'Positive 4: says, health, cdc, dr, covid vaccine, government, chief, president, minister, schools'
+ '=========='
+ 'Negative 5: covid, died, due, patients, hospital, via, risk, study, tested positive, tests positive'
+ 'Neutral  5: covid, patients, died, due, via, hospital, risk, impact, tested positive, study'
+ 'Positive 5: covid, patients, died, via, due, impact, hospital, risk, tested positive, business'
+ '=========='
+ 'Negative 6: coronavirus, via, chinese, world, tested positive, spread, air, major, hospital, could'
+ 'Neutral  6: coronavirus, via, spread, world, chinese, air, two, could, tested positive, patient'
+ 'Positive 6: coronavirus, via, spread, two, world, air, chinese, patient, government, could'
+ '=========='
+ 'Negative 7: #covid, latest, patients, response, data, research, article, check, risk, using'
+ 'Neutral  7: #covid, patients, latest, response, research, data, check, using, spread, article'
+ 'Positive 7: #covid, patients, response, latest, research, data, using, check, spread, evidence'
+ '=========='
+ 'Negative 8: mask, wear, masks, realdonaldtrump, wearing, social distancing, everyone, stop, safe, please'
+ 'Neutral  8: mask, wear, masks, realdonaldtrump, wearing, everyone, stop, safe, social distancing, keep'
+ 'Positive 8: mask, wear, masks, realdonaldtrump, safe, everyone, wearing, stop, keep, face'
+ '=========='
+ 'Negative 9: #coronavirus, latest, thanks, world, #, chinese, #china, response, via, excited'
+ 'Neutral  9: #coronavirus, latest, thanks, world, #, response, #china, excited, chinese, #pandemic'
+ 'Positive 9: #coronavirus, latest, thanks, world, response, #, excited, #pandemic, via, find'
+ '=========='
+ 'Negative 10: time, growing, led, pain, real, week, piece, next, series, use'
+ 'Neutral  10: time, led, growing, pain, week, piece, real, spend, care, series'
+ 'Positive 10: time, led, growing, pain, piece, week, spend, real, best, stop'
+ '=========='
+ 'Negative 11: may, testing, available, cure, vitamin, never, worth, trying, alter, vaccine'
+ 'Neutral  11: may, testing, available, vitamin, cure, worth, trying, never, alter, sars cov'
+ 'Positive 11: may, testing, available, vitamin, trying, cure, worth, never, sars cov, expression'
+ '=========='
+ 'Negative 12: new, novel coronavirus, research, report, data, disease, first, cov, caused, week'
+ 'Neutral  12: new, report, data, research, novel coronavirus, disease, first, england, week, cov'
+ 'Positive 12: new, report, data, research, novel coronavirus, first, england, shows, week, according'
+ '=========='
+ 'Negative 13: trump, tax, realdonaldtrump, election, americans, gop, campaign, pence, president, rally'
+ 'Neutral  13: trump, tax, realdonaldtrump, election, americans, rally, president, pence, gop, campaign'
+ 'Positive 13: trump, tax, realdonaldtrump, election, americans, rally, white house, president, vote, cdc'
+ '=========='
+ 'Negative 14: pandemic, even, economic, better, months, world, could, say, much, times'
+ 'Neutral  14: pandemic, even, economic, better, months, world, times, say, much, online'
+ 'Positive 14: pandemic, better, economic, even, months, times, say, world, things, pre'
+ '=========='
+ 'Negative 15: china, virus, travel, wuhan, world, countries, spread, coronavirus outbreak, flights, chinese'
+ 'Neutral  15: china, virus, wuhan, travel, world, countries, spread, coronavirus outbreak, chinese, flights'
+ 'Positive 15: china, virus, wuhan, world, countries, spread, travel, coronavirus outbreak, outbreak, chinese'
+ '=========='
+ 'Negative 16: corona, home, work, many, back, see, great, going, go, students'
+ 'Neutral  16: many, corona, work, see, home, great, good, back, students, going'
+ 'Positive 16: good, many, kindly, work, see, corona, great, home, students, back'
+ '=========='
+ 'Negative 17: like, would, think, right, said, say, thought, really, love, even'
+ 'Neutral  17: like, would, think, right, said, say, thought, really, absolutely, thing'
+ 'Positive 17: would, like, think, right, said, really, say, thought, absolutely, thing'
+ '=========='
+ 'Negative 18: get, flu, could, vaccine, help, season, done, worse, much, want'
+ 'Neutral  18: get, flu, could, done, vaccine, help, much, season, worse, want'
+ 'Positive 18: get, flu, done, could, vaccine, help, much, sick, want, worse'
+ '=========='
+ 'Negative 19: today, day, cases, news, india, deaths, uk, covid cases, first, days'
+ 'Neutral  19: today, day, news, cases, india, deaths, uk, covid cases, first, days'
+ 'Positive 19: today, day, news, india, deaths, cases, first, days, uk, covid cases'
+ '==========']
+
+Step: 10000 ELBO: -1319564.500 (0.026 sec/step)
+Step: 10100 ELBO: -1282370.500 (0.026 sec/step)
+Step: 10200 ELBO: -1262108.750 (0.026 sec/step)
+Step: 10300 ELBO: -1273363.000 (0.026 sec/step)
+Step: 10400 ELBO: -1268294.250 (0.026 sec/step)
+Step: 10500 ELBO: -1261508.750 (0.026 sec/step)
+Step: 10600 ELBO: -1274034.500 (0.026 sec/step)
+Step: 10700 ELBO: -1266991.250 (0.026 sec/step)
+Step: 10800 ELBO: -1303160.375 (0.026 sec/step)
+Step: 10900 ELBO: -1249160.875 (0.026 sec/step)
+Step: 11000 ELBO: -1253227.500 (0.026 sec/step)
+Step: 11100 ELBO: -1302879.000 (0.026 sec/step)
+Step: 11200 ELBO: -1288217.875 (0.026 sec/step)
+Step: 11300 ELBO: -1281249.250 (0.026 sec/step)
+Step: 11400 ELBO: -1334313.625 (0.026 sec/step)
+Step: 11500 ELBO: -1266777.250 (0.026 sec/step)
+Step: 11600 ELBO: -1270489.000 (0.026 sec/step)
+Step: 11700 ELBO: -1270830.375 (0.026 sec/step)
+Step: 11800 ELBO: -1246972.375 (0.026 sec/step)
+Step: 11900 ELBO: -1304288.000 (0.026 sec/step)
+Step: 12000 ELBO: -1254123.000 (0.026 sec/step)
+Step: 12100 ELBO: -1238868.625 (0.026 sec/step)
+Step: 12200 ELBO: -1305211.250 (0.026 sec/step)
+Step: 12300 ELBO: -1279334.875 (0.026 sec/step)
+Step: 12400 ELBO: -1276616.000 (0.026 sec/step)
+['Negative 0: need, read, know, still, also, well, want, anyone, right, maybe'
+ 'Neutral  0: know, read, need, still, also, well, anyone, want, maybe, right'
+ 'Positive 0: know, read, need, still, also, well, want, anyone, maybe, data'
+ '=========='
+ 'Negative 1: people, least, care, infected, around, really, could, killed, dying, got'
+ 'Neutral  1: people, least, infected, care, around, really, could, country, killed, dying'
+ 'Positive 1: people, around, infected, least, care, really, country, could, killed, yet'
+ '=========='
+ 'Negative 2: lockdown, full, rules, government, went, start, got, govt, local, early'
+ 'Neutral  2: lockdown, full, early, went, rules, govt, coming, got, local, set'
+ 'Positive 2: lockdown, full, early, coming, went, govt, got, set, measures, started'
+ '=========='
+ 'Negative 3: one, way, another, best, every, hope, world, made, yes, important'
+ 'Neutral  3: one, way, another, best, every, hope, world, important, yes, ever'
+ 'Positive 3: one, way, another, every, best, world, hope, important, yes, ever'
+ '=========='
+ 'Negative 4: says, health, cdc, covid vaccine, dr, chief, minister, government, state, president'
+ 'Neutral  4: says, health, cdc, dr, covid vaccine, chief, government, minister, president, state'
+ 'Positive 4: health, says, cdc, dr, covid vaccine, government, chief, public health, president, state'
+ '=========='
+ 'Negative 5: covid, via, died, due, risk, patients, hospital, study, tested positive, tests positive'
+ 'Neutral  5: covid, patients, died, due, hospital, via, risk, study, tested positive, impact'
+ 'Positive 5: covid, patients, hospital, due, died, via, impact, risk, study, tested positive'
+ '=========='
+ 'Negative 6: coronavirus, via, chinese, spread, warns, hospital, two, dies, could, aid'
+ 'Neutral  6: coronavirus, via, chinese, spread, could, hospital, two, tested positive, patient, first'
+ 'Positive 6: coronavirus, via, tested positive, world, spread, could, case, chinese, first, hospital'
+ '=========='
+ 'Negative 7: #covid, patients, latest, response, data, research, check, using, impact, access'
+ 'Neutral  7: #covid, patients, response, data, latest, research, check, using, evidence, access'
+ 'Positive 7: #covid, patients, data, response, research, latest, using, check, evidence, risk'
+ '=========='
+ 'Negative 8: mask, wear, masks, stop, realdonaldtrump, social distancing, keep, everyone, wearing, others'
+ 'Neutral  8: mask, wear, masks, stop, realdonaldtrump, everyone, social distancing, safe, wearing, keep'
+ 'Positive 8: mask, wear, masks, everyone, safe, realdonaldtrump, stop, wearing, face, others'
+ '=========='
+ 'Negative 9: #coronavirus, latest, thanks, world, #, #china, chinese, response, #pandemic, via'
+ 'Neutral  9: #coronavirus, latest, thanks, #, world, #china, response, #pandemic, via, medical'
+ 'Positive 9: #coronavirus, thanks, latest, world, #, via, response, medical, #pandemic, vaccine'
+ '=========='
+ 'Negative 10: time, led, growing, pain, piece, spend, series, week, real, care'
+ 'Neutral  10: time, pain, led, piece, growing, week, real, series, spend, already'
+ 'Positive 10: time, pain, led, week, growing, piece, real, series, already, crisis'
+ '=========='
+ 'Negative 11: may, testing, trying, available, cure, worth, never, vitamin, sars cov, guide'
+ 'Neutral  11: may, testing, available, never, trying, vitamin, cure, worth, sars cov, alter'
+ 'Positive 11: may, testing, sars cov, available, vitamin, never, worth, cure, alter, expression'
+ '=========='
+ 'Negative 12: new, report, novel coronavirus, data, research, first, disease, caused, cov, england'
+ 'Neutral  12: new, data, research, report, novel coronavirus, first, disease, cov, shows, caused'
+ 'Positive 12: new, data, research, report, novel coronavirus, leadership, cov, public health, shows, disease'
+ '=========='
+ 'Negative 13: trump, realdonaldtrump, tax, americans, election, president, white house, pence, rally, campaign'
+ 'Neutral  13: trump, realdonaldtrump, tax, election, americans, president, pence, gop, white house, rally'
+ 'Positive 13: trump, realdonaldtrump, tax, election, americans, president, gop, campaign, pence, debate'
+ '=========='
+ 'Negative 14: pandemic, economic, better, months, even, middle, could, say, world, taking'
+ 'Neutral  14: pandemic, better, economic, even, months, could, pre, world, times, online'
+ 'Positive 14: pandemic, better, economic, months, even, could, world, pre, say, things'
+ '=========='
+ 'Negative 15: china, virus, wuhan, travel, world, coronavirus outbreak, flights, countries, spread, could'
+ 'Neutral  15: china, virus, wuhan, travel, world, coronavirus outbreak, spread, countries, chinese, flights'
+ 'Positive 15: china, virus, travel, spread, wuhan, coronavirus outbreak, world, countries, chinese, could'
+ '=========='
+ 'Negative 16: corona, work, many, home, see, good, back, great, going, school'
+ 'Neutral  16: corona, many, work, see, good, home, great, back, students, going'
+ 'Positive 16: many, good, work, great, see, home, corona, back, students, take'
+ '=========='
+ 'Negative 17: would, like, think, right, said, say, thought, really, even, something'
+ 'Neutral  17: like, would, think, right, said, say, thought, really, absolutely, thing'
+ 'Positive 17: like, think, would, right, said, say, thought, absolutely, really, thing'
+ '=========='
+ 'Negative 18: get, flu, vaccine, season, done, could, sick, worse, bad, covid test'
+ 'Neutral  18: get, flu, done, vaccine, could, season, help, sick, worse, much'
+ 'Positive 18: get, flu, vaccine, done, could, help, want, season, getting, much'
+ '=========='
+ 'Negative 19: today, day, deaths, india, news, cases, uk, covid cases, days, first'
+ 'Neutral  19: today, day, news, cases, india, deaths, uk, covid cases, first, days'
+ 'Positive 19: day, news, cases, today, india, deaths, covid cases, first, uk, days'
+ '==========']
+
+Step: 12500 ELBO: -1273105.750 (0.026 sec/step)
+Step: 12600 ELBO: -1272043.000 (0.026 sec/step)
+Step: 12700 ELBO: -1259762.375 (0.026 sec/step)
+Step: 12800 ELBO: -1269420.250 (0.026 sec/step)
+Step: 12900 ELBO: -1253444.000 (0.026 sec/step)
+Step: 13000 ELBO: -1291728.500 (0.026 sec/step)
+Step: 13100 ELBO: -1250864.250 (0.026 sec/step)
+Step: 13200 ELBO: -1237042.875 (0.026 sec/step)
+Step: 13300 ELBO: -1266722.500 (0.026 sec/step)
+Step: 13400 ELBO: -1282370.375 (0.026 sec/step)
+Step: 13500 ELBO: -1285158.125 (0.026 sec/step)
+Step: 13600 ELBO: -1261196.875 (0.026 sec/step)
+Step: 13700 ELBO: -1271148.250 (0.026 sec/step)
+Step: 13800 ELBO: -1274352.000 (0.026 sec/step)
+Step: 13900 ELBO: -1264247.750 (0.026 sec/step)
+Step: 14000 ELBO: -1257989.625 (0.026 sec/step)
+Step: 14100 ELBO: -1279625.125 (0.026 sec/step)
+Step: 14200 ELBO: -1247319.375 (0.026 sec/step)
+Step: 14300 ELBO: -1233348.750 (0.026 sec/step)
+Step: 14400 ELBO: -1274903.250 (0.026 sec/step)
+Step: 14500 ELBO: -1269671.750 (0.026 sec/step)
+Step: 14600 ELBO: -1275605.000 (0.026 sec/step)
+Step: 14700 ELBO: -1267802.000 (0.026 sec/step)
+Step: 14800 ELBO: -1271916.000 (0.026 sec/step)
+Step: 14900 ELBO: -1306987.875 (0.026 sec/step)
+['Negative 0: still, know, need, also, well, read, everything, maybe, want, make'
+ 'Neutral  0: need, know, read, still, also, well, maybe, anyone, want, everything'
+ 'Positive 0: read, need, know, also, still, well, anyone, maybe, #cdc, want'
+ '=========='
+ 'Negative 1: people, least, around, infected, killed, could, black, care, really, real'
+ 'Neutral  1: people, least, infected, around, care, really, killed, dying, could, vulnerable'
+ 'Positive 1: people, care, infected, least, around, really, dying, vulnerable, talk, could'
+ '=========='
+ 'Negative 2: lockdown, full, went, govt, anti, put, set, police, government, music'
+ 'Neutral  2: lockdown, full, early, went, rules, govt, put, set, anti, started'
+ 'Positive 2: lockdown, early, full, rules, local, coming, start, got, extended, started'
+ '=========='
+ 'Negative 3: one, another, way, every, best, world, hope, made, yes, two'
+ 'Neutral  3: one, way, best, another, every, hope, world, ever, important, yes'
+ 'Positive 3: one, way, best, every, another, hope, important, ever, agree, world'
+ '=========='
+ 'Negative 4: says, health, cdc, covid vaccine, minister, government, chief, schools, state, dr'
+ 'Neutral  4: says, health, cdc, dr, covid vaccine, chief, government, minister, public health, coronavirus vaccine'
+ 'Positive 4: health, dr, says, cdc, covid vaccine, public health, chief, public, coronavirus vaccine, government'
+ '=========='
+ 'Negative 5: covid, due, tested positive, tests positive, died, via, hospital, test positive, study, risk'
+ 'Neutral  5: covid, died, hospital, due, patients, risk, study, via, impact, tested positive'
+ 'Positive 5: covid, patients, impact, risk, hospital, study, died, market, via, due'
+ '=========='
+ 'Negative 6: coronavirus, tested positive, via, could, two, warns, recovery, officials, tests positive, major'
+ 'Neutral  6: coronavirus, via, chinese, major, two, spread, could, first, tested positive, hospital'
+ 'Positive 6: coronavirus, via, first, patient, chinese, major, hospital, case, scientists, spread'
+ '=========='
+ 'Negative 7: #covid, latest, check, response, article, using, based, spread, data, tested'
+ 'Neutral  7: #covid, patients, response, data, research, using, latest, join, check, evidence'
+ 'Positive 7: #covid, patients, research, data, response, evidence, join, webinar, access, using'
+ '=========='
+ 'Negative 8: mask, wear, stop, masks, social distancing, keep, face, wearing, others, everyone'
+ 'Neutral  8: mask, wear, masks, stop, everyone, social distancing, safe, face, keep, wearing'
+ 'Positive 8: mask, wear, masks, everyone, safe, social distancing, keep, protect, face, stop'
+ '=========='
+ 'Negative 9: #coronavirus, latest, thanks, world, #, #china, #pandemic, could, via, #wuhan'
+ 'Neutral  9: #coronavirus, latest, thanks, #, world, #pandemic, #china, via, medical, novel'
+ 'Positive 9: #coronavirus, thanks, latest, #, via, medical, world, #pandemic, epidemic, novel'
+ '=========='
+ 'Negative 10: time, week, led, piece, growing, spend, family, series, real, next'
+ 'Neutral  10: time, pain, piece, led, week, series, growing, spend, real, next'
+ 'Positive 10: time, pain, piece, led, week, series, real, growing, spend, amazing'
+ '=========='
+ 'Negative 11: may, testing, never, trying, vaccine, cure, available, early, human, worth'
+ 'Neutral  11: may, testing, available, never, trying, sars cov, vitamin, cure, worth, alter'
+ 'Positive 11: sars cov, vitamin, may, testing, alter, available, worth, expression, cure, readily'
+ '=========='
+ 'Negative 12: new, report, novel coronavirus, first, disease, according, caused, guidelines, showing, shows'
+ 'Neutral  12: new, report, data, research, novel coronavirus, first, disease, cov, market, according'
+ 'Positive 12: new, data, research, report, market, analysis, novel coronavirus, cov, first, disease'
+ '=========='
+ 'Negative 13: trump, realdonaldtrump, president, election, americans, gop, democrats, pence, tax, republicans'
+ 'Neutral  13: trump, realdonaldtrump, americans, election, president, tax, white house, vote, gop, pence'
+ 'Positive 13: trump, realdonaldtrump, americans, tax, election, campaign, white house, vote, rally, debate'
+ '=========='
+ 'Negative 14: pandemic, economic, even, better, months, end, history, especially, economy, businesses'
+ 'Neutral  14: pandemic, economic, better, even, months, pre, times, online, especially, middle'
+ 'Positive 14: pandemic, better, even, months, pre, economic, learned, online, crisis, mental health'
+ '=========='
+ 'Negative 15: china, virus, wuhan, coronavirus outbreak, travel, chinese, world, spread, ban, russia'
+ 'Neutral  15: china, virus, wuhan, travel, coronavirus outbreak, countries, world, spread, chinese, flights'
+ 'Positive 15: china, virus, countries, travel, world, spread, coronavirus outbreak, wuhan, could, international'
+ '=========='
+ 'Negative 16: corona, home, back, take, due, work, go, school, students, see'
+ 'Neutral  16: corona, work, many, see, home, great, good, back, going, students'
+ 'Positive 16: great, many, see, work, good, please, going, students, go, back'
+ '=========='
+ 'Negative 17: would, like, think, said, right, say, thought, really, thing, whole'
+ 'Neutral  17: like, would, think, right, said, say, thought, really, absolutely, thing'
+ 'Positive 17: like, think, would, right, thought, really, said, say, something, different'
+ '=========='
+ 'Negative 18: get, flu, season, done, could, worse, bad, much, sick, vaccine'
+ 'Neutral  18: get, flu, done, season, could, vaccine, sick, worse, help, getting'
+ 'Positive 18: get, flu, done, vaccine, sick, getting, could, help, worse, much'
+ '=========='
+ 'Negative 19: india, news, cases, deaths, covid cases, today, day, uk, million, first'
+ 'Neutral  19: today, day, news, india, cases, deaths, uk, days, covid cases, first'
+ 'Positive 19: today, day, days, news, cases, uk, deaths, india, first, number'
+ '==========']
+
+Step: 15000 ELBO: -1274676.000 (0.026 sec/step)
+Step: 15100 ELBO: -1261558.750 (0.026 sec/step)
+Step: 15200 ELBO: -1271208.125 (0.026 sec/step)
+Step: 15300 ELBO: -1258941.000 (0.026 sec/step)
+Step: 15400 ELBO: -1224243.625 (0.026 sec/step)
+Step: 15500 ELBO: -1264460.375 (0.026 sec/step)
+Step: 15600 ELBO: -1259267.000 (0.026 sec/step)
+Step: 15700 ELBO: -1259222.000 (0.026 sec/step)
+Step: 15800 ELBO: -1250260.750 (0.026 sec/step)
+Step: 15900 ELBO: -1271454.250 (0.026 sec/step)
+Step: 16000 ELBO: -1289310.250 (0.026 sec/step)
+Step: 16100 ELBO: -1260511.125 (0.026 sec/step)
+Step: 16200 ELBO: -1265857.625 (0.026 sec/step)
+Step: 16300 ELBO: -1267939.250 (0.026 sec/step)
+Step: 16400 ELBO: -1253151.750 (0.026 sec/step)
+Step: 16500 ELBO: -1217531.625 (0.026 sec/step)
+Step: 16600 ELBO: -1263327.250 (0.026 sec/step)
+Step: 16700 ELBO: -1265628.625 (0.026 sec/step)
+Step: 16800 ELBO: -1264492.500 (0.026 sec/step)
+Step: 16900 ELBO: -1254849.250 (0.026 sec/step)
+Step: 17000 ELBO: -1274669.250 (0.026 sec/step)
+Step: 17100 ELBO: -1283118.250 (0.026 sec/step)
+Step: 17200 ELBO: -1255636.250 (0.026 sec/step)
+Step: 17300 ELBO: -1266591.125 (0.026 sec/step)
+Step: 17400 ELBO: -1269911.625 (0.026 sec/step)
+['Negative 0: still, also, know, need, everything, contact, high, maybe, well, want'
+ 'Neutral  0: know, need, still, read, also, well, maybe, want, anyone, everything'
+ 'Positive 0: read, need, know, also, well, still, #cdc, anyone, hear, #billgates'
+ '=========='
+ 'Negative 1: people, least, killed, infected, around, healthy, country, could, yet, millions'
+ 'Neutral  1: people, least, infected, around, care, killed, dying, millions, country, vulnerable'
+ 'Positive 1: people, care, around, infected, dying, least, talk, outside, seriously, understand'
+ '=========='
+ 'Negative 2: lockdown, govt, set, protest, rules, police, went, music, anti, march'
+ 'Neutral  2: lockdown, full, went, early, govt, rules, set, started, put, local'
+ 'Positive 2: lockdown, early, full, colleagues, coming, local, got, started, went, missed'
+ '=========='
+ 'Negative 3: one, another, world, every, way, made, best, case, two, ever'
+ 'Neutral  3: one, way, another, best, every, hope, world, ever, yes, made'
+ 'Positive 3: way, one, best, hope, every, important, another, agree, science, point'
+ '=========='
+ 'Negative 4: says, minister, coronavirus pandemic, health, cdc, chief, government, covid vaccine, state, cuomo'
+ 'Neutral  4: says, health, cdc, dr, covid vaccine, government, chief, minister, public health, coronavirus vaccine'
+ 'Positive 4: dr, health, public health, cdc, crisis, covid vaccine, public, risk, panel, fda'
+ '=========='
+ 'Negative 5: covid, tested positive, tests positive, due, test positive, died, nigeria, via, players, quarantine'
+ 'Neutral  5: covid, hospital, died, due, risk, study, patients, via, impact, tested positive'
+ 'Positive 5: covid, patients, risk, study, transmission, cancer, mortality, impact, hospital, market'
+ '=========='
+ 'Negative 6: coronavirus, tested positive, new post, tests positive, test positive, warns, recovery, chinese, hit, two'
+ 'Neutral  6: coronavirus, via, major, chinese, warns, patient, tested positive, officials, two, spread'
+ 'Positive 6: coronavirus, via, patient, #healthcare, transmission, first, scientists, test, post, major'
+ '=========='
+ 'Negative 7: #covid, check, tested, latest, response, related, based, link, app, support'
+ 'Neutral  7: #covid, response, patients, check, evidence, join, data, using, article, access'
+ 'Positive 7: #covid, patients, evidence, join, data, research, excellent, access, science, webinar'
+ '=========='
+ 'Negative 8: mask, stop, wear, social distancing, masks, face, wearing, keep, others, public'
+ 'Neutral  8: mask, wear, masks, stop, social distancing, everyone, face, keep, safe, others'
+ 'Positive 8: safe, everyone, masks, wear, mask, thank, keep, protect, stop, others'
+ '=========='
+ 'Negative 9: #coronavirus, latest, world, #china, #, #pandemic, #wuhan, become, declared, video'
+ 'Neutral  9: #coronavirus, latest, thanks, #, world, #pandemic, #china, via, novel, medical'
+ 'Positive 9: thanks, #coronavirus, #, sharing, medical, healthcare, # ncov, latest, epidemic, novel'
+ '=========='
+ 'Negative 10: time, james, series, delayed, week, growing, piece, led, real, write'
+ 'Neutral  10: time, piece, pain, led, series, growing, week, spend, real, spent'
+ 'Positive 10: time, pain, piece, led, amazing, series, opportunity, spend, growing, discussion'
+ '=========='
+ 'Negative 11: may, vaccine, testing, trying, experts, covid patients, better, never, test, cheap'
+ 'Neutral  11: may, testing, never, available, trying, cure, sars cov, worth, vitamin, vaccine'
+ 'Positive 11: vitamin, sars cov, alter, expression, readily, available, testing, worth, may, guide'
+ '=========='
+ 'Negative 12: new, novel coronavirus, first, disease, shows, report, according, mexico, strain, city'
+ 'Neutral  12: new, report, research, data, novel coronavirus, market, global, first, leadership, disease'
+ 'Positive 12: research, data, new, market, analysis, global, report, medicine, covid impact, leadership'
+ '=========='
+ 'Negative 13: trump, election, realdonaldtrump, president, gop, insider, pence, republicans, democrats, rally'
+ 'Neutral  13: trump, realdonaldtrump, americans, president, election, white house, vote, pence, gop, america'
+ 'Positive 13: realdonaldtrump, trump, americans, dead, corner, let, plan, america, vote, political'
+ '=========='
+ 'Negative 14: pandemic, economic, economy, businesses, history, world, end, even, hit, months'
+ 'Neutral  14: pandemic, economic, better, even, months, businesses, pre, times, world, crisis'
+ 'Positive 14: pandemic, pre, better, learned, society, things, learning, stress, real, even'
+ '=========='
+ 'Negative 15: china, virus, wuhan, coronavirus outbreak, chinese, russia, ban, travel, flights, economy'
+ 'Neutral  15: china, virus, travel, wuhan, countries, coronavirus outbreak, spread, world, chinese, international'
+ 'Positive 15: virus, countries, china, world, travel, spread, control, international, usa, narendramodi'
+ '=========='
+ 'Negative 16: home, corona, go, back, due, going, stay, take, school, year'
+ 'Neutral  16: corona, many, work, see, good, home, back, great, going, go'
+ 'Positive 16: great, many, please, work, good, working, see, students, spray, thank'
+ '=========='
+ 'Negative 17: said, would, like, right, think, say, whole, fuck, guys, make'
+ 'Neutral  17: like, would, think, right, said, say, thought, really, thing, something'
+ 'Positive 17: like, think, would, thought, right, different, really, understand, something, someone'
+ '=========='
+ 'Negative 18: get, season, flu, bad, could, covid test, done, worse, much, made'
+ 'Neutral  18: get, flu, done, season, worse, sick, could, getting, covid test, vaccine'
+ 'Positive 18: get, done, vaccine, flu, help, getting, sick, example, worse, might'
+ '=========='
+ 'Negative 19: india, covid cases, new covid cases, news, deaths, new cases, state, reports, announced, nigeria'
+ 'Neutral  19: today, day, news, cases, india, deaths, uk, days, covid cases, first'
+ 'Positive 19: day, today, cases, days, daily, uk, first, high, st, news'
+ '==========']
+
+Step: 17500 ELBO: -1259780.375 (0.026 sec/step)
+Step: 17600 ELBO: -1231758.875 (0.026 sec/step)
+Step: 17700 ELBO: -1272020.000 (0.026 sec/step)
+Step: 17800 ELBO: -1252191.250 (0.026 sec/step)
+Step: 17900 ELBO: -1278549.625 (0.026 sec/step)
+Step: 18000 ELBO: -1249133.250 (0.026 sec/step)
+Step: 18100 ELBO: -1281343.250 (0.026 sec/step)
+Step: 18200 ELBO: -1286015.875 (0.026 sec/step)
+Step: 18300 ELBO: -1254963.250 (0.026 sec/step)
+Step: 18400 ELBO: -1256918.000 (0.026 sec/step)
+Step: 18500 ELBO: -1261076.250 (0.026 sec/step)
+Step: 18600 ELBO: -1252348.000 (0.026 sec/step)
+Step: 18700 ELBO: -1228183.250 (0.026 sec/step)
+Step: 18800 ELBO: -1253721.625 (0.026 sec/step)
+Step: 18900 ELBO: -1270360.500 (0.026 sec/step)
+Step: 19000 ELBO: -1266545.375 (0.026 sec/step)
+Step: 19100 ELBO: -1260246.000 (0.026 sec/step)
+Step: 19200 ELBO: -1267621.875 (0.026 sec/step)
+Step: 19300 ELBO: -1270040.250 (0.026 sec/step)
+Step: 19400 ELBO: -1260512.875 (0.026 sec/step)
+Step: 19500 ELBO: -1268033.750 (0.026 sec/step)
+Step: 19600 ELBO: -1265125.375 (0.026 sec/step)
+Step: 19700 ELBO: -1244125.750 (0.026 sec/step)
+Step: 19800 ELBO: -1248658.125 (0.026 sec/step)
+Step: 19900 ELBO: -1241155.000 (0.026 sec/step)
+['Negative 0: still, also, know, need, everything, contact, high, well, maybe, make'
+ 'Neutral  0: know, need, still, read, also, well, maybe, want, anyone, everything'
+ 'Positive 0: read, need, know, also, well, #cdc, still, hear, anyone, #billgates'
+ '=========='
+ 'Negative 1: people, least, killed, infected, healthy, millions, black, around, really, country'
+ 'Neutral  1: people, least, infected, around, care, killed, millions, dying, vulnerable, black'
+ 'Positive 1: people, care, around, dying, infected, seriously, least, talk, outside, #covid pandemic'
+ '=========='
+ 'Negative 2: lockdown, govt, rules, set, protest, police, anti, boris johnson, music, allowed'
+ 'Neutral  2: lockdown, full, early, went, set, rules, govt, coming, put, anti'
+ 'Positive 2: lockdown, early, colleagues, full, coming, started, start, got, went, local'
+ '=========='
+ 'Negative 3: one, another, world, every, made, way, best, ever, single, case'
+ 'Neutral  3: one, way, another, best, every, hope, ever, world, yes, waiting'
+ 'Positive 3: way, one, best, hope, every, important, agree, another, solution, ever'
+ '=========='
+ 'Negative 4: says, coronavirus pandemic, minister, health, government, cdc, state, chief, covid vaccine, covid tests'
+ 'Neutral  4: says, health, cdc, dr, covid vaccine, government, public health, chief, coronavirus pandemic, coronavirus vaccine'
+ 'Positive 4: dr, public health, health, cdc, fda, public, crisis, covid vaccine, social, university'
+ '=========='
+ 'Negative 5: covid, tests positive, tested positive, due, test positive, via, died, nigeria, quarantine, players'
+ 'Neutral  5: covid, hospital, died, due, risk, patients, study, via, impact, tested positive'
+ 'Positive 5: covid, patients, risk, study, mortality, cancer, transmission, hospital, impact, nhs'
+ '=========='
+ 'Negative 6: coronavirus, tested positive, new post, warns, tests positive, recovery, hit, test positive, chinese, hospital'
+ 'Neutral  6: coronavirus, via, major, patient, first, warns, tested positive, could, chinese, two'
+ 'Positive 6: coronavirus, via, transmission, patient, #healthcare, scientists, first, test, trace, major'
+ '=========='
+ 'Negative 7: #covid, tested, check, link, response, special, related, app, #delhi, based'
+ 'Neutral  7: #covid, response, patients, evidence, check, join, using, article, access, important'
+ 'Positive 7: #covid, patients, join, evidence, excellent, science, webinar, access, research, paper'
+ '=========='
+ 'Negative 8: mask, stop, social distancing, wear, face, masks, wearing, keep, others, public'
+ 'Neutral  8: mask, wear, masks, stop, social distancing, everyone, keep, face, safe, others'
+ 'Positive 8: safe, everyone, wear, masks, mask, protect, keep, thank, social distancing, others'
+ '=========='
+ 'Negative 9: #coronavirus, latest, world, #china, #, #pandemic, #wuhan, world news, video, become'
+ 'Neutral  9: #coronavirus, latest, thanks, #, world, #pandemic, #china, become, medical, novel'
+ 'Positive 9: thanks, #, sharing, #coronavirus, medical, healthcare, # ncov, novel, #pandemic, info'
+ '=========='
+ 'Negative 10: time, james, piece, delayed, series, growing, week, write, real, spend'
+ 'Neutral  10: time, piece, series, pain, led, growing, week, book, spend, spent'
+ 'Positive 10: time, pain, piece, led, amazing, series, discussion, opportunity, growing, book'
+ '=========='
+ 'Negative 11: may, vaccine, covid patients, testing, experts, never, trying, god, better, cheap'
+ 'Neutral  11: may, testing, never, trying, available, sars cov, cure, worth, vitamin, vaccine'
+ 'Positive 11: sars cov, vitamin, alter, expression, readily, available, testing, worth, guide, may'
+ '=========='
+ 'Negative 12: new, first, novel coronavirus, report, shows, comments, according, disease, link, caused'
+ 'Neutral  12: new, report, data, research, global, market, novel coronavirus, shows, leadership, analysis'
+ 'Positive 12: data, research, market, analysis, new, global, medicine, leadership, report, covid impact'
+ '=========='
+ 'Negative 13: trump, election, president, insider, gop, realdonaldtrump, pence, rally, republicans, senate'
+ 'Neutral  13: trump, realdonaldtrump, americans, president, election, white house, vote, america, gop, pence'
+ 'Positive 13: realdonaldtrump, trump, americans, political, dead, america, corner, let, plan, american'
+ '=========='
+ 'Negative 14: pandemic, economic, economy, businesses, history, hit, end, world, middle, amid'
+ 'Neutral  14: pandemic, economic, better, businesses, even, times, months, pre, history, world'
+ 'Positive 14: pandemic, better, pre, learned, society, things, times, stress, real, even'
+ '=========='
+ 'Negative 15: china, virus, chinese, wuhan, coronavirus outbreak, russia, ban, travel, corona virus, flights'
+ 'Neutral  15: china, virus, countries, travel, wuhan, coronavirus outbreak, spread, world, chinese, international'
+ 'Positive 15: countries, virus, world, china, travel, spread, control, international, usa, epidemic'
+ '=========='
+ 'Negative 16: home, corona, back, due, go, going, take, stay, year, school'
+ 'Neutral  16: corona, many, see, work, good, home, back, great, going, go'
+ 'Positive 16: great, many, please, work, working, good, students, see, spray, thank'
+ '=========='
+ 'Negative 17: said, would, right, like, say, think, fuck, guys, whole, make'
+ 'Neutral  17: like, would, think, right, said, say, thought, really, thing, something'
+ 'Positive 17: like, think, would, thought, different, understand, right, really, someone, something'
+ '=========='
+ 'Negative 18: get, season, bad, flu, covid test, could, done, takes, worse, much'
+ 'Neutral  18: get, flu, done, season, worse, sick, covid test, getting, could, vaccine'
+ 'Positive 18: get, done, flu, getting, vaccine, example, sick, worse, help, might'
+ '=========='
+ 'Negative 19: india, covid cases, new covid cases, news, new cases, deaths, reports, nigeria, announced, state'
+ 'Neutral  19: today, day, news, cases, india, deaths, uk, days, covid cases, number'
+ 'Positive 19: day, today, days, cases, daily, uk, gt, test, st, first'
+ '==========']
+
+Step: 20000 ELBO: -1237671.750 (0.026 sec/step)
+Step: 20100 ELBO: -1247967.500 (0.026 sec/step)
+Step: 20200 ELBO: -1239404.875 (0.026 sec/step)
+Step: 20300 ELBO: -1273910.750 (0.026 sec/step)
+Step: 20400 ELBO: -1290879.375 (0.026 sec/step)
+Step: 20500 ELBO: -1254335.000 (0.026 sec/step)
+Step: 20600 ELBO: -1256530.625 (0.026 sec/step)
+Step: 20700 ELBO: -1249709.750 (0.026 sec/step)
+Step: 20800 ELBO: -1248797.750 (0.026 sec/step)
+Step: 20900 ELBO: -1229518.375 (0.026 sec/step)
+Step: 21000 ELBO: -1242438.500 (0.026 sec/step)
+Step: 21100 ELBO: -1237285.750 (0.026 sec/step)
+Step: 21200 ELBO: -1241807.250 (0.026 sec/step)
+Step: 21300 ELBO: -1234809.000 (0.026 sec/step)
+Step: 21400 ELBO: -1279208.500 (0.026 sec/step)
+Step: 21500 ELBO: -1275548.625 (0.026 sec/step)
+Step: 21600 ELBO: -1252969.750 (0.026 sec/step)
+Step: 21700 ELBO: -1273954.750 (0.026 sec/step)
+Step: 21800 ELBO: -1251212.000 (0.026 sec/step)
+Step: 21900 ELBO: -1241130.375 (0.026 sec/step)
+Step: 22000 ELBO: -1233397.125 (0.026 sec/step)
+Step: 22100 ELBO: -1241106.875 (0.026 sec/step)
+Step: 22200 ELBO: -1252040.000 (0.026 sec/step)
+Step: 22300 ELBO: -1252796.500 (0.026 sec/step)
+Step: 22400 ELBO: -1223251.250 (0.026 sec/step)
+['Negative 0: still, also, everything, know, need, high, contact, well, yet, maybe'
+ 'Neutral  0: know, need, still, read, also, well, maybe, want, anyone, everything'
+ 'Positive 0: read, need, know, also, well, still, #cdc, hear, anyone, interesting'
+ '=========='
+ 'Negative 1: people, killed, least, infected, black, healthy, oh, country, millions, around'
+ 'Neutral  1: people, least, around, infected, care, millions, killed, dying, talk, black'
+ 'Positive 1: people, care, around, talk, least, dying, infected, seriously, outside, vulnerable'
+ '=========='
+ 'Negative 2: lockdown, govt, set, boris johnson, protest, rules, police, anti, march, music'
+ 'Neutral  2: lockdown, full, early, went, coming, rules, set, anti, started, govt'
+ 'Positive 2: colleagues, lockdown, early, full, coming, missed, nice, started, went, got'
+ '=========='
+ 'Negative 3: one, another, world, every, made, single, way, ever, best, answer'
+ 'Neutral  3: one, way, another, best, every, hope, ever, world, agree, yes'
+ 'Positive 3: way, one, best, hope, every, agree, important, another, ever, solution'
+ '=========='
+ 'Negative 4: says, coronavirus pandemic, minister, health, government, chief, workers, cdc, state, covid vaccine'
+ 'Neutral  4: says, health, cdc, dr, covid vaccine, government, public health, coronavirus pandemic, chief, coronavirus vaccine'
+ 'Positive 4: dr, public health, health, cdc, public, fda, crisis, address, phase, vaccine'
+ '=========='
+ 'Negative 5: covid, tests positive, tested positive, due, test positive, via, players, died, quarantine, heart'
+ 'Neutral  5: covid, hospital, died, risk, patients, study, due, via, impact, tested positive'
+ 'Positive 5: covid, patients, risk, cancer, study, mortality, hospital, transmission, nhs, impact'
+ '=========='
+ 'Negative 6: coronavirus, new post, tested positive, warns, hospital, hit, test positive, recovery, two, tests positive'
+ 'Neutral  6: coronavirus, via, major, patient, first, two, warns, officials, tested positive, hospital'
+ 'Positive 6: via, coronavirus, transmission, patient, #healthcare, scientists, trace, post, first, test'
+ '=========='
+ 'Negative 7: #covid, tested, check, response, special, related, click, based, link, app'
+ 'Neutral  7: #covid, response, check, using, evidence, join, patients, article, access, science'
+ 'Positive 7: #covid, patients, join, excellent, science, evidence, webinar, paper, access, care'
+ '=========='
+ 'Negative 8: mask, social distancing, stop, face, wear, masks, wearing, keep, public, guess'
+ 'Neutral  8: mask, wear, masks, stop, social distancing, everyone, keep, face, safe, others'
+ 'Positive 8: safe, everyone, wear, masks, mask, keep, protect, thank, stop, social distancing'
+ '=========='
+ 'Negative 9: #coronavirus, latest, world, #china, #, #wuhan, #pandemic, world news, become, video'
+ 'Neutral  9: #coronavirus, latest, thanks, #, #pandemic, world, #china, become, sharing, novel'
+ 'Positive 9: thanks, sharing, #, #coronavirus, healthcare, # ncov, info, medical, #pandemic, novel'
+ '=========='
+ 'Negative 10: time, james, week, series, delayed, piece, write, growing, real, book'
+ 'Neutral  10: time, piece, series, led, growing, pain, book, week, spent, spend'
+ 'Positive 10: time, pain, piece, discussion, led, amazing, book, growing, series, incredible'
+ '=========='
+ 'Negative 11: may, vaccine, covid patients, testing, never, trying, blood, experts, plasma, test'
+ 'Neutral  11: may, testing, never, trying, available, cure, sars cov, vaccine, worth, human'
+ 'Positive 11: vitamin, sars cov, alter, expression, readily, available, worth, testing, guide, cure'
+ '=========='
+ 'Negative 12: new, comments, link, submitted, report, novel coronavirus, first, shows, according, disease'
+ 'Neutral  12: new, report, data, research, global, market, shows, novel coronavirus, leadership, analysis'
+ 'Positive 12: data, research, market, analysis, new, global, medicine, leadership, report, covid impact'
+ '=========='
+ 'Negative 13: trump, election, insider, president, gop, realdonaldtrump, pence, party, senate, rally'
+ 'Neutral  13: trump, realdonaldtrump, americans, president, election, white house, america, vote, pence, gop'
+ 'Positive 13: realdonaldtrump, trump, americans, america, political, plan, dead, let, corner, nation'
+ '=========='
+ 'Negative 14: pandemic, economic, economy, businesses, hit, history, power, amid, world, crisis'
+ 'Neutral  14: pandemic, economic, businesses, better, even, crisis, economy, months, pre, times'
+ 'Positive 14: pandemic, pre, better, learned, society, stress, especially, times, changing, difficult'
+ '=========='
+ 'Negative 15: china, virus, chinese, wuhan, russia, coronavirus outbreak, ban, travel, amid coronavirus, corona virus'
+ 'Neutral  15: china, virus, countries, travel, wuhan, coronavirus outbreak, spread, world, chinese, outbreak'
+ 'Positive 15: countries, virus, world, china, travel, control, spread, international, narendramodi, usa'
+ '=========='
+ 'Negative 16: home, corona, go, back, due, going, stay, take, year, school'
+ 'Neutral  16: corona, many, work, see, good, home, back, great, go, going'
+ 'Positive 16: great, many, please, working, work, good, spray, students, see, thank'
+ '=========='
+ 'Negative 17: said, would, right, like, say, think, guys, fuck, whole, big'
+ 'Neutral  17: like, would, think, right, said, say, really, thought, thing, something'
+ 'Positive 17: like, think, would, thought, understand, different, right, really, someone, even'
+ '=========='
+ 'Negative 18: season, get, bad, flu, covid test, could, takes, done, made, paid'
+ 'Neutral  18: get, flu, done, getting, worse, covid test, season, sick, could, bad'
+ 'Positive 18: get, done, getting, example, flu, might, vaccine, help, sick, worse'
+ '=========='
+ 'Negative 19: india, covid cases, new covid cases, news, new cases, announced, reports, deaths, nigeria, breaking'
+ 'Neutral  19: today, day, cases, news, deaths, india, uk, days, covid cases, number'
+ 'Positive 19: day, today, days, daily, cases, gt, st, test, uk, high'
+ '==========']
+
+Step: 22500 ELBO: -1262047.250 (0.026 sec/step)
+Step: 22600 ELBO: -1271262.375 (0.026 sec/step)
+Step: 22700 ELBO: -1257548.750 (0.026 sec/step)
+Step: 22800 ELBO: -1257444.250 (0.026 sec/step)
+Step: 22900 ELBO: -1245316.125 (0.026 sec/step)
+Step: 23000 ELBO: -1249376.000 (0.026 sec/step)
+Step: 23100 ELBO: -1231475.125 (0.026 sec/step)
+Step: 23200 ELBO: -1253705.875 (0.026 sec/step)
+Step: 23300 ELBO: -1243636.750 (0.026 sec/step)
+Step: 23400 ELBO: -1243322.750 (0.026 sec/step)
+Step: 23500 ELBO: -1241326.125 (0.026 sec/step)
+Step: 23600 ELBO: -1261262.250 (0.026 sec/step)
+Step: 23700 ELBO: -1261694.000 (0.026 sec/step)
+Step: 23800 ELBO: -1254673.750 (0.026 sec/step)
+Step: 23900 ELBO: -1249021.750 (0.026 sec/step)
+Step: 24000 ELBO: -1223795.500 (0.026 sec/step)
+Step: 24100 ELBO: -1252841.750 (0.026 sec/step)
+Step: 24200 ELBO: -1234625.875 (0.026 sec/step)
+Step: 24300 ELBO: -1279156.875 (0.026 sec/step)
+Step: 24400 ELBO: -1247510.375 (0.026 sec/step)
+Step: 24500 ELBO: -1261827.125 (0.026 sec/step)
+Step: 24600 ELBO: -1242363.375 (0.026 sec/step)
+Step: 24700 ELBO: -1264722.125 (0.026 sec/step)
+Step: 24800 ELBO: -1253258.000 (0.026 sec/step)
+Step: 24900 ELBO: -1253896.125 (0.026 sec/step)
+['Negative 0: still, also, know, everything, high, need, contact, yet, maybe, well'
+ 'Neutral  0: know, need, still, read, also, well, maybe, want, anyone, everything'
+ 'Positive 0: read, need, know, well, also, still, hear, #cdc, anyone, #billgates'
+ '=========='
+ 'Negative 1: people, killed, least, infected, black, around, millions, country, healthy, happens'
+ 'Neutral  1: people, around, least, infected, care, killed, talk, millions, black, dying'
+ 'Positive 1: people, care, around, talk, dying, least, outside, infected, seriously, millions'
+ '=========='
+ 'Negative 2: lockdown, set, govt, police, protest, rules, boris johnson, anti, march, allowed'
+ 'Neutral  2: lockdown, early, full, went, coming, set, rules, started, govt, put'
+ 'Positive 2: colleagues, lockdown, early, coming, full, missed, started, nice, got, went'
+ '=========='
+ 'Negative 3: one, another, world, single, every, ever, way, made, answer, best'
+ 'Neutral  3: one, way, another, every, best, hope, ever, agree, yes, world'
+ 'Positive 3: way, one, hope, best, every, agree, another, important, ever, solution'
+ '=========='
+ 'Negative 4: says, coronavirus pandemic, minister, government, health, workers, chief, cdc, state, covid vaccine'
+ 'Neutral  4: says, health, cdc, dr, covid vaccine, government, public health, coronavirus pandemic, state, coronavirus vaccine'
+ 'Positive 4: dr, public health, health, cdc, public, fda, address, phase, university, vaccine'
+ '=========='
+ 'Negative 5: covid, tests positive, tested positive, test positive, due, players, via, quarantine, died, hospital'
+ 'Neutral  5: covid, hospital, died, risk, patients, study, due, via, tested positive, impact'
+ 'Positive 5: covid, patients, risk, cancer, study, mortality, hospital, transmission, nhs, help'
+ '=========='
+ 'Negative 6: coronavirus, tested positive, new post, warns, hit, recovery, hospital, test positive, officials, two'
+ 'Neutral  6: coronavirus, via, major, patient, first, two, warns, officials, could, tested positive'
+ 'Positive 6: via, patient, coronavirus, #healthcare, transmission, scientists, test, trace, first, major'
+ '=========='
+ 'Negative 7: #covid, tested, check, response, click, special, related, using, app, women'
+ 'Neutral  7: #covid, response, using, check, evidence, join, article, patients, science, access'
+ 'Positive 7: #covid, patients, excellent, join, science, evidence, webinar, paper, care, access'
+ '=========='
+ 'Negative 8: mask, social distancing, stop, face, wear, masks, wearing, public, keep, stay home'
+ 'Neutral  8: mask, wear, social distancing, masks, stop, everyone, keep, face, safe, others'
+ 'Positive 8: safe, everyone, wear, masks, mask, keep, protect, social distancing, thank, stop'
+ '=========='
+ 'Negative 9: #coronavirus, latest, #china, world, #, world news, #pandemic, #corona, #wuhan, become'
+ 'Neutral  9: #coronavirus, latest, thanks, #, #pandemic, world, become, sharing, #china, opening'
+ 'Positive 9: thanks, sharing, healthcare, #, #coronavirus, info, # ncov, ncov, #pandemic, excited'
+ '=========='
+ 'Negative 10: time, james, delayed, write, series, week, piece, growing, book, spent'
+ 'Neutral  10: time, piece, series, growing, book, led, pain, week, amazing, discussion'
+ 'Positive 10: time, pain, piece, discussion, amazing, led, incredible, series, book, opportunity'
+ '=========='
+ 'Negative 11: may, vaccine, covid patients, testing, never, better, blood, trying, experts, could'
+ 'Neutral  11: may, testing, never, trying, available, human, sars cov, cure, vaccine, worth'
+ 'Positive 11: sars cov, vitamin, alter, expression, available, readily, worth, testing, guide, cure'
+ '=========='
+ 'Negative 12: new, comments, link, submitted, report, shows, first, novel coronavirus, according, posted'
+ 'Neutral  12: new, data, report, research, global, market, shows, leadership, analysis, novel coronavirus'
+ 'Positive 12: data, research, analysis, market, new, global, medicine, leadership, scientific, report'
+ '=========='
+ 'Negative 13: trump, election, president, insider, gop, realdonaldtrump, pence, party, senate, rally'
+ 'Neutral  13: trump, realdonaldtrump, americans, president, election, america, white house, vote, dead, plan'
+ 'Positive 13: realdonaldtrump, trump, americans, plan, america, political, let, nation, dead, american'
+ '=========='
+ 'Negative 14: pandemic, economy, economic, hit, businesses, amid, history, power, crisis, world'
+ 'Neutral  14: pandemic, economic, businesses, economy, crisis, better, times, small, even, months'
+ 'Positive 14: pandemic, pre, learned, better, society, difficult, changing, stress, things, times'
+ '=========='
+ 'Negative 15: china, virus, chinese, wuhan, coronavirus outbreak, russia, ban, travel, corona virus, australia'
+ 'Neutral  15: china, virus, countries, travel, spread, wuhan, coronavirus outbreak, corona virus, world, chinese'
+ 'Positive 15: countries, virus, world, control, china, spread, travel, epidemic, lab, narendramodi'
+ '=========='
+ 'Negative 16: home, corona, back, go, due, going, stay, take, year, school'
+ 'Neutral  16: corona, many, see, work, good, back, home, great, going, go'
+ 'Positive 16: great, many, please, working, work, thank, good, students, proud, see'
+ '=========='
+ 'Negative 17: said, would, right, like, say, think, fuck, guys, whole, big'
+ 'Neutral  17: like, would, think, right, said, say, really, thing, thought, something'
+ 'Positive 17: like, think, understand, would, thought, different, really, someone, right, sure'
+ '=========='
+ 'Negative 18: season, get, bad, covid test, flu, could, takes, made, paid, done'
+ 'Neutral  18: get, flu, done, getting, covid test, worse, season, sick, bad, could'
+ 'Positive 18: get, example, getting, done, flu, vaccine, might, worse, sick, help'
+ '=========='
+ 'Negative 19: india, covid cases, new covid cases, news, reports, new cases, nigeria, announced, breaking, deaths'
+ 'Neutral  19: today, day, cases, news, india, deaths, uk, days, covid cases, number'
+ 'Positive 19: day, today, gt, days, daily, cases, uk, st, test, high'
+ '==========']
+
+Step: 25000 ELBO: -1249046.000 (0.026 sec/step)
+Step: 25100 ELBO: -1245158.000 (0.026 sec/step)
+Step: 25200 ELBO: -1241781.875 (0.026 sec/step)
+Step: 25300 ELBO: -1238481.000 (0.026 sec/step)
+Step: 25400 ELBO: -1236353.375 (0.026 sec/step)
+Step: 25500 ELBO: -1240650.250 (0.026 sec/step)
+Step: 25600 ELBO: -1242531.125 (0.026 sec/step)
+Step: 25700 ELBO: -1257615.500 (0.026 sec/step)
+Step: 25800 ELBO: -1262798.750 (0.026 sec/step)
+Step: 25900 ELBO: -1273229.125 (0.026 sec/step)
+Step: 26000 ELBO: -1263558.750 (0.026 sec/step)
+Step: 26100 ELBO: -1256434.375 (0.026 sec/step)
+Step: 26200 ELBO: -1245476.000 (0.026 sec/step)
+Step: 26300 ELBO: -1251463.875 (0.026 sec/step)
+Step: 26400 ELBO: -1251382.375 (0.026 sec/step)
+Step: 26500 ELBO: -1209990.625 (0.026 sec/step)
+Step: 26600 ELBO: -1230122.500 (0.026 sec/step)
+Step: 26700 ELBO: -1258377.125 (0.026 sec/step)
+Step: 26800 ELBO: -1247554.500 (0.026 sec/step)
+Step: 26900 ELBO: -1297655.375 (0.026 sec/step)
+Step: 27000 ELBO: -1260674.750 (0.026 sec/step)
+Step: 27100 ELBO: -1251839.000 (0.026 sec/step)
+Step: 27200 ELBO: -1263946.250 (0.026 sec/step)
+Step: 27300 ELBO: -1245691.500 (0.026 sec/step)
+Step: 27400 ELBO: -1247804.375 (0.026 sec/step)
+['Negative 0: still, also, know, everything, high, contact, need, well, maybe, yet'
+ 'Neutral  0: know, need, still, read, also, well, maybe, anyone, feel, everything'
+ 'Positive 0: read, need, know, also, well, hear, still, #cdc, anyone, interesting'
+ '=========='
+ 'Negative 1: people, least, killed, infected, black, around, healthy, millions, lives, country'
+ 'Neutral  1: people, around, least, infected, care, talk, black, millions, killed, dying'
+ 'Positive 1: people, care, around, talk, infected, dying, outside, least, seriously, millions'
+ '=========='
+ 'Negative 2: lockdown, govt, police, set, rules, protest, boris johnson, anti, march, allowed'
+ 'Neutral  2: lockdown, early, full, coming, went, started, rules, set, put, govt'
+ 'Positive 2: colleagues, early, lockdown, coming, full, started, friends, missed, nice, got'
+ '=========='
+ 'Negative 3: one, another, made, single, every, world, ever, way, best, answer'
+ 'Neutral  3: one, way, another, best, every, hope, ever, agree, reason, yes'
+ 'Positive 3: way, one, hope, best, agree, every, another, ever, point, important'
+ '=========='
+ 'Negative 4: says, coronavirus pandemic, minister, government, health, workers, state, chief, cdc, ministry'
+ 'Neutral  4: says, health, cdc, dr, government, covid vaccine, public health, state, coronavirus pandemic, chief'
+ 'Positive 4: dr, public health, health, cdc, public, fda, vaccine, address, key, crisis'
+ '=========='
+ 'Negative 5: covid, tests positive, tested positive, test positive, due, players, via, died, heart, quarantine'
+ 'Neutral  5: covid, hospital, died, risk, study, patients, due, via, tested positive, impact'
+ 'Positive 5: covid, patients, risk, cancer, study, mortality, nhs, transmission, hospital, help'
+ '=========='
+ 'Negative 6: coronavirus, new post, tested positive, warns, recovery, hospital, officials, hit, canceled, two'
+ 'Neutral  6: coronavirus, via, major, patient, first, two, warns, officials, tested positive, scientists'
+ 'Positive 6: patient, via, coronavirus, #healthcare, transmission, scientists, first, trace, test, government'
+ '=========='
+ 'Negative 7: #covid, check, tested, special, click, response, using, women, related, based'
+ 'Neutral  7: #covid, response, check, using, evidence, join, article, patients, science, based'
+ 'Positive 7: #covid, patients, excellent, science, join, evidence, webinar, paper, access, care'
+ '=========='
+ 'Negative 8: mask, social distancing, stop, face, wear, masks, keep, wearing, stay home, public'
+ 'Neutral  8: mask, wear, social distancing, masks, stop, keep, everyone, face, safe, others'
+ 'Positive 8: safe, wear, masks, everyone, mask, keep, social distancing, protect, stop, others'
+ '=========='
+ 'Negative 9: #coronavirus, latest, #china, world, world news, #corona, #, #wuhan, #pandemic, become'
+ 'Neutral  9: #coronavirus, latest, thanks, #, become, #pandemic, world, sharing, opening, info'
+ 'Positive 9: thanks, sharing, #, healthcare, #coronavirus, info, ncov, # ncov, become, opening'
+ '=========='
+ 'Negative 10: time, delayed, james, piece, write, series, week, growing, book, miss'
+ 'Neutral  10: time, piece, series, book, growing, led, pain, amazing, week, discussion'
+ 'Positive 10: time, pain, discussion, piece, amazing, book, led, incredible, opportunity, series'
+ '=========='
+ 'Negative 11: may, vaccine, covid patients, blood, testing, never, experts, test, could, trying'
+ 'Neutral  11: may, testing, never, trying, available, human, cure, vaccine, sars cov, worth'
+ 'Positive 11: vitamin, sars cov, alter, expression, available, readily, worth, testing, guide, cure'
+ '=========='
+ 'Negative 12: new, link, comments, submitted, report, first, shows, novel coronavirus, according, posted'
+ 'Neutral  12: new, data, report, research, global, market, shows, leadership, analysis, novel coronavirus'
+ 'Positive 12: data, research, analysis, market, new, medicine, global, leadership, covid pandemic, scientific'
+ '=========='
+ 'Negative 13: trump, election, president, insider, party, gop, realdonaldtrump, republicans, pence, senate'
+ 'Neutral  13: trump, realdonaldtrump, president, americans, america, election, white house, vote, plan, dead'
+ 'Positive 13: realdonaldtrump, trump, america, plan, nation, americans, let, corner, political, dead'
+ '=========='
+ 'Negative 14: pandemic, economy, economic, hit, businesses, power, amid, history, world, crisis'
+ 'Neutral  14: pandemic, economic, economy, businesses, crisis, times, small, even, world, history'
+ 'Positive 14: pandemic, pre, better, changing, learned, difficult, small, especially, society, future'
+ '=========='
+ 'Negative 15: china, virus, chinese, wuhan, coronavirus outbreak, russia, corona virus, ban, australia, travel'
+ 'Neutral  15: china, virus, countries, travel, spread, outbreak, corona virus, wuhan, coronavirus outbreak, world'
+ 'Positive 15: countries, virus, world, control, china, lab, spread, narendramodi, epidemic, travel'
+ '=========='
+ 'Negative 16: home, corona, back, due, go, going, year, stay, take, school'
+ 'Neutral  16: corona, many, work, see, home, good, back, going, great, go'
+ 'Positive 16: great, many, please, working, work, good, students, thank, spray, proud'
+ '=========='
+ 'Negative 17: said, would, say, right, like, think, fuck, guys, big, oh'
+ 'Neutral  17: like, would, think, right, said, say, really, thing, thought, love'
+ 'Positive 17: like, think, understand, would, thought, really, different, sure, right, someone'
+ '=========='
+ 'Negative 18: season, get, bad, takes, flu, covid test, could, paid, worse, done'
+ 'Neutral  18: get, flu, done, getting, covid test, worse, season, bad, sick, could'
+ 'Positive 18: get, example, done, getting, flu, might, sick, worse, vaccine, probably'
+ '=========='
+ 'Negative 19: india, covid cases, new covid cases, news, nigeria, reports, new cases, deaths, announced, breaking'
+ 'Neutral  19: today, day, cases, news, india, deaths, uk, days, covid cases, number'
+ 'Positive 19: day, today, gt, days, daily, cases, st, uk, test, high'
+ '==========']
+
+Step: 27500 ELBO: -1238344.875 (0.026 sec/step)
+Step: 27600 ELBO: -1208653.000 (0.026 sec/step)
+Step: 27700 ELBO: -1214937.875 (0.026 sec/step)
+Step: 27800 ELBO: -1247409.250 (0.026 sec/step)
+Step: 27900 ELBO: -1244008.750 (0.026 sec/step)
+Step: 28000 ELBO: -1252687.750 (0.026 sec/step)
+Step: 28100 ELBO: -1237768.000 (0.026 sec/step)
+Step: 28200 ELBO: -1256170.125 (0.026 sec/step)
+Step: 28300 ELBO: -1252949.375 (0.026 sec/step)
+Step: 28400 ELBO: -1231663.375 (0.026 sec/step)
+Step: 28500 ELBO: -1266689.000 (0.026 sec/step)
+Step: 28600 ELBO: -1238993.625 (0.026 sec/step)
+Step: 28700 ELBO: -1214379.500 (0.026 sec/step)
+Step: 28800 ELBO: -1230588.125 (0.026 sec/step)
+Step: 28900 ELBO: -1245753.125 (0.026 sec/step)
+Step: 29000 ELBO: -1244713.750 (0.026 sec/step)
+Step: 29100 ELBO: -1270288.125 (0.026 sec/step)
+Step: 29200 ELBO: -1236982.625 (0.026 sec/step)
+Step: 29300 ELBO: -1250924.875 (0.026 sec/step)
+Step: 29400 ELBO: -1245946.125 (0.026 sec/step)
+Step: 29500 ELBO: -1247061.125 (0.026 sec/step)
+Step: 29600 ELBO: -1270392.875 (0.026 sec/step)
+Step: 29700 ELBO: -1230549.875 (0.026 sec/step)
+Step: 29800 ELBO: -1219369.750 (0.026 sec/step)
+Step: 29900 ELBO: -1239796.375 (0.026 sec/step)
+['Negative 0: still, also, everything, know, need, contact, high, well, story, maybe'
+ 'Neutral  0: know, need, still, read, also, well, maybe, feel, anyone, everything'
+ 'Positive 0: read, need, know, well, also, hear, #cdc, still, interesting, anyone'
+ '=========='
+ 'Negative 1: people, killed, least, black, infected, around, lives, country, millions, healthy'
+ 'Neutral  1: people, around, least, infected, talk, care, black, killed, millions, outside'
+ 'Positive 1: people, care, around, talk, infected, least, dying, outside, seriously, happening'
+ '=========='
+ 'Negative 2: lockdown, govt, police, set, rules, protest, march, anti, boris johnson, allowed'
+ 'Neutral  2: lockdown, early, coming, full, went, rules, started, govt, put, set'
+ 'Positive 2: colleagues, early, lockdown, coming, full, nice, missed, started, friends, family'
+ '=========='
+ 'Negative 3: one, another, world, every, single, made, ever, way, best, answer'
+ 'Neutral  3: one, way, another, best, every, hope, ever, agree, reason, single'
+ 'Positive 3: way, one, hope, best, agree, every, another, ever, solution, point'
+ '=========='
+ 'Negative 4: says, coronavirus pandemic, minister, government, health, state, workers, chief, cdc, covid vaccine'
+ 'Neutral  4: says, health, cdc, dr, government, covid vaccine, public health, state, coronavirus pandemic, public'
+ 'Positive 4: dr, public health, health, public, cdc, fda, vaccine, safety, address, phase'
+ '=========='
+ 'Negative 5: covid, tests positive, tested positive, test positive, players, due, via, died, heart, quarantine'
+ 'Neutral  5: covid, hospital, risk, died, study, patients, due, via, tested positive, immunity'
+ 'Positive 5: covid, patients, risk, cancer, study, mortality, transmission, icu, nhs, hospital'
+ '=========='
+ 'Negative 6: coronavirus, new post, tested positive, warns, recovery, hospital, two, canceled, hit, test positive'
+ 'Neutral  6: coronavirus, via, patient, first, major, two, warns, officials, scientists, test'
+ 'Positive 6: patient, via, #healthcare, coronavirus, scientists, transmission, first, trace, test, post'
+ '=========='
+ 'Negative 7: #covid, check, tested, special, click, response, using, free, related, policy'
+ 'Neutral  7: #covid, response, using, check, join, evidence, article, science, based, care'
+ 'Positive 7: #covid, science, join, excellent, evidence, patients, webinar, paper, care, important'
+ '=========='
+ 'Negative 8: social distancing, mask, stop, face, wear, public, masks, keep, stay home, wearing'
+ 'Neutral  8: mask, social distancing, wear, masks, stop, everyone, keep, safe, face, others'
+ 'Positive 8: safe, everyone, wear, masks, mask, keep, social distancing, protect, stop, others'
+ '=========='
+ 'Negative 9: #coronavirus, latest, world, #china, #corona, world news, #, #wuhan, #pandemic, declared'
+ 'Neutral  9: #coronavirus, latest, thanks, #, become, #pandemic, world, sharing, opening, info'
+ 'Positive 9: thanks, sharing, healthcare, #, #coronavirus, ncov, info, # ncov, become, latest'
+ '=========='
+ 'Negative 10: time, delayed, include, james, write, piece, series, week, growing, miss'
+ 'Neutral  10: time, piece, series, amazing, book, growing, pain, led, week, discussion'
+ 'Positive 10: time, pain, amazing, discussion, piece, opportunity, incredible, series, book, led'
+ '=========='
+ 'Negative 11: may, vaccine, covid patients, testing, never, blood, experts, human, trying, better'
+ 'Neutral  11: may, testing, never, trying, human, available, vaccine, sars cov, cure, covid patients'
+ 'Positive 11: sars cov, vitamin, alter, expression, readily, available, worth, testing, guide, may'
+ '=========='
+ 'Negative 12: new, comments, link, report, submitted, shows, first, novel coronavirus, according, posted'
+ 'Neutral  12: new, data, report, research, global, market, shows, leadership, analysis, covid pandemic'
+ 'Positive 12: data, research, analysis, market, new, medicine, leadership, global, team, key'
+ '=========='
+ 'Negative 13: trump, election, insider, president, party, gop, realdonaldtrump, pence, senate, rally'
+ 'Neutral  13: trump, realdonaldtrump, president, americans, america, election, white house, plan, dead, vote'
+ 'Positive 13: realdonaldtrump, trump, plan, america, political, americans, nation, corner, dead, american'
+ '=========='
+ 'Negative 14: pandemic, economy, economic, hit, power, businesses, amid, history, industry, financial'
+ 'Neutral  14: pandemic, economic, economy, businesses, crisis, times, small, especially, world, hit'
+ 'Positive 14: pandemic, pre, difficult, small, learned, better, especially, society, times, stress'
+ '=========='
+ 'Negative 15: china, chinese, virus, wuhan, coronavirus outbreak, russia, corona virus, australia, travel, ban'
+ 'Neutral  15: china, virus, countries, spread, travel, outbreak, corona virus, wuhan, world, coronavirus outbreak'
+ 'Positive 15: countries, virus, control, world, spread, lab, china, narendramodi, outbreak, epidemic'
+ '=========='
+ 'Negative 16: home, corona, back, due, go, going, stay, take, year, school'
+ 'Neutral  16: corona, see, work, many, good, back, home, great, go, going'
+ 'Positive 16: great, many, please, working, thank, work, good, spray, students, proud'
+ '=========='
+ 'Negative 17: said, would, say, right, like, think, fuck, big, come, guys'
+ 'Neutral  17: like, would, think, right, said, say, really, thing, love, thought'
+ 'Positive 17: like, think, understand, would, thought, really, different, sure, right, someone'
+ '=========='
+ 'Negative 18: season, get, bad, takes, flu, could, covid test, paid, getting, done'
+ 'Neutral  18: get, flu, getting, done, covid test, bad, worse, season, sick, could'
+ 'Positive 18: get, example, done, getting, flu, might, probably, sick, worse, vaccine'
+ '=========='
+ 'Negative 19: india, covid cases, new covid cases, reports, news, nigeria, new cases, announced, deaths, breaking'
+ 'Neutral  19: today, day, news, cases, india, deaths, uk, days, covid cases, number'
+ 'Positive 19: day, today, gt, days, st, daily, cases, test, uk, high'
+ '==========']
+
+Step: 30000 ELBO: -1248627.500 (0.026 sec/step)
+Step: 30100 ELBO: -1252057.625 (0.026 sec/step)
+Step: 30200 ELBO: -1247535.000 (0.026 sec/step)
+Step: 30300 ELBO: -1225065.250 (0.026 sec/step)
+Step: 30400 ELBO: -1251929.625 (0.026 sec/step)
+Step: 30500 ELBO: -1264051.750 (0.026 sec/step)
+Step: 30600 ELBO: -1272709.000 (0.026 sec/step)
+Step: 30700 ELBO: -1260762.500 (0.026 sec/step)
+Step: 30800 ELBO: -1238213.000 (0.026 sec/step)
+Step: 30900 ELBO: -1222476.750 (0.026 sec/step)
+Step: 31000 ELBO: -1228465.750 (0.026 sec/step)
+Step: 31100 ELBO: -1245450.375 (0.026 sec/step)
+Step: 31200 ELBO: -1262826.875 (0.026 sec/step)
+Step: 31300 ELBO: -1253193.625 (0.026 sec/step)
+Step: 31400 ELBO: -1240514.250 (0.026 sec/step)
+Step: 31500 ELBO: -1254564.250 (0.026 sec/step)
+Step: 31600 ELBO: -1263517.500 (0.026 sec/step)
+Step: 31700 ELBO: -1272633.000 (0.026 sec/step)
+Step: 31800 ELBO: -1259669.250 (0.026 sec/step)
+Step: 31900 ELBO: -1246446.875 (0.026 sec/step)
+Step: 32000 ELBO: -1228407.875 (0.026 sec/step)
+Step: 32100 ELBO: -1229194.000 (0.026 sec/step)
+Step: 32200 ELBO: -1246068.500 (0.026 sec/step)
+Step: 32300 ELBO: -1267679.750 (0.026 sec/step)
+Step: 32400 ELBO: -1254292.500 (0.026 sec/step)
+['Negative 0: still, also, everything, know, high, contact, story, need, well, sad'
+ 'Neutral  0: know, need, still, read, also, well, maybe, feel, everything, anyone'
+ 'Positive 0: read, need, know, hear, also, well, #cdc, still, anyone, interesting'
+ '=========='
+ 'Negative 1: people, least, black, killed, infected, around, lives, happens, millions, healthy'
+ 'Neutral  1: people, around, least, infected, talk, care, black, millions, outside, killed'
+ 'Positive 1: people, talk, care, around, infected, outside, dying, least, seriously, allow'
+ '=========='
+ 'Negative 2: lockdown, govt, police, set, rules, protest, boris johnson, anti, march, melbourne'
+ 'Neutral  2: lockdown, early, coming, full, went, rules, put, started, govt, set'
+ 'Positive 2: colleagues, early, lockdown, coming, full, friends, nice, missed, started, got'
+ '=========='
+ 'Negative 3: one, another, world, single, ever, made, every, way, best, answer'
+ 'Neutral  3: one, way, another, best, every, hope, ever, agree, reason, single'
+ 'Positive 3: way, hope, one, agree, best, every, ever, another, point, offer'
+ '=========='
+ 'Negative 4: says, coronavirus pandemic, minister, government, workers, state, health, cdc, chief, covid vaccine'
+ 'Neutral  4: says, health, cdc, dr, government, covid vaccine, public health, public, state, coronavirus pandemic'
+ 'Positive 4: dr, public health, public, health, cdc, fda, vaccine, safety, key, university'
+ '=========='
+ 'Negative 5: covid, tests positive, tested positive, test positive, players, due, via, died, quarantine, heart'
+ 'Neutral  5: covid, hospital, risk, died, study, patients, due, tested positive, via, doctor'
+ 'Positive 5: covid, patients, risk, cancer, study, mortality, nhs, transmission, icu, hospital'
+ '=========='
+ 'Negative 6: coronavirus, new post, tested positive, warns, recovery, canceled, hospital, two, officials, washington'
+ 'Neutral  6: coronavirus, via, patient, first, major, two, warns, scientists, officials, test'
+ 'Positive 6: patient, via, #healthcare, coronavirus, scientists, transmission, trace, post, first, via youtube'
+ '=========='
+ 'Negative 7: #covid, check, tested, response, policy, using, based, click, special, free'
+ 'Neutral  7: #covid, response, using, check, evidence, join, science, article, based, important'
+ 'Positive 7: #covid, science, join, excellent, evidence, patients, webinar, important, paper, care'
+ '=========='
+ 'Negative 8: social distancing, mask, stop, face, wear, public, stay home, masks, keep, wearing'
+ 'Neutral  8: mask, social distancing, wear, masks, stop, keep, everyone, safe, face, others'
+ 'Positive 8: safe, everyone, masks, wear, mask, keep, social distancing, protect, stop, others'
+ '=========='
+ 'Negative 9: #coronavirus, latest, #china, world, #corona, world news, #, declared, become, #wuhan'
+ 'Neutral  9: #coronavirus, latest, thanks, #, become, #pandemic, opening, healthcare, world, sharing'
+ 'Positive 9: thanks, healthcare, sharing, #, ncov, #coronavirus, info, # ncov, latest, become'
+ '=========='
+ 'Negative 10: time, write, delayed, james, piece, series, include, miss, week, growing'
+ 'Neutral  10: time, piece, series, amazing, book, miss, growing, opportunity, led, pain'
+ 'Positive 10: time, pain, amazing, discussion, piece, opportunity, book, series, incredible, led'
+ '=========='
+ 'Negative 11: may, vaccine, covid patients, blood, never, testing, experts, human, trying, could'
+ 'Neutral  11: may, testing, never, trying, human, vaccine, available, sars cov, cure, covid patients'
+ 'Positive 11: vitamin, sars cov, alter, expression, readily, available, worth, testing, guide, may'
+ '=========='
+ 'Negative 12: new, link, report, comments, submitted, first, shows, novel coronavirus, according, posted'
+ 'Neutral  12: new, data, report, research, global, market, shows, leadership, analysis, covid pandemic'
+ 'Positive 12: research, data, analysis, market, new, medicine, global, leadership, team, covid pandemic'
+ '=========='
+ 'Negative 13: trump, election, party, insider, president, gop, realdonaldtrump, rally, pence, senate'
+ 'Neutral  13: trump, realdonaldtrump, president, americans, america, election, plan, dead, white house, vote'
+ 'Positive 13: realdonaldtrump, plan, trump, america, americans, nation, political, american, interview, dead'
+ '=========='
+ 'Negative 14: pandemic, economy, economic, hit, amid, businesses, power, financial, world, history'
+ 'Neutral  14: pandemic, economy, economic, businesses, crisis, small, times, business, especially, world'
+ 'Positive 14: pandemic, pre, small, difficult, especially, future, learned, changing, society, times'
+ '=========='
+ 'Negative 15: china, virus, chinese, wuhan, coronavirus outbreak, russia, corona virus, australia, ban, outbreak'
+ 'Neutral  15: china, virus, countries, spread, outbreak, corona virus, travel, world, wuhan, control'
+ 'Positive 15: countries, virus, lab, control, spread, world, narendramodi, china, epidemic, outbreak'
+ '=========='
+ 'Negative 16: home, corona, back, go, due, going, stay, take, year, school'
+ 'Neutral  16: corona, many, see, work, home, good, back, going, great, go'
+ 'Positive 16: great, many, please, working, spray, work, good, students, thank, proud'
+ '=========='
+ 'Negative 17: said, would, say, right, like, think, oh, fuck, big, guys'
+ 'Neutral  17: like, would, think, right, said, say, really, love, thing, sure'
+ 'Positive 17: like, think, understand, would, thought, sure, really, different, right, someone'
+ '=========='
+ 'Negative 18: season, get, bad, takes, flu, getting, covid test, paid, could, winter'
+ 'Neutral  18: get, getting, flu, done, bad, covid test, worse, season, sick, takes'
+ 'Positive 18: get, example, might, done, getting, flu, sick, symptoms, probably, worse'
+ '=========='
+ 'Negative 19: india, covid cases, new covid cases, nigeria, new cases, reports, news, deaths, announced, breaking'
+ 'Neutral  19: today, day, cases, news, india, deaths, days, uk, covid cases, number'
+ 'Positive 19: day, today, gt, days, daily, cases, test, st, high, uk'
+ '==========']
+
+Step: 32500 ELBO: -1240842.125 (0.026 sec/step)
+Step: 32600 ELBO: -1261059.125 (0.026 sec/step)
+Step: 32700 ELBO: -1260187.250 (0.026 sec/step)
+Step: 32800 ELBO: -1263266.625 (0.026 sec/step)
+Step: 32900 ELBO: -1249333.750 (0.026 sec/step)
+Step: 33000 ELBO: -1239674.375 (0.026 sec/step)
+Step: 33100 ELBO: -1226684.500 (0.026 sec/step)
+Step: 33200 ELBO: -1230528.000 (0.026 sec/step)
+Step: 33300 ELBO: -1239356.750 (0.026 sec/step)
+Step: 33400 ELBO: -1251778.625 (0.026 sec/step)
+Step: 33500 ELBO: -1255709.375 (0.026 sec/step)
+Step: 33600 ELBO: -1232169.750 (0.026 sec/step)
+Step: 33700 ELBO: -1259538.750 (0.026 sec/step)
+Step: 33800 ELBO: -1260287.000 (0.026 sec/step)
+Step: 33900 ELBO: -1266757.250 (0.026 sec/step)
+Step: 34000 ELBO: -1263197.875 (0.026 sec/step)
+Step: 34100 ELBO: -1250191.250 (0.026 sec/step)
+Step: 34200 ELBO: -1210447.500 (0.026 sec/step)
+Step: 34300 ELBO: -1223339.250 (0.026 sec/step)
+Step: 34400 ELBO: -1231110.250 (0.026 sec/step)
+Step: 34500 ELBO: -1250189.500 (0.026 sec/step)
+Step: 34600 ELBO: -1268828.500 (0.026 sec/step)
+Step: 34700 ELBO: -1240123.000 (0.026 sec/step)
+Step: 34800 ELBO: -1254941.750 (0.026 sec/step)
+Step: 34900 ELBO: -1236206.500 (0.026 sec/step)
+['Negative 0: still, also, everything, know, story, need, contact, high, well, yet'
+ 'Neutral  0: know, need, still, read, also, well, maybe, feel, everything, anyone'
+ 'Positive 0: read, need, know, well, hear, also, still, #cdc, interesting, anyone'
+ '=========='
+ 'Negative 1: people, killed, least, black, infected, lives, around, healthy, millions, country'
+ 'Neutral  1: people, around, least, infected, talk, black, care, killed, outside, millions'
+ 'Positive 1: people, talk, around, care, outside, infected, least, dying, completely, happening'
+ '=========='
+ 'Negative 2: lockdown, police, govt, set, rules, march, protest, boris johnson, anti, allowed'
+ 'Neutral  2: lockdown, early, coming, full, put, went, govt, rules, started, set'
+ 'Positive 2: colleagues, lockdown, early, coming, friends, full, nice, got, family, started'
+ '=========='
+ 'Negative 3: one, another, made, single, every, world, ever, way, reason, best'
+ 'Neutral  3: one, way, another, best, every, hope, ever, agree, reason, seen'
+ 'Positive 3: way, one, hope, agree, best, every, another, ever, solution, post covid'
+ '=========='
+ 'Negative 4: says, coronavirus pandemic, minister, government, workers, state, health, chief, cdc, schools'
+ 'Neutral  4: says, health, cdc, dr, government, covid vaccine, public health, state, public, schools'
+ 'Positive 4: dr, public health, public, health, cdc, vaccine, fda, safety, key, university'
+ '=========='
+ 'Negative 5: covid, tests positive, tested positive, test positive, players, due, via, died, quarantine, hospital'
+ 'Neutral  5: covid, hospital, study, risk, died, patients, due, tested positive, via, doctor'
+ 'Positive 5: patients, covid, risk, cancer, study, mortality, icu, transmission, nhs, doctor'
+ '=========='
+ 'Negative 6: coronavirus, new post, tested positive, warns, recovery, officials, washington, canceled, two, hospital'
+ 'Neutral  6: coronavirus, via, first, patient, major, two, warns, scientists, officials, post'
+ 'Positive 6: patient, via, #healthcare, coronavirus, transmission, scientists, first, front, post, trace'
+ '=========='
+ 'Negative 7: #covid, check, tested, policy, click, response, using, special, based, related'
+ 'Neutral  7: #covid, response, using, check, evidence, article, join, science, based, important'
+ 'Positive 7: #covid, science, excellent, join, evidence, important, webinar, paper, care, patients'
+ '=========='
+ 'Negative 8: social distancing, mask, stop, face, wear, public, keep, stay home, masks, wearing'
+ 'Neutral  8: mask, social distancing, wear, masks, stop, keep, everyone, safe, face, others'
+ 'Positive 8: safe, wear, everyone, masks, mask, keep, social distancing, protect, stop, others'
+ '=========='
+ 'Negative 9: #coronavirus, latest, #china, world news, world, #corona, #, declared, become, #wuhan'
+ 'Neutral  9: #coronavirus, latest, thanks, #, become, healthcare, #pandemic, opening, world, sharing'
+ 'Positive 9: thanks, healthcare, sharing, #, ncov, #coronavirus, info, # ncov, latest, advice'
+ '=========='
+ 'Negative 10: time, include, delayed, james, write, series, piece, miss, week, growing'
+ 'Neutral  10: time, piece, amazing, series, miss, opportunity, book, growing, led, pain'
+ 'Positive 10: time, pain, amazing, discussion, piece, opportunity, md, book, incredible, led'
+ '=========='
+ 'Negative 11: may, vaccine, covid patients, testing, blood, never, could, experts, human, trying'
+ 'Neutral  11: may, testing, never, vaccine, trying, human, available, cure, sars cov, covid patients'
+ 'Positive 11: vitamin, sars cov, alter, expression, available, readily, testing, guide, worth, may'
+ '=========='
+ 'Negative 12: new, submitted, comments, report, link, shows, first, according, novel coronavirus, posted'
+ 'Neutral  12: new, data, report, research, global, market, shows, covid pandemic, leadership, analysis'
+ 'Positive 12: research, data, analysis, market, new, medicine, leadership, scientific, global, team'
+ '=========='
+ 'Negative 13: trump, election, party, president, insider, realdonaldtrump, gop, senate, republicans, pence'
+ 'Neutral  13: trump, realdonaldtrump, president, americans, america, election, plan, dead, white house, vote'
+ 'Positive 13: realdonaldtrump, plan, trump, america, nation, americans, political, american, corner, dead'
+ '=========='
+ 'Negative 14: pandemic, economy, economic, hit, power, businesses, amid, history, financial, world'
+ 'Neutral  14: pandemic, economy, economic, crisis, businesses, times, small, especially, hit, world'
+ 'Positive 14: pandemic, pre, small, difficult, especially, future, learned, changing, society, times'
+ '=========='
+ 'Negative 15: china, chinese, virus, wuhan, coronavirus outbreak, corona virus, outbreak, russia, australia, travel'
+ 'Neutral  15: china, virus, spread, countries, outbreak, travel, corona virus, control, world, wuhan'
+ 'Positive 15: countries, virus, lab, control, spread, epidemic, world, narendramodi, china, outbreak'
+ '=========='
+ 'Negative 16: home, corona, back, go, going, due, stay, take, year, school'
+ 'Neutral  16: corona, see, work, many, back, good, home, going, great, go'
+ 'Positive 16: great, many, please, working, thank, work, students, good, proud, see'
+ '=========='
+ 'Negative 17: said, would, say, right, like, think, oh, big, fuck, guys'
+ 'Neutral  17: like, would, think, right, say, said, really, love, thing, sure'
+ 'Positive 17: like, think, understand, would, really, thought, sure, different, someone, love'
+ '=========='
+ 'Negative 18: season, get, bad, flu, getting, takes, covid test, paid, could, done'
+ 'Neutral  18: get, getting, flu, done, bad, covid test, worse, season, sick, might'
+ 'Positive 18: get, example, done, getting, flu, might, probably, worse, better, sick'
+ '=========='
+ 'Negative 19: india, covid cases, new covid cases, nigeria, new cases, news, reports, deaths, breaking, announced'
+ 'Neutral  19: today, day, cases, news, deaths, india, days, uk, covid cases, number'
+ 'Positive 19: day, today, gt, days, daily, cases, st, test, uk, high'
+ '==========']
+
+Step: 35000 ELBO: -1262789.250 (0.026 sec/step)
+Step: 35100 ELBO: -1248269.375 (0.026 sec/step)
+Step: 35200 ELBO: -1253662.625 (0.026 sec/step)
+Step: 35300 ELBO: -1227525.375 (0.026 sec/step)
+Step: 35400 ELBO: -1237846.750 (0.026 sec/step)
+Step: 35500 ELBO: -1226609.750 (0.026 sec/step)
+Step: 35600 ELBO: -1237385.125 (0.026 sec/step)
+Step: 35700 ELBO: -1276002.750 (0.026 sec/step)
+Step: 35800 ELBO: -1237910.250 (0.026 sec/step)
+Step: 35900 ELBO: -1261505.250 (0.026 sec/step)
+Step: 36000 ELBO: -1239029.000 (0.026 sec/step)
+Step: 36100 ELBO: -1248548.500 (0.026 sec/step)
+Step: 36200 ELBO: -1244933.875 (0.026 sec/step)
+Step: 36300 ELBO: -1244031.750 (0.026 sec/step)
+Step: 36400 ELBO: -1239011.375 (0.026 sec/step)
+Step: 36500 ELBO: -1239446.500 (0.026 sec/step)
+Step: 36600 ELBO: -1225341.250 (0.026 sec/step)
+Step: 36700 ELBO: -1251466.000 (0.026 sec/step)
+Step: 36800 ELBO: -1273302.500 (0.026 sec/step)
+Step: 36900 ELBO: -1239576.750 (0.026 sec/step)
+Step: 37000 ELBO: -1259542.375 (0.026 sec/step)
+Step: 37100 ELBO: -1221683.000 (0.026 sec/step)
+Step: 37200 ELBO: -1250606.875 (0.026 sec/step)
+Step: 37300 ELBO: -1237980.875 (0.026 sec/step)
+Step: 37400 ELBO: -1252293.750 (0.026 sec/step)
+['Negative 0: still, also, know, everything, story, need, contact, well, ny, sad'
+ 'Neutral  0: know, need, still, read, also, well, maybe, hear, feel, everything'
+ 'Positive 0: read, need, know, hear, well, also, #cdc, still, interesting, anyone'
+ '=========='
+ 'Negative 1: people, black, least, killed, infected, lives, around, healthy, war, happens'
+ 'Neutral  1: people, around, least, infected, talk, black, care, killed, outside, millions'
+ 'Positive 1: people, talk, around, care, infected, outside, least, dying, happening, completely'
+ '=========='
+ 'Negative 2: lockdown, police, govt, set, protest, rules, boris johnson, anti, march, allowed'
+ 'Neutral  2: lockdown, early, coming, full, put, went, govt, rules, started, place'
+ 'Positive 2: colleagues, early, lockdown, friends, coming, full, nice, got, family, started'
+ '=========='
+ 'Negative 3: one, another, world, made, single, every, ever, way, answer, best'
+ 'Neutral  3: one, way, another, best, every, hope, ever, agree, seen, reason'
+ 'Positive 3: way, one, hope, agree, best, every, another, ever, point, post covid'
+ '=========='
+ 'Negative 4: says, minister, coronavirus pandemic, government, workers, state, health, cdc, chief, schools'
+ 'Neutral  4: says, health, cdc, government, dr, covid vaccine, public health, public, state, schools'
+ 'Positive 4: dr, public health, public, health, cdc, vaccine, fda, university, safety, #covid pandemic'
+ '=========='
+ 'Negative 5: covid, tests positive, tested positive, test positive, players, due, died, hospital, via, quarantine'
+ 'Neutral  5: covid, hospital, study, risk, died, patients, due, tested positive, via, doctor'
+ 'Positive 5: patients, covid, risk, cancer, study, icu, mortality, nhs, transmission, doctor'
+ '=========='
+ 'Negative 6: coronavirus, new post, tested positive, warns, recovery, two, officials, canceled, dies, washington'
+ 'Neutral  6: coronavirus, via, patient, first, two, major, scientists, warns, officials, post'
+ 'Positive 6: patient, via, scientists, #healthcare, transmission, coronavirus, first, front, trace, post'
+ '=========='
+ 'Negative 7: #covid, check, policy, special, click, response, free, using, based, tested'
+ 'Neutral  7: #covid, response, using, check, join, evidence, article, science, based, important'
+ 'Positive 7: #covid, science, excellent, join, important, evidence, webinar, care, use, paper'
+ '=========='
+ 'Negative 8: social distancing, mask, stop, face, wear, stay home, keep, public, masks, wearing'
+ 'Neutral  8: mask, social distancing, wear, masks, stop, keep, everyone, safe, face, others'
+ 'Positive 8: safe, everyone, masks, wear, mask, keep, protect, social distancing, stop, others'
+ '=========='
+ 'Negative 9: #coronavirus, latest, #china, #corona, world, world news, #, #pandemic, become, declared'
+ 'Neutral  9: #coronavirus, latest, thanks, #, healthcare, become, #pandemic, opening, sharing, info'
+ 'Positive 9: thanks, healthcare, sharing, #, ncov, #coronavirus, info, # ncov, latest, opening'
+ '=========='
+ 'Negative 10: time, delayed, include, week, james, series, write, piece, miss, growing'
+ 'Neutral  10: time, piece, amazing, series, opportunity, miss, book, week, growing, led'
+ 'Positive 10: time, pain, amazing, opportunity, md, piece, discussion, book, incredible, led'
+ '=========='
+ 'Negative 11: may, vaccine, covid patients, never, could, testing, blood, human, experts, trying'
+ 'Neutral  11: may, testing, never, vaccine, trying, human, available, sars cov, cure, treatment'
+ 'Positive 11: sars cov, vitamin, alter, expression, readily, available, worth, testing, may, guide'
+ '=========='
+ 'Negative 12: new, comments, link, report, submitted, first, shows, according, novel coronavirus, global'
+ 'Neutral  12: new, data, report, global, research, market, covid pandemic, shows, leadership, analysis'
+ 'Positive 12: research, data, analysis, market, medicine, new, team, leadership, covid pandemic, impact'
+ '=========='
+ 'Negative 13: trump, election, party, president, insider, gop, realdonaldtrump, pence, senate, republicans'
+ 'Neutral  13: trump, realdonaldtrump, president, americans, america, plan, election, dead, white house, vote'
+ 'Positive 13: realdonaldtrump, plan, trump, america, nation, americans, political, american, dead, let'
+ '=========='
+ 'Negative 14: pandemic, economy, hit, economic, power, businesses, amid, financial, world, jobs'
+ 'Neutral  14: pandemic, economy, economic, crisis, businesses, times, small, business, hit, especially'
+ 'Positive 14: pandemic, future, difficult, pre, especially, small, crisis, learned, changing, lessons'
+ '=========='
+ 'Negative 15: china, chinese, virus, wuhan, coronavirus outbreak, corona virus, russia, australia, ban, outbreak'
+ 'Neutral  15: china, virus, spread, countries, outbreak, corona virus, travel, control, across, world'
+ 'Positive 15: countries, epidemic, lab, virus, control, spread, world, narendramodi, across, china'
+ '=========='
+ 'Negative 16: home, corona, back, go, going, due, take, stay, year, school'
+ 'Neutral  16: corona, many, work, see, home, good, back, great, going, go'
+ 'Positive 16: great, thank, many, please, working, work, good, students, proud, spray'
+ '=========='
+ 'Negative 17: said, would, say, like, right, think, oh, fuck, big, got'
+ 'Neutral  17: like, would, think, right, say, said, really, love, thing, sure'
+ 'Positive 17: like, think, really, understand, would, thought, sure, love, different, right'
+ '=========='
+ 'Negative 18: get, season, bad, takes, getting, flu, covid test, paid, could, done'
+ 'Neutral  18: get, getting, flu, done, bad, covid test, worse, season, might, hospitals'
+ 'Positive 18: get, might, example, done, getting, flu, probably, better, mind, hospitals'
+ '=========='
+ 'Negative 19: india, covid cases, new covid cases, news, new cases, nigeria, reports, deaths, announced, breaking'
+ 'Neutral  19: day, today, cases, news, india, deaths, days, uk, covid cases, number'
+ 'Positive 19: day, gt, today, days, st, daily, cases, high, uk, test'
+ '==========']
+
+Step: 37500 ELBO: -1252198.500 (0.026 sec/step)
+Step: 37600 ELBO: -1242063.500 (0.026 sec/step)
+Step: 37700 ELBO: -1242013.375 (0.026 sec/step)
+Step: 37800 ELBO: -1247648.000 (0.026 sec/step)
+Step: 37900 ELBO: -1272512.250 (0.026 sec/step)
+Step: 38000 ELBO: -1238649.750 (0.026 sec/step)
+Step: 38100 ELBO: -1254175.250 (0.026 sec/step)
+Step: 38200 ELBO: -1231934.625 (0.026 sec/step)
+Step: 38300 ELBO: -1245429.500 (0.026 sec/step)
+Step: 38400 ELBO: -1240094.125 (0.026 sec/step)
+Step: 38500 ELBO: -1270616.500 (0.026 sec/step)
+Step: 38600 ELBO: -1256492.250 (0.026 sec/step)
+Step: 38700 ELBO: -1231447.375 (0.026 sec/step)
+Step: 38800 ELBO: -1225231.250 (0.026 sec/step)
+Step: 38900 ELBO: -1252597.625 (0.026 sec/step)
+Step: 39000 ELBO: -1269507.875 (0.026 sec/step)
+Step: 39100 ELBO: -1240199.250 (0.026 sec/step)
+Step: 39200 ELBO: -1256994.750 (0.026 sec/step)
+Step: 39300 ELBO: -1227996.375 (0.026 sec/step)
+Step: 39400 ELBO: -1247916.250 (0.026 sec/step)
+Step: 39500 ELBO: -1239021.000 (0.026 sec/step)
+Step: 39600 ELBO: -1265236.875 (0.026 sec/step)
+Step: 39700 ELBO: -1259873.375 (0.026 sec/step)
+Step: 39800 ELBO: -1233050.875 (0.026 sec/step)
+Step: 39900 ELBO: -1237299.125 (0.026 sec/step)
+Step: 39999 ELBO: -1256765.750 (0.026 sec/step)
+['Negative 0: still, also, know, story, everything, need, well, high, contact, yet'
+ 'Neutral  0: know, need, still, read, also, well, maybe, feel, hear, everything'
+ 'Positive 0: read, need, know, hear, well, also, still, interesting, #cdc, anyone'
+ '=========='
+ 'Negative 1: people, least, killed, lives, black, infected, around, healthy, war, millions'
+ 'Neutral  1: people, around, least, infected, talk, black, care, outside, killed, millions'
+ 'Positive 1: people, around, care, talk, infected, least, dying, outside, happening, completely'
+ '=========='
+ 'Negative 2: lockdown, police, govt, set, rules, boris johnson, protest, anti, march, allowed'
+ 'Neutral  2: lockdown, early, coming, full, put, govt, went, rules, started, place'
+ 'Positive 2: colleagues, early, friends, lockdown, coming, full, nice, family, missed, got'
+ '=========='
+ 'Negative 3: one, another, made, single, world, ever, every, way, bar, best'
+ 'Neutral  3: one, way, another, every, best, hope, ever, agree, seen, post covid'
+ 'Positive 3: way, one, hope, agree, best, every, another, ever, question, post covid'
+ '=========='
+ 'Negative 4: says, coronavirus pandemic, minister, government, state, workers, health, chief, schools, cdc'
+ 'Neutral  4: says, health, cdc, government, dr, covid vaccine, public health, public, state, schools'
+ 'Positive 4: dr, public health, public, health, cdc, fda, vaccine, safety, university, address'
+ '=========='
+ 'Negative 5: covid, tests positive, tested positive, test positive, players, due, died, via, hospital, heart'
+ 'Neutral  5: covid, hospital, risk, study, patients, died, due, tested positive, via, doctor'
+ 'Positive 5: patients, covid, risk, cancer, study, mortality, icu, nhs, transmission, doctor'
+ '=========='
+ 'Negative 6: coronavirus, new post, tested positive, warns, recovery, officials, two, dies, canceled, washington'
+ 'Neutral  6: coronavirus, via, first, patient, two, major, scientists, warns, officials, post'
+ 'Positive 6: patient, via, scientists, #healthcare, coronavirus, transmission, first, post, front, via youtube'
+ '=========='
+ 'Negative 7: #covid, check, policy, click, special, based, using, response, free, tested'
+ 'Neutral  7: #covid, response, using, check, article, evidence, science, join, based, important'
+ 'Positive 7: #covid, science, important, join, excellent, evidence, care, webinar, paper, access'
+ '=========='
+ 'Negative 8: social distancing, mask, stop, face, wear, public, keep, stay home, masks, wearing'
+ 'Neutral  8: mask, social distancing, wear, masks, keep, stop, everyone, safe, face, others'
+ 'Positive 8: safe, everyone, wear, masks, mask, keep, social, social distancing, protect, stop'
+ '=========='
+ 'Negative 9: #coronavirus, latest, world, #corona, #china, world news, #, #wuhan, become, #pandemic'
+ 'Neutral  9: #coronavirus, latest, thanks, #, healthcare, become, #pandemic, opening, sharing, info'
+ 'Positive 9: thanks, healthcare, sharing, #, ncov, info, #coronavirus, advice, latest, # ncov'
+ '=========='
+ 'Negative 10: time, include, delayed, james, week, piece, miss, series, write, growing'
+ 'Neutral  10: time, piece, amazing, opportunity, series, miss, book, week, growing, pain'
+ 'Positive 10: time, pain, amazing, md, opportunity, piece, discussion, book, incredible, miss'
+ '=========='
+ 'Negative 11: may, vaccine, covid patients, never, testing, blood, human, could, experts, trying'
+ 'Neutral  11: may, testing, never, vaccine, trying, human, available, treatment, cure, sars cov'
+ 'Positive 11: sars cov, vitamin, alter, expression, readily, available, worth, testing, guide, may'
+ '=========='
+ 'Negative 12: new, comments, report, link, submitted, first, novel coronavirus, according, shows, global'
+ 'Neutral  12: new, data, report, global, research, covid pandemic, market, shows, leadership, analysis'
+ 'Positive 12: research, data, analysis, market, new, medicine, team, leadership, impact, covid pandemic'
+ '=========='
+ 'Negative 13: trump, election, party, insider, president, gop, realdonaldtrump, senate, pence, republicans'
+ 'Neutral  13: trump, realdonaldtrump, president, americans, america, election, plan, dead, white house, party'
+ 'Positive 13: realdonaldtrump, plan, trump, america, nation, political, americans, american, corner, tweet'
+ '=========='
+ 'Negative 14: pandemic, economy, hit, economic, amid, businesses, impact, power, industry, jobs'
+ 'Neutral  14: pandemic, economy, crisis, economic, businesses, times, business, hit, especially, small'
+ 'Positive 14: pandemic, future, crisis, difficult, pre, especially, small, class, learned, changing'
+ '=========='
+ 'Negative 15: china, chinese, virus, wuhan, coronavirus outbreak, australia, corona virus, ban, outbreak, russia'
+ 'Neutral  15: china, virus, spread, outbreak, countries, corona virus, travel, across, control, world'
+ 'Positive 15: countries, lab, epidemic, control, virus, spread, world, narendramodi, across, china'
+ '=========='
+ 'Negative 16: home, corona, back, go, going, due, stay, take, year, school'
+ 'Neutral  16: corona, many, see, work, home, back, good, go, great, going'
+ 'Positive 16: great, many, thank, please, working, work, proud, spray, good, students'
+ '=========='
+ 'Negative 17: said, would, say, right, like, think, big, oh, fuck, got'
+ 'Neutral  17: like, would, think, right, say, said, really, love, even, thing'
+ 'Positive 17: like, think, really, understand, would, thought, sure, different, someone, right'
+ '=========='
+ 'Negative 18: season, get, bad, getting, flu, takes, covid test, paid, could, done'
+ 'Neutral  18: get, getting, flu, done, bad, might, covid test, worse, hospitals, better'
+ 'Positive 18: get, example, might, getting, done, flu, better, probably, hospitals, mind'
+ '=========='
+ 'Negative 19: india, covid cases, new covid cases, nigeria, announced, new cases, news, reports, deaths, breaking'
+ 'Neutral  19: day, today, cases, news, india, deaths, days, uk, covid cases, number'
+ 'Positive 19: day, gt, today, st, days, daily, cases, test, high, uk'
+ '==========']

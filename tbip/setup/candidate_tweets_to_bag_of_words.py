@@ -26,6 +26,12 @@ df = df[df.screen_name != 'AndrewYang']
 df = df[df.screen_name != 'marwilliamson']
 df = df[df.screen_name != 'JayInslee']
 
+# uncomment if only using 4 authors
+# names = ['BernieSanders', 'KamalaHarris', 'JoeBiden', 'TimRyan']
+# name_mask = df.screen_name.isin(names)
+# df = df[name_mask]
+print(df.screen_name.value_counts())
+
 candidates = np.array(df['screen_name'])
 tweets = np.array(df['text'])
 
@@ -58,6 +64,14 @@ min_authors_per_word = 2
 author_counts_per_word = np.sum(counts_per_author > 0, axis=0)
 acceptable_words = np.where(
     author_counts_per_word >= min_authors_per_word)[0]
+
+
+print(len(acceptable_words))
+print(len(author_counts_per_word))
+print(counts)
+print(len(vocabulary))
+print(len(tweets))
+print(author_map)
 
 # Fit final document-term matrix with new vocabulary.
 count_vectorizer = CountVectorizer(ngram_range=(1, 3),

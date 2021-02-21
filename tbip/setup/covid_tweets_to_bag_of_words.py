@@ -17,7 +17,8 @@ project_dir = os.path.abspath(
 data_dir = os.path.join(project_dir, "data/covid-tweets-2020/raw")
 save_dir = os.path.join(project_dir, "data/covid-tweets-2020/clean")
 
-df = pd.read_csv(os.path.join(data_dir, "tweets_cosine_sim_masks.csv"))
+# df = pd.read_csv(os.path.join(data_dir, "tweets_journalist.csv"))
+df = pd.read_csv(os.path.join(data_dir, "tweets_cosine_sim.csv"))
 
 # Don't include tweets before 2019.
 # df = df[pd.to_datetime(df['created_at']) > pd.to_datetime('2019')]
@@ -25,6 +26,7 @@ df = pd.read_csv(os.path.join(data_dir, "tweets_cosine_sim_masks.csv"))
 # df = df[df.screen_name != 'AndrewYang']
 # df = df[df.screen_name != 'marwilliamson']
 # df = df[df.screen_name != 'JayInslee']
+
 
 candidates = np.array(df['screen_name'])
 tweets = np.array(df['text'])
@@ -44,25 +46,40 @@ stopwords = set(np.loadtxt(
     dtype=str,
     delimiter="\n"))
 
+with open('/Users/maxpaton/nltk_data/corpora/stopwords/english', 'r') as f:
+  words = set(f.read().split())
+
 count_vectorizer = CountVectorizer(min_df=0.0005, 
                                    max_df=0.3, 
                                    ngram_range=(1, 3),
                                    stop_words=stopwords, 
+                                   # stop_words=words,
                                    token_pattern="[a-zA-Z#]+")
+
+print(len(tweets))
 # Learn initial document term matrix to identify words to exclude based
 # on author counts.
 counts = count_vectorizer.fit_transform(tweets)
 vocabulary = np.array(
     [k for (k, v) in sorted(count_vectorizer.vocabulary_.items(), 
                             key=lambda kv: kv[1])])
-
 # Remove phrases spoken by only 1 candidate.
 counts_per_author = utils.bincount_2d(author_indices, counts.toarray())
 min_authors_per_word = 2
 author_counts_per_word = np.sum(counts_per_author > 0, axis=0)
 acceptable_words = np.where(
     author_counts_per_word >= min_authors_per_word)[0]
+# acceptable_words = np.where(
+#     author_counts_per_word >= 1)[0]
 
+print(len(acceptable_words))
+print(len(author_counts_per_word))
+print(author_indices)
+print(counts)
+print(len(vocabulary))
+print(len(tweets))
+
+print(author_map)
 # Fit final document-term matrix with new vocabulary.
 count_vectorizer = CountVectorizer(ngram_range=(1, 3),
                                    vocabulary=vocabulary[acceptable_words],

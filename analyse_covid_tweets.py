@@ -8,8 +8,6 @@ import utils
 import cosine_similarity
 import clustering
 import re
-from nltk.corpus import stopwords
-from sentence_transformers import SentenceTransformer, util
 import matplotlib.pyplot as plt
 import emoji
 import bm25_similarity
@@ -26,6 +24,7 @@ def readTweets(base_path, out_path=None):
 	    for name in sorted(file):
 	        # if name.endswith('.csv') and '2020-02' in name:
 	        # if name.endswith('.csv') and '2020-01' in name:
+	        # if name.endswith('.csv') and re.search('2020-0[12]', name):
 	        if name.endswith('.csv'):
 	            filename = os.path.join(path, name)
 	            df = pd.read_csv(filename, header=0, index_col=None, engine='python')
@@ -48,10 +47,15 @@ def exportTweetsForBOW(tweets, out_path):
 	tweets.columns = ['screen_name', 'id', 'created_at', 'text']
 	tweets.to_csv(out_path, index=False)
 
-def descriptionsToJSON(df):
+def buildIndex(df):
+	# convert descriptions to JSON
 	df.columns = ['id', 'contents']
 	df.to_json('docs_jsonl/documents.jsonl', orient='records', lines=True)
-
+	# build index
+	cmd = 'python3 -m pyserini.index -collection JsonCollection -generator DefaultLuceneDocumentGenerator \
+				-threads 1 -input docs_jsonl \
+				-index indexes/docs_jsonl -storePositions -storeDocvectors -storeRaw'
+	os.system(cmd)
 
 
 if __name__ == "__main__":
@@ -74,13 +78,19 @@ if __name__ == "__main__":
 	# drop retweeted content
 	tweets = tweets.drop(tweets[tweets.tweet.str.startswith('RT')].index)
 	print('# tweets used (removed N/A + RTs): {}'.format(len(tweets)))
+	# convert tweets IDs to numeric
 	tweets.id = pd.to_numeric(tweets.id)
+	tweets = tweets.drop_duplicates(subset=['id'])
+	# remove URLs
+	tweets.tweet = tweets.tweet.apply(lambda x: re.sub(r'http\S+', '', x))
+
 
 	# export descriptions to compute embeddings on Colab
 	# tweets_temp = tweets.description
+	# print(len(tweets_temp))
 	# tweets_temp.to_csv('for_embeddings/tweets_for_embeddings.csv')
 	# print('Tweets for embeddings saved')
-	# time.sleep(555)
+	# sys.exit()
 
 	# load author lexicons containing keywords
 	author_lexicons = readLexicons('tbip/lexicons/')
@@ -96,12 +106,11 @@ if __name__ == "__main__":
 		print('{:.0%} of account descriptions have keywords\n'.format(n_labelled/len(tweets)))
 		# exportTweetsForBOW(tweets_with_keyword, 'tbip/data/covid-tweets-2020/raw/tweets.csv')
 
-	embedder = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
 
 	# descriptions = list(tweets.description.apply(lambda x: emoji.demojize(x, remove=True)))
 	# choose model
 	if args.model == 'cosine_sim':
-		tweets = cosine_similarity.cosineSim(tweets, embedder, author_info, use_lexicon=False)
+		tweets = cosine_similarity.cosineSim(tweets, author_info, use_lexicon=False)
 		tweets = cosine_similarity.cosineSimSecondFaiss(tweets, author_info)
 		# tweets = cosine_similarity.cosineSimSecond(tweets, author_info)
 		print(tweets)
@@ -113,10 +122,11 @@ if __name__ == "__main__":
 		scores = clustering.clusteringAll(tweets, embedder, author_info)
 
 	if args.model == 'bm25':
-		descriptionsToJSON(tweets[['id', 'description']])
+		buildIndex(tweets[['id', 'description']])
 		tweets = bm25_similarity.bm25Sim(tweets, author_info)
 		tweets.dropna(inplace=True)
 		print(len(tweets))
+		print(tweets.label.value_counts())
 	
 	exportTweetsForBOW(tweets, 'tbip/data/covid-tweets-2020/raw/tweets_' + args.model + '.csv')
 

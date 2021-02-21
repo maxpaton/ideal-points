@@ -1,4 +1,4 @@
-from sentence_transformers import util
+from sentence_transformers import SentenceTransformer, util
 import torch
 import numpy as np
 import pandas as pd
@@ -48,13 +48,15 @@ def getAverageScorePerAuthor(scores, author_indices, author_info):
 
 
 
-def cosineSim(tweets, embedder, author_info, use_lexicon=False):
+def cosineSim(tweets, author_info, use_lexicon=False):
 	"""
 	Labels the tweet's account description by author type by comparing the sentence embedding of the description with
 	the sentence embedding of either
 	a) only the name of each author type (i.e. 'doctor'), or
 	b) averaged similarity of all words in each author type lexicon
 	"""
+
+	embedder = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
 	# description_embeddings = getEmbeddingsFromList(embedder, descriptions)
 	# description_embeddings = np.load('embeddings/description_embeddings_2020-02.npy')
 	description_embeddings = np.load('embeddings/description_embeddings_all.npy')
@@ -73,7 +75,7 @@ def cosineSim(tweets, embedder, author_info, use_lexicon=False):
 	# scores_histogram = []
 	tweets['label'] = np.nan
 	tweets['label_score'] = np.nan
-	thresholds = dict(zip(author_info.names, [0.45, 0.45, 0.45, 0.35]))
+	thresholds = dict(zip(author_info.names, [0.5, 0.5, 0.5, 0.4]))
 	print('Cosine similarities')
 	for idx, description_embedding in enumerate(description_embeddings):
 		scores = computeCosineScore(description_embedding, author_embeddings, use_lexicon)
@@ -87,6 +89,7 @@ def cosineSim(tweets, embedder, author_info, use_lexicon=False):
 			# print('Original description: {} \nLabel: {} \nScore: {} \nIndex: {} \n'.format(tweets.iloc[idx].description,
 																						# label, scores_dict[label], idx))
 	print('Finished similarities')
+	print(tweets.label.value_counts())
 
 	return tweets
 
@@ -105,6 +108,7 @@ def cosineSimSecondFaiss(tweets, author_info):
 
 	distances, indices = faiss_similarity.computeFaissSim(set_a, set_b)
 
+	# split into high threshold set (a) and rest (b)
 	set_a_df = tweets[tweets.label.notnull()]
 	set_b_df = tweets[tweets.label.isnull()]
 
@@ -115,13 +119,31 @@ def cosineSimSecondFaiss(tweets, author_info):
 	set_b_df['second_cos_label'] = set_b_df.second_cos_index.apply(lambda x: getSecondLabelFaiss(x, author_indices, author_info))
 
 	tweets = set_a_df.append(set_b_df.drop(['second_cos_index'], axis=1)).sort_index()
-	tweets = tweets.loc[(tweets['second_cos_score'] < 150) | (tweets['label_score'].notnull())]
+	print(tweets.second_cos_score.value_counts(dropna=False))
+
+	thresholds = dict(zip(author_info.names, [152, 130, 142, 142]))
+	tweets['second_th_temp'] = np.nan
+	for i in range(len(tweets)):
+		if i%10000==0:
+			print(i)
+		if pd.notnull(tweets.second_cos_label.iloc[i]):
+			if tweets.second_cos_score.iloc[i] < thresholds[tweets.second_cos_label.iloc[i]] \
+					| pd.notnull(tweets.label_score.iloc[i]):
+				tweets.second_th_temp.iloc[i] = True
+
+	tweets = tweets[tweets.second_th_temp == True]
+	print(tweets.second_cos_label.value_counts())
+	print(len(tweets), 'len3')
+	# tweets = tweets.loc[(tweets['second_cos_score'] < 140) | (tweets['label_score'].notnull())]
+	# print(tweets.second_cos_score.value_counts())
 
 	# clean
 	tweets['label_score'].fillna(tweets['second_cos_score'], inplace=True)
 	tweets['label'].fillna(tweets['second_cos_label'], inplace=True)
 	tweets.dropna(subset=['label'], inplace=True)
 	tweets.drop(labels=['second_cos_label', 'second_cos_score'], axis=1, inplace=True)
+	# export to visually inspect label accuracy
+	tweets.to_csv('tbip/data/covid-tweets-2020/raw/label_checking/cosine_sim.csv')
 
 	return tweets
 
